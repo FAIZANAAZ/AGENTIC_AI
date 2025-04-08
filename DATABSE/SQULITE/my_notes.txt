@@ -54,6 +54,7 @@ phir hmaray databse ke name sy ak file bn kr ay gi ospr click krna he phie osky 
 osky bad oper sy data ke tan pr click krengy to data nazr a jayga jo dala tha 
 
 ########################################
+
 oper ak sql likha hoga left pr ospr click krengy 
 hm yha sy bhi krskty hen code same wesy hi jesy file me kiya he lekin sirf quairy 
 example:

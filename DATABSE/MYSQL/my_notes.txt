@@ -1,0 +1,58 @@
+setup*********
+uv init
+uv add ruff
+open (https://dev.mysql.com/downloads/installer/)
+download (Windows (x86, 32-bit), MSI Installer)=>click(No thanks, just start my download.)
+file dawnload ho jaygi 
+ospr click krengy permistion many ga computer yes krengy 
+phir ak window open aygy click on full =>click on =>click on=>execute=> chek in i agree =>install=>close
+
+phir again =>nichy wo window pr jagy nichy wo open hoi wihogi  wha wo koch install kra hoga oska w8 krengy =>next=>execute=>phir agian hm execute hony ka w8 krengy =>next=>sb pr click krengy wo dark black ho jayga=>next=>next=>phir pasward dalengy easy jo yad rhy phir=>next=>FIRST PR CLICK KRKY NEXT =>execute=>finish
+
+phir again (product configration ayga)=>next=>finish
+
+phir again(contact to server )=>next=>pasward dalengy =>connect success a jayga => next=>execute=done krna he =>finish
+
+phir again product configration ayga >next=>finish
+
+phir wo window khod band hokr ak new window open hogi jispr likha hoga (welcom ka sms)
+or sath ak cmd bhi hoga wo khlata he (sql shall)
+
+ENVIRONMENT VARIABLE STEUP *******************
+wesy to wo khod bhi set ho jaty hen lekin hm cheq krty hen agr hoa path to nhi dengy nhi hiwa to de dengy
+
+sbsy phly search bar me nichy likhengy (envornment variable)
+osmy path me (C:\Program Files\MySQL\MySQL Shell 8.0\bin\)user or nichy dodno jga jha path likha he ye likha hona chiye 
+wrna khod likhlengy
+
+MySQL Command-Line Setup******************
+jo folder bnaya he osmy run krna he (mysql -u root -p)
+osky bad pasward dalengy or likha ayga (welcom to my sql monitor 
+)
+
+
+
+WORKING***************
+run (CREATE DATABASE your database name; )=Query OK, 1 row affected (0.01 sec)
+run(USE databse name;)=database name
+run(uv add pymysql)
+run(uv add sqlalchemy)
+
+
+phir wo krna he jo main.py me likha he 
+
+
+SEE DATA in Dbeaver**************
+Dbeaver open krengy desktop sy open kna he  
+
+phir osmy left side ke blkl orner pr ak icon ayga jis pr + bhi  hoga ospr click krnegy to bhut sary data base ke name a jaengy 
+
+phir wha sy squlite pr click krengy phir next krygy or location dengy hm os folder ko jha bnaya he database or osmy jo databse ke name sy file bnti he osko selet krna he ander ja jakr
+
+phir click on test connection =>click dawnlod =>ok =>again click on test connection (likha ayga connect)
+
+phir hmaray databse ke name sy ak file bn kr ay gi ospr click krna he phie osky bad => click on table =>right click on hamry jo table ka name tha => viw table
+
+osky bad oper sy data ke tan pr click krengy to data nazr a jayga jo dala tha 
+info******************
+mysql shall hmary camand prompt me help krta he (CREATE DATABASE your database name; )
