@@ -18,8 +18,7 @@ with engine.connect() as connection:
             id INT AUTO_INCREMENT PRIMARY KEY,
             name VARCHAR(25) NOT NULL,
             age INT
-        );
-    """))
+        );"""))
         # is trha hm query likhty hen 
         # isky ander hm jo likhry hen osko wo smajhta he jesy 
         # yha likha he ke ( CREATE TABLE IF NOT EXISTS students) yani agr students table nhi he to create krdo
@@ -36,8 +35,29 @@ with engine.connect() as connection:
 with engine.connect() as connection:
     connection.execute(text("""
         INSERT INTO students (name, age)
-        VALUES ('Zeeshan', 30);
+        VALUES ('Zeeshan', 30),
+        ('Ali', 25),
+        ('Hamza', 20);
     """))
     connection.commit()  # 🧠 Don't forget to commit the transaction
     
+    # update
+    # Update student record (example: change 'Ali' age to 28)
+with engine.connect() as connection:
+    connection.execute(text("""
+        UPDATE students
+        SET age = 28
+        WHERE name = 'Ali';
+    """))
+    connection.commit()
+
+    # delete
+    # Delete student record (example: delete 'Hamza')
+with engine.connect() as connection:
+    connection.execute(text("""
+        DELETE FROM students
+        WHERE name = 'Hamza';
+    """))
+    connection.commit()
+
      

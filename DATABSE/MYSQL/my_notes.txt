@@ -22,14 +22,20 @@ ENVIRONMENT VARIABLE STEUP *******************
 wesy to wo khod bhi set ho jaty hen lekin hm cheq krty hen agr hoa path to nhi dengy nhi hiwa to de dengy
 
 sbsy phly search bar me nichy likhengy (envornment variable)
-osmy path me (C:\Program Files\MySQL\MySQL Shell 8.0\bin\)user or nichy dodno jga jha path likha he ye likha hona chiye 
+osmy path me click krky edit krengy phir =>new and add(C:\Program Files\MySQL\MySQL Server 8.0\bin\)user or nichy dono jga jha path likha he ye likha hona chiye 
 wrna khod likhlengy
 
 MySQL Command-Line Setup******************
-jo folder bnaya he osmy run krna he (mysql -u root -p)
+jo folder bnaya he osmy 
+run krna he (mysql -u root -p)
 osky bad pasward dalengy or likha ayga (welcom to my sql monitor 
 )
 
+
+DATABASE KA NAME CHANGE KRNY KE LIYE *******************
+DROP DATABASE old_database_name;
+CREATE DATABASE new_database_name;
+USE your new_databasse_name;
 
 
 WORKING***************
@@ -41,18 +47,23 @@ run(uv add sqlalchemy)
 
 phir wo krna he jo main.py me likha he 
 
+SEE DATA in Terminsl ***************
+run (python main.py) in cmd sperate tab 
+mysql -u root -p =ye start krta he
+USE school; = ye hm btaty hen ye database usse krna he
+SELECT * FROM students; = ye table dikhayga 
 
-SEE DATA in Dbeaver**************
-Dbeaver open krengy desktop sy open kna he  
+SEE DATA in Dbeaver*****************
 
-phir osmy left side ke blkl orner pr ak icon ayga jis pr + bhi  hoga ospr click krnegy to bhut sary data base ke name a jaengy 
+Dbeaver open krengy desktop sy open kna he  (shortcut)
 
-phir wha sy squlite pr click krengy phir next krygy or location dengy hm os folder ko jha bnaya he database or osmy jo databse ke name sy file bnti he osko selet krna he ander ja jakr
+phir osmy left side ke blkl korner pr ak icon ayga jis pr + bhi  hoga ospr click krnegy to bhut sary data base ke name a jaengy 
 
-phir click on test connection =>click dawnlod =>ok =>again click on test connection (likha ayga connect)
+phir wha sy MySQL pr click krengy phir next krygy or pasward dalengy or connect krna he =>TEST connection => dawnload=>ok=>finish
 
-phir hmaray databse ke name sy ak file bn kr ay gi ospr click krna he phie osky bad => click on table =>right click on hamry jo table ka name tha => viw table
+lcalhost open =>click on database  =>sekect apna jo database ka name rkha tha wo =>table=>name ayga database ka ospr right click krengy or  => view table =>top pr data ka tab open krengy to data show ho jayga 
 
-osky bad oper sy data ke tan pr click krengy to data nazr a jayga jo dala tha 
+
+
 info******************
 mysql shall hmary camand prompt me help krta he (CREATE DATABASE your database name; )
