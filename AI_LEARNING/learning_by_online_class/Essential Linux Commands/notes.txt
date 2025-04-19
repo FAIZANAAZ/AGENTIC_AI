@@ -1,0 +1,100 @@
+hm apny computer me window ka use krty hen OR YE PAID OTA HE yani hm kharidty hen computer waly kharidty hen 
+iski ki trha ak hota he linUx jo ke dikhny me alag hota he terminal jesa jismy hm cammands chala chala kr kam krty hen
+
+LINUX :
+Linux ek open source operating system he jo ke free me milta he. ye bhut powerfull hota he aur isme kai features hain jo ke windows me nahi hain. Linux ko hm docer ki wja sy use krna sikhengy thora jisky liye oski koch cammands dekhengy yha hm run krkry 
+window bhi hmy linus use krny ka option deti he swl sy 
+
+linux me hm folder ko directory khty hen
+hm oski koh cammands ka use krnasikhengy
+
+open gitbash on windows search =>ak terminal open hoga hm osmy use krengy linux ki cammands kioky sary cammands linux ki run nhi htin terminal me cms me
+
+1=pwd — Print Working Directory
+run pwd =>ye hmy btayga ki hm kaha he YANI KONSI directory me hen
+
+hm jis folder me kam kr rhy ho jesy hmny jha or git bash open kiya he wo folder to wo hmesha ~ (tilde) se show hota he lekin jb hm cd wagera krky kisi dosrcy folder me chaly jaty hen to oper bhi os folder ka path likha ata he 
+
+2=run ls
+ye hmy btayga ke hm jis dirctory yani jis jga hen osmy kitni files or folders hen ye yani agr hm (pwd) run krky jo dirtory ai he osko jakr apni files me search bar me dalengy to wo sari files show ho jayengy jo os dirctory me hen wahi sb hmy ls bhi dikhata he
+
+3= ls -l
+ye files or folders onki information ke sath dikhata he
+jisky start me likha hoga dr wo folder he or lrw yani file he wo
+
+4=   ls --help
+ye hmy batayga ki ls ki kai features hain jo ke hm use kr skty hen yani jo cammands hen wo sb jiska hm use kr skty hen or wo kiya kiya kam krty hen
+wo sari cammands hm ls ke sath run krengy
+
+5=cd ..
+cd yani change directery he ye hmy pichle directory me le jata he
+os os folder me wapas any ke liye m again likhengy 
+cd
+
+6=cd anyfolder name 
+cd ke bad jo bhi likhengy wo os folder me le ayga /c/user/public
+
+7=cd /
+/ yani hm root dirctory yani jha hmny git bash open kiya tha  tha jha git base open hen
+
+8=mkdir anyfolder name
+mkdir ke bad jo bhi folder name likhengy wo folder create ho jayega wahi prjha hm hen agr hm kisi or folder ke ander koi folder bnana he to phly hm cd c/user/public/ali is trha os folder ka name likhengy phir mkdir krengy to wo publick ke ander bn jayga 
+
+9=touch anyfile name
+YE BHI SAME PHLY KISI FOLDER ME JAYGY OR RUN KRENGY touch app.txt ye to app.txt sy file bn jaygi 
+
+10=echo "anytext"
+echo ke bad jo bhi text likhengy wo file me likh jayega CONSOLE.LOG ME JESY HM LIKHty hen
+
+11=echo "any text" > anyfile name
+ye text os file me jakr likh jayga jis file ka name hm > ke bad likhengy phly wo file bnygi phir osky ander wo text a jayga  agr file phly sy hogi to bn jayga lekin wo jitna bhi kam hoga osky ander wo mita kr bs wahi likh dega jo hmny likha he yani replace krdega  lekin cd folder me andy ke bad
+
+aagr hm koi kam bina cd me jakr kregy to wo jha pr hoga wahi wo kam krdega 
+
+12=cat anyfilename.txt 
+ye kisi file ke ander ka text dikhayga
+
+13=echo "any text" >> anyfile name
+ye bhi samy wahi kam kryga lekin aagr os file ke ander koch likha hoga oskoreplace nhi kryga blky jo hmny likha osko add krdega sath
+
+14=cp anyfile1.txt anyfile2.txt
+ye kisi file ke kam  ko dusre file me copy kr dega yani file1 ka kam file2 me krdyga 
+
+15=cp -r anyfolder1name/ anyfolder2name/
+ye kisi folder ke kam ko dusre folder me copy kr dega yani folder1 me jitni files wagera hongi sb folder2 me daldyga
+
+16=mv anyfilename.txt anyfilename.txt
+ye kisi file ko dusre file me rename kr dega 
+
+17=mv anyfilename anyfoldername/
+ye kisi file ko move krdega os folder me jis folder ka name diya he 
+
+18=rm anyfilename.txt
+ye kisi file ko delete kr dega
+
+19=rm -r anyfoldername/
+ye kisi folder ko delete kr dega 
+
+20=clear
+ye clear trdega terminal 
+
+21=history
+ye terminal me sabhi command ko show kr dega jo hmne run kiye he
+
+22=head -n 1 anyfilename.txt
+ye kisi file ke 1st line ko show kr dega
+
+23=tail -n 1 anyfilename.txt
+ye kisi file ke last line ko show kr dega
+
+24=ps aux 
+ye terminal me sabhi process ko show kr dega jo running he 
+
+25=ping google.com
+ye google.com server ko ping kr dega yani check kr dega ki wo server running he ya nhi google ka
+
+26=grep anytext anyfilename.txt
+ye kisi file me anytext ko search kr dega aur us text ko show kr dega 
+example:
+yani ak line he jismy baa syntext he hmy yad nh ara hmy bs bich ka yad ara he ke new likha tha bich me to hm new likh kr search krengy phir us line ko show kr dega
+
