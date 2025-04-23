@@ -74,5 +74,39 @@ Swarm ya Agents SDK ko samajhne ke liye Anthropic ke kuch important AI design pa
 4️⃣ Orchestrator-Workers: Aik main agent (orchestrator) jo tasks ko alag alag agents (workers) mein distribute karta hai.
 5️⃣ Evaluator-Optimizer: Aik agent jo system ka performance check karta hai aur improvements suggest karta hai.
 
+<!-- //////////////////////////////// -->
+
+Workflow:
+Workflow ka matlab hota hai kisi kaam ko pura karne ka sequence ya tareeqa. Matlab, ek kaam ko mukammal karne ke liye kis tareeqe se steps ya tasks perform karne hain, woh workflow kehlata hai. Jab hum programming ya AI systems ki baat karte hain, to workflow ka matlab hota hai data ka flow ya steps ka sequence, jo kisi kaam ko mukammal karne ke liye follow kiya jata hai.
+CHAT COMLITIOPN 
+yani ye dekhna ke konsa llm sbsy acha he wo lagana
 
 
+
+Agency/autonomy  (AI ya Chat Agents mein):
+Agency ka matlab hai ke AI ya chat agent ko apne aap decision lene ki salahiyat ho. Jab ek agent ke paas agency hoti hai, toh woh sirf user ke commands ke response mein kaam nahi karta, balkeh woh apni understanding ke hisaab se decisions leta hai aur actions karta hai.
+
+workflow or agency ka use or differcce koch u he ke hm khi jga hm workflow ka use krty hen or khi agency ka 
+jesy hm ak email agent bnaty hen hm osmy ak company ke liye workflow dety hen agent ko ke ye hmari main company he ag iski traf sy koi email ati he to oska ans is trha hi dena taky wo koch ghalat na dede
+or isi trha agency hm isi liye khty hen taky koch unimportant emails hen to osmy wo khod decisio lele 
+
+<!-- //////////////////////////////// -->
+
+simple code of agent 
+
+from openai import   Agent ,Runner 
+
+aget = Agent(
+   name="lahoreTA"
+   instruction="Agent for Lahore travel assistance",
+)  # Initialize the agent
+<!-- sbsy phly agent ka name dengy or instruction yani sytem prompt yani ke is chiz ko dimag me hmehsa wo rkhyga agent har sawal ka ans dety waqt jesy wo yad rkhyga ke hn me lahuore travel ke liye bna hon -->
+
+result =Runner.run_sync(
+   agent,
+   "what is your name"
+)
+<!-- runner hi hmara agent loopko chala he  -->
+
+print(result.final_output)
+<!-- final output by default func he jo hmy resul nikal kr deta he  -->
