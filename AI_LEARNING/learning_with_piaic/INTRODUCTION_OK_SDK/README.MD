@@ -1,6 +1,8 @@
 
-
 00_openai_agents
+"Sab se pehle LLM (Large Language Model) OpenAI le kar aaya tha, us ke baad langraph waghaira jaise kai frameworks aaye,
+ jo ke LLM ke use se agents banate the, lekin woh complicated the. Phir OpenAI ne Swarm introduce kiya, aur uske baad CRUAI aaya, 
+ jo ke developers ke liye kaafi asaan tha aur viral bhi ho gaya. Uske baad OpenAI SDK le kar aaya jo ke antropit  pr bna he or open sorce bhi he jismy hm kisi bhi llm ko use kr skty hen , jo usse bhi zyada asaan tha."
 
 <!-- https://github.com/panaversity/learn-agentic-ai/tree/main/00_openai_agents -->
 
@@ -25,7 +27,7 @@ Tracing karne se ye faida hota hai ke jo bhi agents kaam karte hain, unhone kya 
 <!-- $************************$ -->
 
 PYTHON FIRST 
-   hmy phly python pr peojects kam krna hota he best practice
+   hmy phly python pr peojects kam krna hota he best practice sdk me python first rkha gya he ke ap python me agents bnay 
  
 Built-in Loop #***********************
 
@@ -91,6 +93,14 @@ jesy hm ak email agent bnaty hen hm osmy ak company ke liye workflow dety hen ag
 or isi trha agency hm isi liye khty hen taky koch unimportant emails hen to osmy wo khod decisio lele 
 
 <!-- //////////////////////////////// -->
+
+OPEN ROUTER*****************
+openrouter 50 free llm provide krta he ye ak esa pekig he jo apny ander sb llm rhta he phly llm ka use esy hota tha ke hm kisi bhi 
+company ka llm use krny ke liye api key janerate krky lgani hoti thi lekin openrouter me 50 yani bhut sari companies ke llm hen or hmy 
+key bhi nhi chiye bs ak key lgygi open ai ki or phir bs jis company ka llm use krna he oska model ka name likhngy  wo chal jayga 
+
+<!-- //////////////////////////////// -->
+
 
 simple code of agent 
 
