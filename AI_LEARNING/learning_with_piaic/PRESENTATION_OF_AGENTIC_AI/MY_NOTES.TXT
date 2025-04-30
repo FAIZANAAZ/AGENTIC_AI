@@ -117,3 +117,19 @@ cloud matlb server less ...assent matlb ak bandy ke liye bhi chly or 1000ke liye
 DACA Process ************************
 DACA mein AI agents ko cloud pe deploy karna hota hai, jo apne tasks automatically manage karte hain. Har agent task ko apni memory mein store karke apna kaam karta hai. Jab koi task complex hota hai, toh agent naye actors create karta hai aur kaam ko distribute karta hai. DAPR actors ke beech communication ko manage karta hai aur messages ko efficiently handle karta hai.
 
+FOR AGENTIC AI ROLES **********************************
+
+1.AI FIRST
+yaniai hona lazmi he harchiz ka
+
+AGENT NATIVE COULD FIRST
+yani sbsy phly clud ko mind me rakhy ke konsy clud me hamra agent chlna he koi bhi chiz datbase wagera use krna he to mind me rkhna he ke clud pr hm kam kry hen
+
+
+DEVELOPED ANYWERE
+yani agent esa hona chiye jo har clud ke liye developed kren hm
+
+COULD ANYWERE
+yani wo esa agent ho jo har clud pr run ho sky
+
+OPEN CORE AND MANAGE EDGE
