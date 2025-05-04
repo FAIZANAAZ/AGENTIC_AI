@@ -1,0 +1,109 @@
+
+*************Persona (شخصیت)*********:
+Persona ka matlab hota hai ke aap apne prompt ko kis perspective se likh rahe hain. Jaise agar aap ek coding expert hain, toh prompt mein ye mention karein ke aap ek coding expert ki tarah jawab denge.
+
+Example:
+"Aap ek web developer hain jo Next.js aur MongoDB ka istemal karte hain."
+
+Purpose:
+Persona clear karne se model ko yeh samajh aata hai ke wo kis role mein kaam karega, taake jawab ussi perspective se aaye.
+
+*************Task (کام)*********:
+Task ka matlab hai ke aap model se kis cheez ki madad chahtay hain. Yeh step clear karta hai ke aap kaunsi specific task ya problem solve karne ki koshish kar rahe hain.
+
+Example:
+"Aap se ek login page banane ke liye kaha gaya hai jo Next.js mein ho."
+
+Purpose:
+Task specify karna model ko guide karta hai ke wo kis cheez par focus kare aur kis cheez ko avoid kare.
+
+*************Context (سیاق و سباق)*********:
+Context mein aapko batana hota hai ke kaun se tools, languages, ya frameworks ka use hoga aur us task ki kya specific requirements hain.
+
+Example:
+"Is page mein authentication ke liye AWS Cognito ko integrate karna hoga."
+
+Purpose:
+Context dena model ko poori information deta hai jisse wo task ko sahi tareeqe se samajh kar complete kar sake.
+
+Aapka Approach for Prompt Engineering:
+Aapne jo approach batayi hai, wo bhi kaafi logical aur effective hai. Agar aapko ek website banana hai, toh sabse pehle aapko wo saare zaroori elements list karne chahiye jo website mein hone chahiye. Phir, uss list ko use karke har page ke liye ek prompt banaya jayega. Yeh ek incremental approach hai jo har step par focus karte hue aapko desired output tak pahuchne mein madad karti hai.
+
+Steps for Creating the Prompt:
+Start with the Broad Goal (عام مقصد):
+
+Sabse pehle aapko apna broad goal define karna hoga, jaise "Humein ek food delivery website banani hai."
+
+List of Essential Elements (ضروری عناصر ki list):
+
+Website ke liye jo zaroori features honge unki list banayein. Yeh elements aapke task ko clear karte hain.
+
+Example:
+
+User Registration
+
+Menu Display
+
+Cart System
+
+Payment Gateway
+
+Order Tracking
+
+Admin Panel
+
+Select One Element and Write the Prompt (Ek Element Select Karein aur Prompt Likhein):
+
+Jab ek element select karen, uspar detailed prompt likhein.
+
+Example:
+"Aapko ek user registration system design karna hai jo email aur password ke zariye user ko register kare. Yeh Next.js aur MongoDB ka use karega."
+
+Is prompt mein model ko clear instructions milengi ki wo kis cheez ko target kare.
+
+Iterate and Refine (Phir Step-by-Step Tasks Par Focus Karein):
+
+Jab ek task complete ho, usse next step par move karein. Har page ko ek ek karke design karna hai, complete website ek hi baar mein nahi banani.
+
+Example Process for a Food Delivery Website:
+Define Your Goal (Maqsad ko Define Karein):
+
+"Mujhe ek food delivery website banani hai."
+
+List of Essential Features (Zaroori Features ki List):
+
+Home Page
+
+Menu Page
+
+Cart Functionality
+
+User Authentication
+
+Checkout Page
+
+Order History
+
+Admin Panel
+
+Select a Feature (Ek Feature Select Karein):
+
+Task: "Menu page ka design banayein."
+
+Prompt:
+"Aapko ek menu page banani hai jisme categories (e.g., Pizza, Burgers, Drinks) dikhayein, aur har category ke items ko show karein. Yeh page Next.js aur Tailwind CSS ka use karke design karna hai."
+
+Generate and Refine (Task ko Complete Karna aur Refine Karna):
+
+Once the menu page is ready, you can proceed to the next page or functionality step by step.
+
+Additional Important Content for Prompt Engineering:
+Clarity (وضاحت):
+Har prompt ko itna clear banayein ke model ko confusion na ho. Agar task complicated ho, toh usse chhote parts mein divide karein.
+
+Specificity (خصوصیت):
+Specific instructions dena zaroori hai. Agar aapko ek specific technology use karni hai, toh wo mention karein (e.g., "Use AWS Cognito for authentication").
+
+Feedback (ردعمل):
+Har response ke baad aap model se feedback le sakte hain. Agar jo aap chah rahe hain wo nahi mil raha, toh prompt ko thoda adjust karein.
+
