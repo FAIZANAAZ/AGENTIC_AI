@@ -6,6 +6,9 @@ PASSWORD = 'faiza13579'       # Password
 HOST = 'localhost'          # Local Server
 DB_NAME = 'school'          # Target Database
 
+
+
+
 # Establish SQLAlchemy Engine
 engine = create_engine(f"mysql+pymysql://{USER}:{PASSWORD}@{HOST}/{DB_NAME}")
 # ye hmny name ko sahi sy add krwaty hen system me yhahm wesy direct bhi data base name likh skty hen ya phir hm variable me rakhlety hen

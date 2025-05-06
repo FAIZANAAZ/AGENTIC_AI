@@ -8,6 +8,7 @@ from sqlalchemy import create_engine, text
 from dotenv import load_dotenv
 # ye load krwata he env ki file ko
 
+
 data_list=[]#yha data base sy data lakr stor krengy
 
 # .env file load kar rahe hain
