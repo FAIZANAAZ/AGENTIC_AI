@@ -1,0 +1,21 @@
+agent ak kam krny wala band he
+llm oska dimag he 
+
+agents***************
+agent khod kam nhi krta wo llm ki madad sy hi kam kr skta he 
+system prompt
+user prompt
+tool
+tool message
+guardrail
+agent 
+
+
+llm******************
+agent llm ko sirf 4 chizwn leta he agentbsy osy zada nhi 
+
+system prompt
+user prompt
+tool schema (function structure)
+tool message
+
