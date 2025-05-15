@@ -1,0 +1,36 @@
+steaming:
+
+ streaming ye he ke wo time totime llmsy ans krdeti he jesy phly hm agr koi sawal llm/chat sy krty thy to wo 1 mint me oska proceess complete krky ans
+ krta tha lekin streaming ne ye hota he ke hm jb bhi sawl krty hen to wo complete krta rhta he or ans bhi sath krta rhta he full process ka complete hony ke 
+ bad nhi krta jesy hm chat gpt sy pochty hen sawal to wo foran ans kr deta he or hm prhty rhty hen or ans wo ahista ahista rta jata he 
+
+streaming 2 trha ki hoti he 
+1 wahi jo oper likha he time ke sath ans krna
+2 jo hm hands off ya tolls calling llm request krna ye sb pichy ka process bhi straming hoti he 
+
+ 3 functions hoty hen result lany ke
+ runner.run / by defult wo async hota he  to simple run ka ans async ayga
+ runner.sync
+ runner.streaming
+
+
+
+CONTEXT
+jb koi information nhi hoti llm ke pas to wo kisi dosri jga google chanalkho sy bhi lakr deta he tools ko tay ans de sken wo khlata he
+context yani llm ko i trha set krna ke wo ye bhi kr sky osy khty hen context
+
+ya hm koi file den llm ko or wo osko read krky ans kry yani hmny di hena file or oska data llm ke pas to nhi tha wokhlata he context
+
+context hm 3 tariky sy bhej skty hen 
+1. y=jb hm code me den den as a tool me ke ye data ye koi ye pochy to yha sy ans krna
+2. ya hm user promptagr koi user rkh kr de ke ye mer name he email he ak cover late likh kr do
+3. ya system prompt ke zariye bhi de skty hen ke wo ye nfo yad rky phir kam kry 
+
+context 2 trha ki hoti he
+local context
+local context me hm secure chizon ko manag krty hen or hm osy llmko nhi dety  taky llm kisi user kona nikalkr dede
+
+AGENT/LLM context
+ismy hmllm kokoch tools ke zariye data detyhen jo wo user ko nhi dega bs tool call krky kam kryga jesy
+id ya pasward to secure he lekin agr llm ko hmari id or pasward sy hmari info nikalni he hmary hi liye yani jesy facbok pr loging
+krengy to wo hmari info ko match krky login krwayga hmara accout to osky liye to llm ko dena pryga hmy isi liy hm tolls ke zariye krengy

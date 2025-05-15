@@ -83,3 +83,17 @@ agent: Agent = Agent(name="Assistant", instructions="You are a helpful assistant
 result = Runner.run_sync(agent, "Hello")
 
 print(result.final_output)
+
+
+# Pehla tareeqa
+# (Async method) mein asynchronous execution hota hai, iska matlab yeh task block nahi hota aur non-blocking hota hai. Yeh direct agent creation
+# ka tareeqa hai, jisme aap ek agent ko create karke usse ek task run karwa rahe ho.
+
+# Doosra tareeqa
+# mein RunConfig ka use kiya gaya hai taake multiple agents ko manage kiya ja sake. Isme configuration ko zyada control kiya gaya hai,
+# lekin yeh synchronous hai, matlab ek agent ke baad doosra agent run hoga.
+
+# Teesra tareeqa 
+# mein global configuration ka use kiya gaya hai. Yahan par aap ek hi client ko multiple agents ke liye bar bar use kar sakte ho,
+# jo scalable aur reusable approach hai. Agar aapko kai agents ko manage karna ho, toh global configuration best option hai.
+
