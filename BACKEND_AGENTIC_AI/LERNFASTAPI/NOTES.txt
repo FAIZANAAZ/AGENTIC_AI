@@ -1,0 +1,67 @@
+https://github.com/panaversity/learn-agentic-ai/tree/main/04_daca_agent_native_dev/01_intro_fastapi
+
+project.tomal ki file me sari dependeies hoti hen
+
+fastapi dev main.py (fast api ko hm is cammand sy run krengy)
+
+fastapi ne stanley ki library sy functionality apny pas lekr aya osko or modify krky hmy diya he sbkhod ni bnya osny 
+
+uv add uvicorn
+uv run uvicorn main:app --reload
+
+
+/******************************
+Pytest 
+uv add --dev pytest pytest-asyncio
+
+--dev hm isi liye lgaty hen ke wo hmari main dependies jha hen wha jakr store na ho alag sy dev ke name sy bn kr ho jay 
+kio ye testing ke liye he isi liye isko space deny ki zarorat ni he 
+
+HM JO BHI  KAM KRENGY OSKO TEST KRENGY YANI FASTAPI ME HM AK API bnaty hen hmy oska output to pta hota he kiya ayga 
+lekin hm osko check bhi krty jaygy koi bhi function bnaygy osko cheq zaror krengy 
+
+cheq hm is trha krengy ke 
+pytest ke zariye pytest ye khta he ke apki file ke name sy phly test_ ho ya end me _test ho to pytest os file ko dhond kr khod 
+run krdega hmy bs ak file bnai hogi test ki or osky start ya end me _test likhengy or osmy dosri file ke function ko import krengy 
+
+or os funcion ke ander hm likhengy ki oska function kya kr rha he or oska output kya he oska output is trha jesy hmny main.py ki file bnai
+osmy ak function bnaya 
+  def addition(a,b)=>{
+    return a+b
+  }
+
+hmy pta he ke jo bhi argument me dengy wo + hoga phir bhi hm test krengy esy 
+make file test_main.py 
+
+from main import  addition
+
+test_addition(test_main.py)
+ assert addition(2,3)==5
+
+ hmny osy output bhi diya he or sahi diya he + ke bad 5 hi ayga agr ye ghlat howa to error dega pytest
+
+ run krny ke liye hm likhengy pytest enter 
+
+ pytest ka kam function call krna file dhond kr or report dena 
+
+ iska main perpose hm api ka bnaygy or or api ko hm cheq krlengy ke api thik sy kam kri he ya nhi ye local testing khlati he
+
+ /***********************
+ pydantic
+
+ ye ak schema hota he ke hmy kis type ka output chiye hm pydantic koimport krengy 
+from pydantic import BaseModel
+ 
+ or ak class bnaygy osmy hm kis type ka output chiye hm is trha likhengy
+
+ class User(BaseModel):
+  name: str
+
+  OR HM User ko as a type kisi bhi function ke parameter ko dengy to wo function sirf wahi lekr ayga baqi sb igore krdyga 
+  yani agr osmy name ke sath age bhi howa to wo bs name lekr ayga output me lekin agr type ghalat de dengy name ki 33 to error a jayga 
+
+
+  or agr hm likh den function ke name ke sath . model_dump() to wo dictionary me change ho jayga 
+ type(fuctionname.model_dump()) esy 
+ or hm osko acees bhi kr skty hen kisi bhi data o esy 
+ functionname.name
