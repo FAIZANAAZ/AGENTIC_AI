@@ -1,0 +1,71 @@
+setup*********
+uv init
+uv add ruff
+open (https://dev.mysql.com/downloads/installer/)
+download (Windows (x86, 32-bit), MSI Installer)=>click(No thanks, just start my download.)
+file dawnload ho jaygi 
+ospr click krengy permistion many ga computer yes krengy 
+phir ak window open aygy click on full =>click on =>click on=>execute=> chek in i agree =>install=>close
+
+
+
+phir again =>nichy wo window pr jagy nichy wo open hoi wihogi  wha wo koch install kra hoga oska w8 krengy =>next=>execute=>phir agian hm execute hony ka w8 krengy =>next=>sb pr click krengy wo dark black ho jayga=>next=>next=>phir pasward dalengy easy jo yad rhy phir=>next=>FIRST PR CLICK KRKY NEXT =>execute=>finish
+
+phir again (product configration ayga)=>next=>finish
+
+phir again(contact to server )=>next=>pasward dalengy =>connect success a jayga => next=>execute=done krna he =>finish
+
+phir again product configration ayga >next=>finish
+
+phir wo window khod band hokr ak new window open hogi jispr likha hoga (welcom ka sms)
+or sath ak cmd bhi hoga wo khlata he (sql shall)
+
+ENVIRONMENT VARIABLE STEUP *******************
+wesy to wo khod bhi set ho jaty hen lekin hm cheq krty hen agr hoa path to nhi dengy nhi hiwa to de dengy
+
+sbsy phly search bar me nichy likhengy (envornment variable)
+osmy path me click krky edit krengy phir =>new and add(C:\Program Files\MySQL\MySQL Server 8.0\bin\)user or nichy dono jga jha path likha he ye likha hona chiye 
+wrna khod likhlengy
+
+MySQL Command-Line Setup******************
+jo folder bnaya he osmy 
+run krna he (mysql -u root -p)
+osky bad pasward dalengy or likha ayga (welcom to my sql monitor 
+)
+
+
+DATABASE KA NAME CHANGE KRNY KE LIYE *******************
+DROP DATABASE old_database_name;
+CREATE DATABASE new_database_name;
+USE your new_databasse_name;
+
+
+WORKING***************
+run (CREATE DATABASE your database name; )=Query OK, 1 row affected (0.01 sec)
+run(USE databse name;)=database name
+run(uv add pymysql)
+run(uv add sqlalchemy)
+
+
+phir wo krna he jo main.py me likha he 
+
+SEE DATA in Terminsl ***************
+run (python main.py) in cmd sperate tab 
+mysql -u root -p =ye start krta he
+USE school; = ye hm btaty hen ye database usse krna he
+SELECT * FROM students; = ye table dikhayga 
+
+SEE DATA in Dbeaver*****************
+
+Dbeaver open krengy desktop sy open kna he  (shortcut)
+
+phir osmy left side ke blkl korner pr ak icon ayga jis pr + bhi  hoga ospr click krnegy to bhut sary data base ke name a jaengy 
+
+phir wha sy MySQL pr click krengy phir next krygy or pasward dalengy or connect krna he =>TEST connection => dawnload=>ok=>finish
+
+lcalhost open =>click on database  =>sekect apna jo database ka name rkha tha wo =>table=>name ayga database ka ospr right click krengy or  => view table =>top pr data ka tab open krengy to data show ho jayga 
+
+
+
+info******************
+mysql shall hmary camand prompt me help krta he (CREATE DATABASE your database name; )

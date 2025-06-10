@@ -1,0 +1,19 @@
+posgraQL versal alon ke sath mil kr hmy neon ki service provide krta he 
+
+1=open your versal account and create an account 
+2= Open the Storage Tab on versal pr
+3=click on neon =>accept and create =>enter koi sa bhi molk ka name =>select free=>create=>done=>.env.local sy DATABASE_URL_UNPOOLED
+ko hmy copy krna he =>create a folder => run uv init =>uv add ruff=> Create .env File=>and past DATABASE_URL_UNPOOLED=>
+4=Install Required Dependencies
+uv add sqlalchemy
+uv add psycopg2-binary
+uv add python-dotenv
+
+5=wo  krna he jo main.py me kiya howa he
+6=FOR VIEW YOUR TABLE =>Open Database in Neon From the Vercel Storage page, click Open in Neon.
+=>WO neon ki web pr le jayga jha aapko database ki list dekhne ko mil jayga =>left side pr buttom pr table lika hoga 
+=>click on table =>uv run main.py=>again jaengy wahi neon ke page pr wha ak table bn kr a jayga jo name hmny rkha he os name sy 
+=>
+
+7=neo ki web pr hm add record pr click krky add bhi kr skty hen or cheq pr click krky delete bhi kr skty hen
+

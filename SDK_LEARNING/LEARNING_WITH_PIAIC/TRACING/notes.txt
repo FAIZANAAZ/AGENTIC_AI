@@ -1,0 +1,21 @@
+TRACING********************
+agent ke start hony ke bad sy end hony tk jitny process hoty onko openi ke dashborad me  ya kisi third party ko bhi connect krwa kr  
+wa kr onka dashbord me save krny ko tracing khty hen 
+using tracing dashborad ka use krky hm code ko debug monitor update yani jo krna chahy kr skty hen developemnt ke darmiyan me history
+
+traching ko disable hm 2 trha sy kr skty hen
+ak hm env ki file bna kr osmy jakr kr skty hen varible bna kr disable_tracing true ye globly hoga
+or ak jesy hm krty hen function call krky jb hmary pas error ata he key ka set_tracing(disable=true)
+
+trace(parents)*****
+ismy hm btaty hen ke krna kya he debug kisko krna he disable kiya krna he sb koch oskiid wagraye compose krta he child 
+processcer 
+jismy sari kam ki history mojood hoti he 
+
+
+
+span(child)*****
+ismy starting time har chiz or ending time hota he ke kb start howa konsi chiz kb end hoi 
+
+tracing processer******
+ye zimedar hota he data ko open ai ke server pr bhejny ke

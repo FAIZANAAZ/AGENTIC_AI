@@ -1,0 +1,29 @@
+sdk ke full process ko hm khty hen lifecycle
+
+ismy hoty hen hooks 2 trha ke
+RunnerHook
+AgentHook
+
+
+Runner hook **********
+ye runner ke sath chlta he sbsy phly call hota he 
+ismy hoty hen 2 trha ke methods hoty hen
+1. on-start() ye chalta he runner ke start hony pr
+2. on-end() ye chalta he runner ke end hony pr
+
+
+
+AGENT HOOK*******
+ye agent ke sath chlta he sbsy phly call hota he
+ismy hoty hen 2 trha ke methods hoty hen
+1. on-start() ye chalta he agent ke start hony pr
+2. on-end() ye chalta he agent ke end hony pr
+
+Custom hooks *********
+hm custom yani khod bhi bna skty hen hook osmy hm class bnaygy or agr cutom runner hook bnary hen to osko hm pramerter
+me likhengy runner hook or osko runnerme hi passs krengy
+
+agr cutom agent hook bnary hen to osko hm pramerter
+me likhengy runnerhook or osko runnerme hi passs krengy
+
+

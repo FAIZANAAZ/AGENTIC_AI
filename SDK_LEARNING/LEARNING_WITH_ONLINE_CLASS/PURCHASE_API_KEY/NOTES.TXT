@@ -1,0 +1,10 @@
+1.OPEN =>plateform.openai.com=>login with google
+2.right side pr dashbord pr click krengy =>phir apy key pr right side sy
+3.open apki key in seperate tab also usage open in another tab
+4.go setting dp ke raber me hoga => cick on biling =>add credit blance pr jaygy =>click + add pyment method=>
+    koi sa method click krky card detail enter krengy or continue or phir blace nazr a jayga 
+
+
+
+//
+account me 5 dolar minimum dalny lazmi hen open api key ke liye baqi 97 max he 

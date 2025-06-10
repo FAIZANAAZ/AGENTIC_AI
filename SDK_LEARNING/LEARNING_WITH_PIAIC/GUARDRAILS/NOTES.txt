@@ -1,0 +1,20 @@
+Gruardails*************
+
+ye ak agent hota he or ye user inputs ko rules sy guzarta he ismy hm roles of regulation dety hen yani osmy hm koch distruction lga det hen or agent ko de de dety 
+jesy hm bolengy ismy ke hn ye kam kr dena ya isy motalik koi bhi input ata he user ka oska ans krdena lekin 
+agr ye input ay to mt krna reply khna iska me answer nhi kr skta 
+
+example.....
+jesy hm bolengy ke nmae or email de dena kisi ka agr koi pochy lekin passward nhi dena  kisi ka 
+
+two types of Gruardails
+
+input  Gruardails***************
+sbsy phly wo input receive kryga user ka first input joke first agent ko hm dengy sbsy phy taky phly hi ye lely
+Gruardails ak  function he jb ye  run hoga or wrap hokr yani chop kr 
+wo  har input ko dekh kr osko os rules sy guzary ga agr wo sahi hoga to output dedega wrna tripwire_triggered yani reject krdega or except wala code run krdega
+
+output Gruardails
+ismy same wahi process hoga lekin is bar hm Gruardails last agent pr lgaygy taky out put jaty waqt bhi same process ho 
+
+

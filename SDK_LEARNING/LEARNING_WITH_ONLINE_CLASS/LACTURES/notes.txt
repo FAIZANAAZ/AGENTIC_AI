@@ -1,0 +1,98 @@
+agent ak kam krny wala band he
+llm oska dimag he 
+
+agents***************
+agent khod kam nhi krta wo llm ki madad sy hi kam kr skta he 
+system prompt
+user prompt
+tool
+tool message
+guardrail
+agent 
+
+
+llm******************
+agent llm ko sirf 4 chizwn leta he agentbsy osy zada nhi 
+
+system prompt
+user prompt
+tool schema (function structure)
+tool message
+
+agent me hm name instruction or model dety hen jismy name dena lazmi hota he wrna error ata he
+model wo by default 4o othayga or instruction wo khod otha leta he bu default
+///
+ismy hm ak or bhi property hm pas krty hen model setting = ModelSetting(temprature=0.1,max-token=1000)
+jb hm minimum temprature rakhengy to wo ak jesy 0.1 0.2 is trha to wo ak jesy ans kry ga mtlb hm hi bolengy to wo ans hello kreyga jitni bar hi bolengy
+jb hm temprature maximum rakhengy yani 0.7 0.8 ya 1 2 to wo har bar hi bolney pr ans diffrent dega 
+by default 0.7 thata he 
+
+max-token hm isi liye lgaty hen ke jisko hm ye use krny dy wo 1000 token sy zada use na kr sky
+
+
+
+/********************
+
+jb hm open ai ki jga gemini ki key ka use krty hen to wo openai not set ka error deta he 
+to hm set-tracing-disable=(disable=true ) krty hen to hmy esa koch bhi krny sy ye yad rkhna chiye ke wi by default false hoga tabhi hmny true kiya he 
+
+/*******************
+@function-toll decorater jo hota he wo auto uthata he shema or validation or error handling bhi wo khod krta he 
+lekin hm @function-toll(failair-error-function=None) kr  skty hen ke khod sy nhi kro orerrro handling or hm khod krlen jakr phir try catch sy 
+userprompt or sytem prompt ke ilawa harchiz as a tool hi jati he llm ke pas
+
+koi bhi agebt tool chose krny ke bad wo auto reset ho jata he yani again wo kr skta he koi dosra tool choise 
+/*******************
+lifesycle khht hen kisis chiz ke chalny ko jesy hmary agent ke chalny  ko ismy initializ yani start hona execute yani chalna wagera or terminate yani end hona 
+
+jb runner chalta he to Runnerhook chlta he isi trha jb Agent stat hota he to Agenthook chlta he 
+
+/*******************
+agent clone 
+hm agentname.clon() krky acities copy krkry use kr skty hen osmy sari chizen a jaygi phly agent ki or osmy agr hm koch change krna chahy to och bhi hm override kr skty hen 
+
+
+/*******************
+tool call with llm
+jbhm agent me ak funcstool pas krty hen to wo tool chalta he lekin oska anse  jata he llm ke pas wo osko agar thik nhi hoto thik krky ans krta he lekin tool call zaror hota he
+lekin hm agent me ak property use krengy tool_use_behsvior="stop_on_first_toll" isy ye hga ke wo tol ka jo return hoga wo sahi ho ya ghalat ans lekr wo stop ho jayga llm ke pas nhi jayga
+ya hm modelseting ki property dekr bhi osmy tool choise ko required kr skty hen 
+/*******************
+agnet ak tool ko call krky khod by defult rest kr deta he wrna tool ba bar chalta rhhyga
+lekin hm reset_tool_choice ko false krdy to wo chlta rhyga lekin 10 bar chalyga wo phir error dedega kioky osmy or or property hoty he max toll =10
+yani wo bs 10 bar chlta he hm osko 4  5 bhi kr skty hen
+/*******************
+stric_mood
+
+hm agr @function_toll(strick_mood=true)krdengy to agr osky nichy wlaa function 2 pramerter leta he or llm osko aagr 3 deny ki koshish  kryga to 
+strickkmood roky ga ke jitna manga he dta onta hi do
+
+name override
+hm agr @function_toll(name_overide="abc")
+krdengy to jo function ka name hoga wo overide ho jayga abc sy phir wo abc hi lega llm isi trha description_overide bhi de skty hen same 
+
+
+
+/*******************
+sdk ke pas functioltool() hota he TO hmisy bhi tool bna skty hen
+yani phly hm @functioltool sy bnaty hen 1 trika he
+2 tarikahe hm FunctionToll() sy bhi bna skty hen
+
+
+/*********************
+hm agr instruction nnhi dety agent ko towo by dafault otha leta he lekin agr dety hen to lazim he kr wo string ya function ho osky ilwa errror ayga
+/*********************
+jb bhi dynamic instruction ki bat ya alg alg information ki bat aygi to yani wha context ki bat hori hogi osi me hm info rkhty hen
+/*********************
+rest-tool-choise configure krta he  selection-tool ko tool call hony ke bad 
+/*********************
+jb bhi debuging ki bat hogi to tracing ki bat hogi
+/*********************
+handsoff me jo input-type hota he wo rest-agent ke liye hota he dosry agent ke liye yani wo reset krdeta he 
+/*********************
+recomended-prompt-predifine next agent ke liye instruction ko or easy understand bnata he modify krky
+/*********************
+.to-input-list me conversation history ati he jismy multiple history ko uniq id ke zariye manage krty hen 
+/*********************
+
+ lifecycle ke agent or runner hooks me  dono me phly Runner wlaa satrt hota he phir agent wala or end bhi isi trha phly runner wala phir agent wla 

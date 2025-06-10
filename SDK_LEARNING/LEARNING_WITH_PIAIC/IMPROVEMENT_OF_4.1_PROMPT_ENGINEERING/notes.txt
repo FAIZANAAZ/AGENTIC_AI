@@ -1,0 +1,45 @@
+prompt engineering llm sy bat krny ka ak tarika he
+
+
+4.1 lmm and agent bnnay ke liye kiya kiya zarorri he as prompt engineering************************
+llm 4.1
+ye non-reasoning model he
+context ki i million length he 4.1 me context yani dynamic insturctions dena agents ko
+4.1 backend ke liye bhut acha he
+ye ak reasoning model he
+llms mesbsy best 4.1 he 
+by defult open ai 4o  ka use krta he
+4.1 me 3 chizon ko update krky onho ne agent ko takriban 55% problem solving bna liya he jbky isy phly 25% tha
+phly sytem prompt yani """"""" me hm functions ki chzien likhty thy tools ki ke ye kiya kam krta he ab tool_description add kr diya jisy llm or acah kam krta he
+hm ak instruction agent ko start me dety hen or osi ko or achy sy krky end me bhi de dety hen taky osko or yad rhy
+4.1 dosry models sy 85% cheper he 
+ye paralel kam krta he step by step
+
+
+
+ye 3 chizen open ai 4,1 me ad hoi jo hmy bhi add krni chiye hmara agent bhut acha work kryga********
+
+1.Persistence
+persistence bnana yani agent jo bhi kam krta jay osko wo hstory me save krta jay or osko yad rkahy koi msla hoto wo user sy again
+pochle lekin phly ki chizen bhuly na sb yad rakh rakh kr agy brhy
+or chlta jay tb tk sahi user input solve na ho jay sahi sy 
+
+2.tool calling
+tool calling kobhut acha bna diya he phly kabhi kabhi esa hota tha ke kisi or jiska milta jholta kam ya name ho osko agent call kr deta tha
+lekin ab osko tool calling me bayan krty hen kb konsa use krna he or ab wo esa nhi krta 
+isko hm khty hen ke bee khod sy nhikro tool call krky kam kro
+
+3.plaining(chain of thought)
+yani jo kam kr liya osko or achy sy samj kr soch kr improve krna hr function call krny sy 
+phly plaining kro 
+planining krny sy 20% capability br jaygi
+lekin hm yha ye bhi khty hen kr sirf tool calling nhi kro khod ki ablity bhi use kro leki agr tool call sy ho skta he to wo kro phly 
+
+
+
+2 thra ke context hoty hen loacl context or llm context
+local context 
+ye hide hota he ye kabhi llm ko pass nhi hota ismy hm kisi bhi tool ya kisi bhi zariye data lakr context me save krty hen
+
+llm context
+ye llm ko pass hota he 

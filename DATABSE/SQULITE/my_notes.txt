@@ -1,0 +1,68 @@
+database ak memory he ***************
+squilte ko hm sqAlchamey/Dbeaver ke zariye dekhengy jakr store kiya hwoa he ye sb wagera wesy bhut sary hoty esy jisy hm dekh skty lekin hm iska use krty hen
+
+
+table *****************
+table rows and column sy bnta he 
+table ki surat me data store hota he hm bhut sy table create kr dkty hen k hi table me table jesy students ka teachers ka
+
+
+
+******SETUP
+open (https://sqlite.org/download.html)
+
+dawnload (sqlite-tools-win-x64-3490100.zip(6.12 MiB))
+
+extract file  After downloading, you'll receive a .zip file. Extract it to access the contents, which include the following file:
+sqlite3.exe
+
+ak folder bnaygy phir osko os folder me extrack krygy ya copy past jha hm kam kry hen sqlite ka
+
+
+phir hm wo code or kam krengy jo meny main.py me kiya wa he 
+
+
+
+
+
+##############################################$######################
+
+Dbeaver**********************
+
+store data ko dekhny ke liye hota he 
+install Dbeaver (https://dbeaver.io/download/)
+dawnload krna he ye wala version (`dbeaver-ce-25.0.0-x86_64-setup`)click on (Windows (installer)).
+ Run the installer and follow the setup steps:
+   - Select `English` for language.
+   - Accept the license agreement.
+   - Choose the installation type as `For Me`.
+   - create not shortcut pr click nhi krna he blky end me krna he create shortcut pr osy ye hoga ke desktop pr a jayga phit hm wha sy open krleny
+   - Select all installation options.
+   - Complete the installation.
+
+
+desktop sy open krny ke bad jo bhi ay sbko cencel krna he 
+
+phir osmy left side ke blkl orner pr ak icon ayga jis pr + bhi  hoga ospr click krnegy to bhut sary data base ke name a jaengy 
+
+phir wha sy squlite pr click krengy phir next krygy or location dengy hm os folder ko jha bnaya he database or osmy jo databse ke name sy file bnti he osko selet krna he ander ja jakr
+
+phir click on test connection =>click dawnlod =>ok =>again click on test connection (likha ayga connect)
+
+phir hmaray databse ke name sy ak file bn kr ay gi ospr click krna he phie osky bad => click on table =>right click on hamry jo table ka name tha => viw table
+
+osky bad oper sy data ke tan pr click krengy to data nazr a jayga jo dala tha 
+
+########################################
+
+oper ak sql likha hoga left pr ospr click krengy 
+hm yha sy bhi krskty hen code same wesy hi jesy file me kiya he lekin sirf quairy 
+example:
+      UPDATE students
+            SET name = 'kkk'
+            WHERE id = 3;
+
+ phir osi tab pr rirht click => execute => execute sl qury 
+ ak bar refresh krengy phir wo table sy bhi update ho jayga
+
+ khi pr bhi risht click krengy to refresh likha ayga sbsy end me wha sy refresh         
