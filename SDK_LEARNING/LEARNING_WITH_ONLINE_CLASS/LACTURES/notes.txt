@@ -11,6 +11,7 @@ guardrail
 agent 
 
 
+
 llm******************
 agent llm ko sirf 4 chizwn leta he agentbsy osy zada nhi 
 
@@ -96,3 +97,138 @@ recomended-prompt-predifine next agent ke liye instruction ko or easy understand
 /*********************
 
  lifecycle ke agent or runner hooks me  dono me phly Runner wlaa satrt hota he phir agent wala or end bhi isi trha phly runner wala phir agent wla 
+
+ ***********
+ In the context of prompt engineering, the primary function of a Large Language Model (LLM) is to predict the next token (word, character, etc.) 
+ based on the given input, enabling it to generate coherent and contextually relevant responses.
+
+ ***********
+ Jab temperature setting lower hoti hai (e.g., 0.1), to model ka output zyada deterministic aur predictable hota hai. Iska matlab hai
+  ke model zyada common aur likely words select karta hai, jisse response predictability badhti hai.
+
+***********
+Top-K sampling mein, model apni top K sab se zyada likely tokens ko select karta hai, aur phir un mein se ek token ko randomly 
+choose karta hai. Is se output mein randomness control hoti hai aur model sirf zyada probable tokens se hi choose karta hai.  
+**********
+
+Top-P sampling, ya nucleus sampling, mein model un tokens ko select karta hai jinka cumulative probability P tak pahuchta hai.
+ Iska matlab hai ke model random tokens ko choose karta hai jab tak unka combined probability P tak na pahuch jaye, jo zyada diverse aur natural output create
+  karta hai.
+***********
+In Vertex Studio, Top-K and Top-P are used together to filter the most likely tokens, and then the Temperature setting is applied to introduce randomness in the final selection from those filtered tokens.
+***********
+Temperature 0.2, Top-P 0.95, Top-K 30
+
+Yeh setting balanced output deti hai jisme creativity bhi hoti hai aur coherence bhi. Low temperature (0.2) 
+se zyada predictable output milta hai, lekin Top-P aur Top-K se randomness bhi add hoti hai, jo creative aur diverse results generate karti hai.
+
+***********
+Zero-shot prompting involves giving the model a task or query without providing any examples. The model is expected to generate
+ a response based on its understanding of the task from the description alone.
+
+*******
+In few-shot prompting, multiple examples are provided to the model. These examples help guide the model in understanding the task and 
+generating a more accurate and relevant response based on the patterns in the provided examples.
+
+**********
+Step-back prompting mein model ko pehle ek general sawal ya concept ke bare mein sochne ko kaha jata hai, 
+phir wo specific problem ko solve karta hai. Is technique se model broader context ko samajh kar task ko systematically approach karta hai.
+
+*******
+Chain of Thought (CoT) prompting model ko encourage karta hai ke wo intermediate reasoning steps generate kare,
+ taakay wo complex problems ko chhote aur manageable steps mein tod ke sahi jawab de sake. Is se model ka response zyada accurate aur clear hota hai.
+
+ *********
+ Tree of Thoughts technique sampling aur majority voting ka combination use karta hai, jisme multiple reasoning paths generate kiye jate hain. 
+ Isme different paths ko explore kiya jata hai, aur phir unme se sab se zyada consistent ya correct path ko select kiya jata hai.
+
+*********
+Reason and Act
+
+ReAct technique mein, model pehle reasoning karta hai aur phir action leta hai. Iska matlab hai ke model apne thoughts ko logically 
+step by step explain karta hai aur phir uske baad wo appropriate action perform karta hai.
+
+************
+Automatic Prompt Engineering mein LLM ko use karke prompts ko automatically generate aur evaluate kiya jata hai. Is technique se model apne 
+ prompts ko refine karta hai taake best possible output mil sake
+
+*********
+Renaming files with a Bash script
+
+Yeh ek aisa task hai jisme aap model se code likhne ka kehte ho. Misal ke taur pe, aap model se keh rahe ho ke "Bash script likho jo files ka naam badal sake." Yeh ek code-related task hai.
+
+************
+Gemini models mein temperature setting randomness ko control karti hai. Jab temperature ko 0.1 par set kiya jata hai,
+
+*********
+Code prompting mein code ko explain karne ka maqsad yeh hota hai ke aap existing code ko samajh sakein aur uska documentation kar sakein. 
+Is se code ko behtar tareeqe se samjha ja sakta hai aur future development ke liye clarity milti hai.
+
+*********
+Code translation example mein, original language Bash thi aur target language Python thi. Yani ke, Bash code ko Python mein translate karna tha.
+******
+Debugging example mein logical error identify kiya gaya tha. Iska matlab hai ke code syntactically sahi tha lekin wo
+ apne expected result ko produce nahi kar raha tha, jo usually algorithmic ya logical mistakes ki wajah se hota hai.
+**********
+Broken Python script mein suggested improvement yeh thi ke 'upper()' method ko use kiya jaye 'toUpperCase' ki jagah, kyunki 
+'toUpperCase' Java mein use hota hai, aur Python mein 'upper()' method sahi hai.
+**********  
+Multimodal prompting mein multiple input formats ko use kiya jata hai, jaise ke text, images, aur audio. Iska matlab hai ke model 
+ek se zyada tareeqon se input ko samajhne aur process karne ke liye trained hota hai.
+**********
+Prompts mein instructions aur constraints dono ka istemal zaroori hota hai. Instructions model ko task ka clear idea deti hain,
+ jabke constraints us task ko specific limitations aur boundaries mein rakhti hain. Dono ka istemal milke model ko precise aur relevant response dene mein madad karta hai.
+ **********
+ Few-shot prompting mein classes ko mix karna is liye zaroori hota hai taake model kisi specific sequence ya pattern ko overfit na kar jaye. Agar classes ko 
+ mix nahi kiya jata, to model ek fixed order ya pattern ke liye optimize ho sakta hai, jo ke generalization ko affect karta hai.
+ *************
+ Non-creative tasks ke liye structured formats jaise JSON ya XML recommended hote hain, kyunki yeh output ko clearly define karte hain
+  aur machine ke liye process karna asaan banate hain.
+  *************
+  JSON repair ka istemal incomplete ya malformed JSON outputs ko theek karne ke liye kiya jata hai. 
+  Yeh process JSON data ko valid aur structured format mein convert karta hai, taake wo correctly parse aur use ho sake.
+  *************
+Prompt attempts ko document karne ka maqsad yeh hota hai ke aap apne prompts ko track kar sakein aur unhein iteratively refine kar sakein. 
+Isse aap dekh sakte hain ke kis prompt ne kaise perform kiya aur uss ke base par improvements kar sakte hain.
+*************
+APE mein generated prompts ko LLM khud evaluate karta hai. Model apne output ko analyze kar ke yeh decide karta hai ke kaunsa prompt 
+best perform karega, jisme quality aur relevance ko consider kiya jata hai.
+*************
+PDF ka author Lee Boonstra hai, jo Google mein Senior Developer Advocate ke taur par kaam karte hain. Unhone "Prompt Engineering" 
+whitepaper likha hai, jo large language models (LLMs) ke saath effective interaction ke liye prompt crafting techniques ko detail mein samjhata ha AND PUBLISH JANUARY 2024 with 68 pages
+*************
+handoof_filter.remove_all_tool 
+ye tamal tools call ko remove krdeta he conversation history sy 
+*************
+
+guardrail function guardrailFunctionOutput return krta he 
+
+************
+functiontoolka schema inspect ka module lekr ata he 
+************
+llm apny code ko codeinterpretertool me run krky sandbox evornment me bhejta he 
+************
+
+hm by default trace prosecer ko hta kr set_trace_processerlga skty hen oroskaname agent trace hoga 
+agr osi ke sath add krna hoto add_trace_processer
+
+************
+sary runner trace me wrap hoty hen 
+************
+khod sy error  jo hm rase ya retry kty hen to modlretry sy wo aata he impot hokr 
+************
+jb koi handoff function invoke hpga tb on_handoff function execute hoga
+************
+
+FunctionTool ki class me hm sara code parameter params_json_schema ke zariye jeson me convert krty hen 
+************
+
+RUNCONTEXTWRAPER ak type he jo apny ander system prompt function ko or dependencies ko rkhta he
+************
+ctx.retry_count retry count krt he kitny bar retry howa he 
+************
+
+# isko minimum 2 token chiye hoty hen or max 10 1me ye nhi kr payga handle 
+)
+
+
