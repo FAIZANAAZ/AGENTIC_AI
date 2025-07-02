@@ -229,6 +229,11 @@ ctx.retry_count retry count krt he kitny bar retry howa he
 ************
 
 # isko minimum 2 token chiye hoty hen or max 10 1me ye nhi kr payga handle 
-)
+************
 
-
+sdk ki 3 main primitive types hoti hen 1=Agent 2=handoff 3=guardrail
+************
+llm hmy bs 2 chizen bhej skta he ak plain text joky markdown structure me hoga or dosra konsa tool call krna he wo 
+************
+hmy debuging ko on rkhna choye hmy isy ak tracing id bhi milti he
+************
