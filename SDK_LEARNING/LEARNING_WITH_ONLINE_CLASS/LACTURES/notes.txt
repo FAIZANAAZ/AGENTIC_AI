@@ -237,3 +237,17 @@ llm hmy bs 2 chizen bhej skta he ak plain text joky markdown structure me hoga o
 ************
 hmy debuging ko on rkhna choye hmy isy ak tracing id bhi milti he
 ************
+StopAtToll(use_at_tool_name=abs)
+ye abs ko use krny ke bad puse krdyga yani rok dega pgir again nhi call nhi hoga llm 
+************
+max turn hmesha runner me pas hoga 
+************
+agr hmny tool_choice ko bhi krdiya required or reset_tool_choice ko krdiya false yani wo reset na kry to wo infinite ho jayga or hmny max turn ko 2  3 krdiya itni km to wo errro a jayga phir 
+************
+tool_use_behsvior by default hota he runn_llm_again or peraleel_tool_call True hota he
+************
+peraleel_tool_call ko agr hm false krdengy to wo phly ak ko run kryga phir oska ans dega phir 
+dosra agr zarorat hoto oska response yani sb tolls ko call krny ke bad response nhi dega 
+************
+dynamic insturection me hmara phla preameter hmesha hi ctx hoga or 2 agent agy pichy nhi ho skty
+ ye agr kiye to wo error nhi dega lekin wo phly waly ko as a context hi consider kryga or agent or 2 wala 
