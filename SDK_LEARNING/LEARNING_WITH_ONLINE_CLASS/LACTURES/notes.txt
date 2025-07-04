@@ -251,3 +251,37 @@ dosra agr zarorat hoto oska response yani sb tolls ko call krny ke bad response 
 ************
 dynamic insturection me hmara phla preameter hmesha hi ctx hoga or 2 agent agy pichy nhi ho skty
  ye agr kiye to wo error nhi dega lekin wo phly waly ko as a context hi consider kryga or agent or 2 wala 
+
+**********
+name ak position argument he name ka perameter hmesha str leta he ya function lekin function ka lena zarori he isky ilawa kch bhidengy wo error nhi dyga wahi set bhi ho jayga nme me 
+lekin nichy soft wornging a jaygi ke apny schema ko follow nui kiya error invaled ayga 
+**********
+data type ko change krny ko sirialization khty hen 
+**********
+instraction ye bhi ak position argument he is  me hm str ,callable yani dynamic instraction jo function bna kr dety hen or none de kty hen 
+or instruction me hm agr fuction pas krty hen to osko chalaty nhi hen wo osko khod chalata he callable hota he
+hm instruction ho openai me dekhny ke ilawabhi dekh skty hen easy
+
+async def func():
+ context=RunContextRaper(context="ww")
+ instruction= await agent.get_system_prompt(context)
+ print(instraction)
+ is trha kioky instruction ko hm system prompthi khtyhen
+
+**********
+callable mean function or wo sync bhi ho skta he or async bhi 
+***********
+runner me jo context as hota he actua me context start hi wha sy hota he 
+**********
+hm jb koi function instruction me pas krty hen wo osky perameter ko phly waly runcontextwraper or dosry ko agent hi lega bhly hm oski type na dy runcontextwraper
+hm ctx.context krengy to hmy wahi value mily gi jo hm runner me context="faiza" pas krengy to faiza milyga 
+
+**********
+ak prompmt ka option hmary pas openai ke dashbord pr hota he jismy gr hm koi prompt den to osko hm otha skty hen apny code me instruction ki jga prmpt lg kr
+prompt{"id_823803"}
+wha jb hm lgaygy prompt yha id deni hogi hmy wo dega hmy khod prompt dalny ke bad
+**********
+
+
+
+
