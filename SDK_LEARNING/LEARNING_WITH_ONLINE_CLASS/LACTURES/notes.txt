@@ -240,7 +240,7 @@ hmy debuging ko on rkhna choye hmy isy ak tracing id bhi milti he
 StopAtToll(use_at_tool_name=abs)
 ye abs ko use krny ke bad puse krdyga yani rok dega pgir again nhi call nhi hoga llm 
 ************
-max turn hmesha runner me pas hoga 
+max turn hmesha runner me pas hoga or tools me minimum 2 turn lazim chiye hota he jbky normaly 1 chiye hita he 
 ************
 agr hmny tool_choice ko bhi krdiya required or reset_tool_choice ko krdiya false yani wo reset na kry to wo infinite ho jayga or hmny max turn ko 2  3 krdiya itni km to wo errro a jayga phir 
 ************
@@ -281,7 +281,25 @@ ak prompmt ka option hmary pas openai ke dashbord pr hota he jismy gr hm koi pro
 prompt{"id_823803"}
 wha jb hm lgaygy prompt yha id deni hogi hmy wo dega hmy khod prompt dalny ke bad
 **********
+enable_verbose_stdout_logging() sy hm local tracing on kr skty hen yani vs code pr terminal me hi debug kr skty hen jo ke openai ke dashbord prdikhta he 
+**********
+toll_message return hota he function ka jo wo dosri dfa lekr ata he  next  trun me 
+***********
+handoff_description me hm jo bhi dalkr chala den wo osy string bna deta he 
+************
+handoff ak method he or Handoff ak class he jo hm sdk sy import krty hen lekin ye wo waly nhi hen jo hm agent me pass krty hen kioky osy hm import nhi krty 
+handoff ka jo ye method he wo eturn krta he Handoff ki class ko 
+hm is method ka use isi liye krty hen ke hm agr koi agent bna howa he osmy jitni chizen hen osko override krny ke liye  kisi bny bnay agent ko lekin wo wala agent jisko hmny hands off me pas kiya howa he 
 
+abc=handoff(
+  agent"phly sy bna agent ka name taky pta lgy kisko override kren hen"
+  yaha wo proprty aygi jisko override krna he )
+  ismy ak proerty hoty he input_filter jisy hm koch bhi remove kr skty hen jesy 
+
+  input_filter =handoff_filter.remove_all_tool isy jb agent dosry angent ko koch bhi handoff kryga to tools remove krky kryga jo osny use kiye hongy 
+
+
+********
 
 
 
