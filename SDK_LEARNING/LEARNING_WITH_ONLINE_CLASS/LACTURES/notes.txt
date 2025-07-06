@@ -296,10 +296,12 @@ abc=handoff(
   yaha wo proprty aygi jisko override krna he )
   ismy ak proerty hoty he input_filter jisy hm koch bhi remove kr skty hen jesy 
 
-  input_filter =handoff_filter.remove_all_tool isy jb agent dosry angent ko koch bhi handoff kryga to tools remove krky kryga jo osny use kiye hongy 
+  input_filter =handoff_filter.remove_all_tool 
+    #ye conversation history sy tool CALL ki info ko or isky output ko remove krdyga lekin tool ko remove nhi kryga kioky wo builtin hota he ahr agent ka 
 
+from agents.extensions import handoff_filter 
+or handoff agent sy import hoga
 
 ********
-
-
-
+span***
+ye histroy of record hota he tracing ka 
