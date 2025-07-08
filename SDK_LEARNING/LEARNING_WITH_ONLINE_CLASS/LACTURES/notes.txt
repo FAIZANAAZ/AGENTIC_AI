@@ -27,11 +27,37 @@ ismy hm ak or bhi property hm pas krty hen model setting = ModelSetting(tempratu
 jb hm minimum temprature rakhengy to wo ak jesy 0.1 0.2 is trha to wo ak jesy ans kry ga mtlb hm hi bolengy to wo ans hello kreyga jitni bar hi bolengy
 jb hm temprature maximum rakhengy yani 0.7 0.8 ya 1 2 to wo har bar hi bolney pr ans diffrent dega 
 by default 0.7 thata he 
+2 iska max value he or 0 minimum
 
 max-token hm isi liye lgaty hen ke jisko hm ye use krny dy wo 1000 token sy zada use na kr sky
 
 
 
+/********************
+toll_choice
+ye by dafalut auto hota he yani chalta rhta he or by default value na hoti he yani na bhi to to chal jayga 
+agr isko hm "none" krdengy to wo nhi kryga use or requied krdengy to lazmi chalyga 
+or auto me oski mrzi he chly ya nhi 
+or agr ksis tool ka anme deden to phir wo osi ko chlayga bhly ga or agr swal os tool ke motabik na hoto wo dosra tool bhi chalalyga kioky osko bs ye pta he hn ye wla krna he jiska nmae diya he use hony bad tool reset ho jata he phir wo sawal ke motabik dosra tool bhi chalaega 
+lekin agr hm None ye wala krdengy tb wo auto hoga yani chalalo ya nhi marzi he
+toll use krny ke bad wo reset krdyga tool ko 
+
+/********************
+paralel_toll_call
+ye bhi by default None value leta he or behaviour wo true hota he
+iska matlb bhly zarorat ho ya na ho sary tools ko call kro 
+agr iskofalse krdengy to ye nhi chalyga 
+
+/********************
+truncation
+
+/********************
+
+input truncation**
+ye conversation history ko hort krta he
+/********************
+output truncation
+ye max_token hi hota he yani zada token to zada words ka ans
 /********************
 
 jb hm open ai ki jga gemini ki key ka use krty hen to wo openai not set ka error deta he 
@@ -57,9 +83,10 @@ hm agentname.clon() krky acities copy krkry use kr skty hen osmy sari chizen a j
 tool call with llm
 jbhm agent me ak funcstool pas krty hen to wo tool chalta he lekin oska anse  jata he llm ke pas wo osko agar thik nhi hoto thik krky ans krta he lekin tool call zaror hota he
 lekin hm agent me ak property use krengy tool_use_behsvior="stop_on_first_toll" isy ye hga ke wo tol ka jo return hoga wo sahi ho ya ghalat ans lekr wo stop ho jayga llm ke pas nhi jayga
-ya hm modelseting ki property dekr bhi osmy tool choise ko required kr skty hen 
+ya hm modelseting ki property dekr bhi osmy tool choise ko required kr skty hen
+
 /*******************
-agnet ak tool ko call krky khod by defult rest kr deta he wrna tool ba bar chalta rhhyga
+agnet ak tool ko call krky khod by defult rest kr deta he wrna tool bar bar chalta rhhyga
 lekin hm reset_tool_choice ko false krdy to wo chlta rhyga lekin 10 bar chalyga wo phir error dedega kioky osmy or or property hoty he max toll =10
 yani wo bs 10 bar chlta he hm osko 4  5 bhi kr skty hen
 /*******************
@@ -102,25 +129,53 @@ recomended-prompt-predifine next agent ke liye instruction ko or easy understand
  In the context of prompt engineering, the primary function of a Large Language Model (LLM) is to predict the next token (word, character, etc.) 
  based on the given input, enabling it to generate coherent and contextually relevant responses.
 
+
+
+////////////////////////////////
+
+
+*******
+modelseting
+ye llm ko call krty time ki seting hoti he ismy jitni bhi properties hoty hen oski by default value none hoti he 
  ***********
  Jab temperature setting lower hoti hai (e.g., 0.1), to model ka output zyada deterministic aur predictable hota hai. Iska matlab hai
   ke model zyada common aur likely words select karta hai, jisse response predictability badhti hai.
 
 ***********
 Top-K sampling mein, model apni top K sab se zyada likely tokens ko select karta hai, aur phir un mein se ek token ko randomly 
-choose karta hai. Is se output mein randomness control hoti hai aur model sirf zyada probable tokens se hi choose karta hai.  
+choose karta hai. Is se output mein randomness control hoti hai aur model sirf zyada probable tokens se hi choose karta hai.
+
+
 **********
 
 Top-P sampling, ya nucleus sampling, mein model un tokens ko select karta hai jinka cumulative probability P tak pahuchta hai.
  Iska matlab hai ke model random tokens ko choose karta hai jab tak unka combined probability P tak na pahuch jaye, jo zyada diverse aur natural output create
   karta hai.
+
+ye zada sy zada probaly wali chizoen ko otha he ismy har word ki ak probablity hoti he number me agr hm ismy set krty hen 0.8 yani 80 0.1 yani 100
+or agr kisi word ki probablity 80 he to wo foran sy osko otha lega lekina agr nhi he to wo 2 word ko lega jesy ak ki 50 ak ki 30 h0 dono mila kr 80 bnata he
+phir on dono me sy kisi bhi ak ko random otha lega 
+
 ***********
 In Vertex Studio, Top-K and Top-P are used together to filter the most likely tokens, and then the Temperature setting is applied to introduce randomness in the final selection from those filtered tokens.
 ***********
+
 Temperature 0.2, Top-P 0.95, Top-K 30
 
 Yeh setting balanced output deti hai jisme creativity bhi hoti hai aur coherence bhi. Low temperature (0.2) 
 se zyada predictable output milta hai, lekin Top-P aur Top-K se randomness bhi add hoti hai, jo creative aur diverse results generate karti hai.
+
+***********
+frequantly_panalty
+-0.2 sy 0.2 tk hi isko kr skty hen
+ismy ye hota he ke agr hm 0 sy agr hm 0.2 tk agr set krengy to koi agr esa word he jo bar bar ara he ans me bar bar to wo osko bar bar nhi layga different layga ye zada creativity hogi 
+agr - 0 sy -0.2 me rakhenngy to wo phir repeat kryga
+***********
+presence_panalty
+ye bhi same he lekin ismy word ki jga wo sentence/topic ko repeate nhi kryga or - me kryga 
+
+***********
+
 
 ***********
 Zero-shot prompting involves giving the model a task or query without providing any examples. The model is expected to generate
@@ -241,7 +296,10 @@ StopAtToll(use_at_tool_name=abs)
 ye abs ko use krny ke bad puse krdyga yani rok dega pgir again nhi call nhi hoga llm 
 ************
 max turn hmesha runner me pas hoga or tools me minimum 2 turn lazim chiye hota he jbky normaly 1 chiye hita he 
+
 ************
+************
+
 agr hmny tool_choice ko bhi krdiya required or reset_tool_choice ko krdiya false yani wo reset na kry to wo infinite ho jayga or hmny max turn ko 2  3 krdiya itni km to wo errro a jayga phir 
 ************
 tool_use_behsvior by default hota he runn_llm_again or peraleel_tool_call True hota he
@@ -288,20 +346,38 @@ toll_message return hota he function ka jo wo dosri dfa lekr ata he  next  trun 
 handoff_description me hm jo bhi dalkr chala den wo osy string bna deta he 
 ************
 handoff ak method he or Handoff ak class he jo hm sdk sy import krty hen lekin ye wo waly nhi hen jo hm agent me pass krty hen kioky osy hm import nhi krty 
-handoff ka jo ye method he wo eturn krta he Handoff ki class ko 
+handoff ka jo ye method he wo return krta he Handoff ki class ko 
 hm is method ka use isi liye krty hen ke hm agr koi agent bna howa he osmy jitni chizen hen osko override krny ke liye  kisi bny bnay agent ko lekin wo wala agent jisko hmny hands off me pas kiya howa he 
 
-abc=handoff(
-  agent"phly sy bna agent ka name taky pta lgy kisko override kren hen"
-  yaha wo proprty aygi jisko override krna he )
-  ismy ak proerty hoty he input_filter jisy hm koch bhi remove kr skty hen jesy 
+handoff propertis
+1 agent = ye os agent ka name jis pr hm apply kren hen handoff
+2 tool_name_overide = ye os agent ke name ko overide krny ke liye
+3 tool_description_overide = ye description ko overide krny ke liye 
+4 input_filter= ye history me sy toll call or osky outputko remove krdyga lekin streaming me wo filter out nhi krta kioky wo by default hota he streaming
+5 is_enable= ye handoff mita dega or os agent ko hi mita dega or ye callable bhi ho skta he callable ka matlb he function dena but call na krna wo khod auto call kryga
 
-  input_filter =handoff_filter.remove_all_tool 
-    #ye conversation history sy tool CALL ki info ko or isky output ko remove krdyga lekin tool ko remove nhi kryga kioky wo builtin hota he ahr agent ka 
+**********
+Handoff class
+ Handoff(
+    agent_name=yha agent ka name ayga jispr hm ye lgary hen
+    tool_name=yha hm os agent ke name ko overide kr skty hen
+    tool_description=YHA hm os agent ke description ko overide kr skty hen
+    input_filter=yha hm os agent ke history me sy toll call or osky output ko remove kr skty hen
+    input_json_schema=ye schema leta he yani jb hm jb handoff kryga agent  is waly agent ko to wo input sturcture krky osko handeoff ka kam btayga 
+    on_invoke_handoff= ye jb call hota he tb handsoff invote hota he or ye resturn krta he Agent ko or ye async hota he ye hmesha callablehota he or isky schema ko  input jeson schema sy validate kiya jata he 
+    is_enabled=ye handeoff mita dega or os agent ko hi mita dega or ye callable bhi ho skta he callable ka matlb he function dena but call na krna wo khod auto call kryga
 
-from agents.extensions import handoff_filter 
-or handoff agent sy import hoga
+    )
 
+ismy on_invoke_handoff oe is_snable required position perameter hen 
+    default_toll_name = ye hota he agr hm handsoff waly  agent ka name nhi dety to wo by default rakh deta he 
+    default_tool_description=ismy description na den o wo khod rakhlega ak string return krta he 
 ********
 span***
 ye histroy of record hota he tracing ka 
+
+*********
+get_transfer_message(agent,"kkkk")
+ye hanodd ya class Handoff jis varible me save hoga ospr lgta he . krky ye ak agent leta he 
+ye bs ak message he agr hmy handoff krty waqt koch sms dena he to hm ismy de dengy
+********
