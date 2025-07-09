@@ -47,9 +47,31 @@ agent =Agent(
         # iska matlb bhly zarorat ho ya na ho sary tools ko call kro 
         # agr iskofalse krdengy to ye nhi chalyga 
         
-    )
-)
-# isko agr run krengy to ismy abhi error ayga kioy ye ak sath nhi use hoti kochapas me conflict kr jati henye bhi same he lekin ismy word ki jga wo sentence/topic ko repeate nhi kryga or - me kryga 
+        truncation="auto",
+        #    ye convesation history ko ccontrol krta he input ka context window yani 1 million words hon bs or output yani max_token 
+        # agr ye auto hoga to wo khod manage kryga agr limit sy cros kr jay ya koch bhi agr disable rakhengy to wo limit cros krny pr error de dega
+        reasoning={ "efforts": "high" },
+        # ye experamental parameter khlata he model seting ka
+        # kioky 4.1 reasing model nhi he agr is trh aka model use krengy to phir wo error use kryga kioky wo reasing support nhi krta
+        # agr task simple heto hm set krengy low agr normal heto midium agr complex heto high
+        ),
+        metadata={
+            "name":"faiza",
+            "class":"223"
+        },
+        #    ismy hm koch bhi deta ak oobject me  rkh skty hen key value me lekin ye data llm ko nhi jata na hi history me ata he
+        store=False,
+        # ye by default value none hoti he behaveiaur true hota he
+        # ismy ye hota he agr hm isko false krden to iska my jitna kam hm krengy koi response to wo open ai ke server pr nhi trace hoga
+        # iska ye faida he ke hm kisi client ke liye application bnaygy to hm osko khengy ke apka dta openai ke server pr bhi nhi jayga to leek nhi hoga
+        include_usage=True
+        # 
+        
+        )
+        # isko agr run krengy to ismy abhi error ayga kioy ye ak sath nhi use hoti kochapas me conflict kr jati henye bhi same he lekin ismy word ki jga wo sentence/topic ko repeate nhi kryga or - me kryga 
+        #agr hmy isy dehna hoto hm result._last_agent.model_settingd.metadata
+        #ye runner wala result he jismy ans ata he runner ka agent ke 
+        # ye debuging me kam ata he 
 
 # ***********************************************************
 

@@ -29,36 +29,7 @@ jb hm temprature maximum rakhengy yani 0.7 0.8 ya 1 2 to wo har bar hi bolney pr
 by default 0.7 thata he 
 2 iska max value he or 0 minimum
 
-max-token hm isi liye lgaty hen ke jisko hm ye use krny dy wo 1000 token sy zada use na kr sky
-
-
-
-/********************
-toll_choice
-ye by dafalut auto hota he yani chalta rhta he or by default value na hoti he yani na bhi to to chal jayga 
-agr isko hm "none" krdengy to wo nhi kryga use or requied krdengy to lazmi chalyga 
-or auto me oski mrzi he chly ya nhi 
-or agr ksis tool ka anme deden to phir wo osi ko chlayga bhly ga or agr swal os tool ke motabik na hoto wo dosra tool bhi chalalyga kioky osko bs ye pta he hn ye wla krna he jiska nmae diya he use hony bad tool reset ho jata he phir wo sawal ke motabik dosra tool bhi chalaega 
-lekin agr hm None ye wala krdengy tb wo auto hoga yani chalalo ya nhi marzi he
-toll use krny ke bad wo reset krdyga tool ko 
-
-/********************
-paralel_toll_call
-ye bhi by default None value leta he or behaviour wo true hota he
-iska matlb bhly zarorat ho ya na ho sary tools ko call kro 
-agr iskofalse krdengy to ye nhi chalyga 
-
-/********************
-truncation
-
-/********************
-
-input truncation**
-ye conversation history ko hort krta he
-/********************
-output truncation
-ye max_token hi hota he yani zada token to zada words ka ans
-/********************
+************
 
 jb hm open ai ki jga gemini ki key ka use krty hen to wo openai not set ka error deta he 
 to hm set-tracing-disable=(disable=true ) krty hen to hmy esa koch bhi krny sy ye yad rkhna chiye ke wi by default false hoga tabhi hmny true kiya he 
@@ -166,6 +137,65 @@ Yeh setting balanced output deti hai jisme creativity bhi hoti hai aur coherence
 se zyada predictable output milta hai, lekin Top-P aur Top-K se randomness bhi add hoti hai, jo creative aur diverse results generate karti hai.
 
 ***********
+
+max-token
+isko hmy minimum 16 dena he kam krny ke liye wrna wo 400 ka error dega 
+jitni token dengy wo otna ans lakr dega baqi at dega yani agr hm khty hen ke 100 lines ki story likho jismy 18 token use hoty hen or hmny 1 diye hen to wo error nhi dega
+blky story 100 lines ki nhi layga 80 90 line pr rok dega
+
+/********************
+toll_choice
+ye by dafalut auto hota he yani chalta rhta he or by default value na hoti he yani na bhi to to chal jayga 
+agr isko hm "none" krdengy to wo nhi kryga use or requied krdengy to lazmi chalyga 
+or auto me oski mrzi he chly ya nhi 
+or agr ksis tool ka anme deden to phir wo osi ko chlayga bhly ga or agr swal os tool ke motabik na hoto wo dosra tool bhi chalalyga kioky osko bs ye pta he hn ye wla krna he jiska nmae diya he use hony bad tool reset ho jata he phir wo sawal ke motabik dosra tool bhi chalaega 
+lekin agr hm None ye wala krdengy tb wo auto hoga yani chalalo ya nhi marzi he
+toll use krny ke bad wo reset krdyga tool ko 
+
+/********************
+paralel_toll_call
+ye bhi by default None value leta he or behaviour wo true hota he
+iska matlb bhly zarorat ho ya na ho sary tools ko call kro 
+agr iskofalse krdengy to ye nhi chalyga 
+
+/********************
+truncation
+
+input truncation/context window
+ye conversation history ko handle r=krta he yani ye context widow he ak trha sy jesy 1 miliun sy zada nhi de skty words hm ye wahi he
+agr isko hm auto rakhengy to agr words 1 milins sy zada hen to wo isko khod handle kryga or start or end ki history rakhenga baqi bich ki mita dega
+agr hm isko disable rakhngy to wo esa nhi kryga or 1 lion sy zada hoga to wo error de dega  
+by default ye autoh hota he
+
+
+output truncation/max token
+ye max_token hi hota he yani zada token to zada words ka ans
+/********************
+reasoning={ "efforts"="high" },
+        # ye experamental parameter khlata he model seting ka
+        # kioky 4.1 reasing model nhi he agr is trh aka model use krengy to phir wo error use kryga kioky wo reasing support nhi krta
+        # agr task simple heto hm set krengy low agr normal heto midium agr complex heto high
+/********************
+ metadata={
+           "name":"faiza",
+           "class":"223"
+       }
+    #    ismy hm koch bhi deta ak oobject me  rkh skty hen key value me lekin ye data llm ko nhi jata na hi history me ata he
+    #agr hmy isy dehna hoto hm result._last_agent.model_settingd.metadata
+    #ye runner wala result he jismy ans ata he runner ka agent ke 
+/********************
+store=False
+        # ye by default value none hoti he behaveiaur true hota he
+        # ismy ye hota he agr hm isko false krden to iska my jitna kam hm krengy koi response to wo open ai ke server pr nhi trace hoga
+        # iska ye faida he ke hm kisi client ke liye application bnaygy to hm osko khengy ke apka dta openai ke server pr bhi nhi jayga to leek nhi hoga
+        
+/********************
+
+
+
+
+
+
 frequantly_panalty
 -0.2 sy 0.2 tk hi isko kr skty hen
 ismy ye hota he ke agr hm 0 sy agr hm 0.2 tk agr set krengy to koi agr esa word he jo bar bar ara he ans me bar bar to wo osko bar bar nhi layga different layga ye zada creativity hogi 
@@ -381,3 +411,8 @@ get_transfer_message(agent,"kkkk")
 ye hanodd ya class Handoff jis varible me save hoga ospr lgta he . krky ye ak agent leta he 
 ye bs ak message he agr hmy handoff krty waqt koch sms dena he to hm ismy de dengy
 ********
+
+*********
+sdk me dny waly input context window khlata he or 1 milion iski tadat he  isy zada words nhi leta
+or output me max token sy hm handle krengy 
+***********
