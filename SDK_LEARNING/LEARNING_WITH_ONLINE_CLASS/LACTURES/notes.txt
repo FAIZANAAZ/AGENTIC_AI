@@ -190,10 +190,24 @@ store=False
         # iska ye faida he ke hm kisi client ke liye application bnaygy to hm osko khengy ke apka dta openai ke server pr bhi nhi jayga to leek nhi hoga
         
 /********************
+include_usage=True
+        # ye tokens kitny howy hen use osko dikhany or chopany ka kam krta he 
+        # by defaault value None hoti he
+
+/*********************
+base=ModelSettings(temperature=0.7)
+overide=ModelSettings(temperature=0.3)
+final_setting=base.resolve(overide)
+# base ko hmny overide krdiya 0.7 sy isko hm pas krdengy nichy bhi
+
+ model_setting2=final_setting,
+    # ismy ye hoga ke yha 2 modelsetings bnai hen hmny final_setting me osmy wo same chizen hongi to osko overide waly sy overide krky osko othayga
+    # or jo differnt hongi wo sb ko ak model seting me rakh kr combine krdega         
 
 
-
-
+/*********************
+.to_jesn_dics
+agr kisi bhi chiz ko hm jeson sy dictionary me krky dekhna chahty hen to ye lgaygy
 
 
 frequantly_panalty
@@ -205,7 +219,7 @@ presence_panalty
 ye bhi same he lekin ismy word ki jga wo sentence/topic ko repeate nhi kryga or - me kryga 
 
 ***********
-
+///////////////////////
 
 ***********
 Zero-shot prompting involves giving the model a task or query without providing any examples. The model is expected to generate
@@ -416,3 +430,16 @@ ye bs ak message he agr hmy handoff krty waqt koch sms dena he to hm ismy de den
 sdk me dny waly input context window khlata he or 1 milion iski tadat he  isy zada words nhi leta
 or output me max token sy hm handle krengy 
 ***********
+
+/////////////////////////
+Tools
+
+/////////////////////////
+dataclass me ak defaault hoga he jo bhi set krengy osky pera meter me @dataclass ka decorater lga kr wo default value hogi 
+or ak hita he default_factory jiska matlb eamty 
+
+/////////////////////////
+input_grardial
+ ye pralel chalta he yani  main agent ke sath sath hi chal jata h bad me nhi 
+ ye input guardrail ki class sy list leta he wrna ye emty list leta he jesy iski default_factory  set hoti he 
+ guadrailFunctionoutput ko return krta he 

@@ -14,11 +14,20 @@ enable_verbose_stdout_logging()
 
 load_dotenv()  # Load environment variables from .env file
 
+# *****
+base=ModelSettings(temperature=0.7)
+overide=ModelSettings(temperature=0.3)
+final_setting=base.resolve(overide)
+# base ko hmny overide krdiya 0.7 sy isko hm pas krdengy nichy bhi
+
 
 agent =Agent(
     model="gpt-4.1-mini",
     name="triage agent",
     instructions="you are a helpful agents.",
+    model_setting2=final_setting,
+    # ismy ye hoga ke yha 2 modelsetings bnai hen hmny final_setting me osmy wo same chizen hongi to osko overide waly sy overide krky osko othayga
+    # or jo differnt hongi wo sb ko ak model seting me rakh kr combine krdega 
     model_settings=ModelSettings(
         temperature=0.1,
         # jb hm minimum temprature rakhengy to wo ak jesy 0.1 0.2 is trha to wo ak jesy ans kry ga mtlb hm hi bolengy to wo ans hello kreyga jitni bar hi bolengy
@@ -54,7 +63,7 @@ agent =Agent(
         # ye experamental parameter khlata he model seting ka
         # kioky 4.1 reasing model nhi he agr is trh aka model use krengy to phir wo error use kryga kioky wo reasing support nhi krta
         # agr task simple heto hm set krengy low agr normal heto midium agr complex heto high
-        ),
+        
         metadata={
             "name":"faiza",
             "class":"223"
@@ -65,13 +74,25 @@ agent =Agent(
         # ismy ye hota he agr hm isko false krden to iska my jitna kam hm krengy koi response to wo open ai ke server pr nhi trace hoga
         # iska ye faida he ke hm kisi client ke liye application bnaygy to hm osko khengy ke apka dta openai ke server pr bhi nhi jayga to leek nhi hoga
         include_usage=True
-        # 
-        
+        # ye tokens kitny howy hen use osko dikhany or chopany ka kam krta he 
+        # by defaault value None hoti he
+        response_include=["True"]
+        # ye ak array  he ismy bhut sy items hoty hen osmy sy hm koch bhi lga skty hen 
+        # ye agents ke response me addtional info add krta he 
+        extra_query=""
+        extra_body=""
+        extra_header=""
+        extra_argu=""
+        # ye 4ro isi liye use hota he jesy api me koch bhi add krky bhejna he 
+        # or ye dicnary hoty hen sb 
+        )
         )
         # isko agr run krengy to ismy abhi error ayga kioy ye ak sath nhi use hoti kochapas me conflict kr jati henye bhi same he lekin ismy word ki jga wo sentence/topic ko repeate nhi kryga or - me kryga 
         #agr hmy isy dehna hoto hm result._last_agent.model_settingd.metadata
         #ye runner wala result he jismy ans ata he runner ka agent ke 
         # ye debuging me kam ata he 
+        
+        
 
 # ***********************************************************
 
