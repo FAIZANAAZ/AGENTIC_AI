@@ -91,7 +91,7 @@ handsoff me jo input-type hota he wo rest-agent ke liye hota he dosry agent ke l
 /*********************
 recomended-prompt-predifine next agent ke liye instruction ko or easy understand bnata he modify krky
 /*********************
-.to-input-list me conversation history ati he jismy multiple history ko uniq id ke zariye manage krty hen 
+.to-input-list me conversation history ati he jismy multiple history ko uniq id ke zariye manage krty hen or isky zariye hm kisi bhi agent ke output ko input bna skty hen next agent ke liye
 /*********************
 
  lifecycle ke agent or runner hooks me  dono me phly Runner wlaa satrt hota he phir agent wala or end bhi isi trha phly runner wala phir agent wla 
@@ -339,7 +339,8 @@ hmy debuging ko on rkhna choye hmy isy ak tracing id bhi milti he
 StopAtToll(use_at_tool_name=abs)
 ye abs ko use krny ke bad puse krdyga yani rok dega pgir again nhi call nhi hoga llm 
 ************
-max turn hmesha runner me pas hoga or tools me minimum 2 turn lazim chiye hota he jbky normaly 1 chiye hita he 
+max turn hmesha runner me pas hoga or tools me minimum 2 turn lazim chiye hota he lekin agr tool_choice required ho wrna wo tool use nhi 
+kryga 1 trun me lekin ans de dega  jbky normaly 1 chiye hota he lekin hmny agent ko agr handsoff diyahe to 2 lazmi chiye wrna eror yga 
 
 ************
 ************

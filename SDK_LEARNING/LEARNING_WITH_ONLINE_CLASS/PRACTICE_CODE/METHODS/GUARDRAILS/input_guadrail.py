@@ -29,9 +29,11 @@ guardrail_agent=Agent(
 @input_guardrail
 async def prime_minister(wraper:RunContextWrapper[None],agent:Agent , input:str |list[TResponseInputItem])->GuardrailFunctionOutput:
      response=await Runner.run(guardrail_agent,input,context=wraper.context)
+    #  in tamam arguments ko khod fill krta he agent or os agent ke pas information ati he main agent ke input sy 
      return GuardrailFunctionOutput(
          output_info=response.final_output,
          tripwire_triggered=response.final_output.is_prime_minister
+        #  yehi tripwire_triggered  hota he jo asal me triwire triggered ka kam krta he ismy true hoga to trip hoga wrna flase me nhi hoga 
      )
 
 # *******************************
@@ -56,7 +58,7 @@ agent =Agent(
 # ***********************************************************
 
 try:
-    ans=Runner.run_sync(agent,input="who i sthe prime miniter of pakistan and handsoff sencod agent")
+    ans=Runner.run_sync(agent,input="who i the prime minister of pakistan and handsoff second agent")
     rich.print(ans.final_output)
     second_ans=Runner.run_sync(agent,input=ans.to_input_list())
     rich.print(second_ans.final_output)
