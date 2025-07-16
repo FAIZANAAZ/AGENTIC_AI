@@ -152,6 +152,9 @@ or agr ksis tool ka anme deden to phir wo osi ko chlayga bhly ga or agr swal os 
 lekin agr hm None ye wala krdengy tb wo auto hoga yani chalalo ya nhi marzi he
 toll use krny ke bad wo reset krdyga tool ko 
 
+as_tool me hm custom_output_extrac sy hm koi bhi word nikl kr extrac kr skty hen
+
+
 /********************
 paralel_toll_call
 ye bhi by default None value leta he or behaviour wo true hota he
@@ -304,6 +307,7 @@ guardrail function guardrailFunctionOutput return krta he
 
 ************
 functiontoolka schema inspect ka module lekr ata he 
+function tool e data type bhi jati he compilation ke time pr 
 ************
 llm apny code ko codeinterpretertool me run krky sandbox evornment me bhejta he 
 ************
@@ -440,7 +444,19 @@ dataclass me ak defaault hoga he jo bhi set krengy osky pera meter me @dataclass
 or ak hita he default_factory jiska matlb eamty 
 
 /////////////////////////
+
+Runner
+ye runresult return krta he
+/////////////////////////
 input_grardial
  ye pralel chalta he yani  main agent ke sath sath hi chal jata h bad me nhi 
  ye input guardrail ki class sy list leta he wrna ye emty list leta he jesy iski default_factory  set hoti he 
  guadrailFunctionoutput ko return krta he 
+ InputGuardrail return krta he ye 
+ ismy iska apna run bhi hota he jisko context dena lazmi he 
+
+/////////////////////////
+outtput_guadrial
+ ye ak dataclass he ye OutputGuardrail return krta he
+ ismy hm run lgaty hen run_sync nhi lga skty isky apny waly agent me naky main agent me
+ 

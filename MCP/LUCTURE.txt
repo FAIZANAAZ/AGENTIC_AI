@@ -1,0 +1,9 @@
+MCP (model context protocol)
+mcp is a server 
+hm apna kam data local server sy hta kr mcp pr rkhty hen isy hmara local server bhi lightwaight ho jata he 
+
+HTTP protocol
+client yani browser ka internet ke zariye server yani (kisi ka bhi computer jo dosri jga rkha he ) bat krny ko hhtp protocol khty hen
+
+*******************
+400 yani bad request ,404 yani not found ,500 yani internal server error,200 yani ok 
