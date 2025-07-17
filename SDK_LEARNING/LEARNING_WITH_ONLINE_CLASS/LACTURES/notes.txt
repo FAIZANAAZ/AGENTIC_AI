@@ -460,3 +460,44 @@ outtput_guadrial
  ye ak dataclass he ye OutputGuardrail return krta he
  ismy hm run lgaty hen run_sync nhi lga skty isky apny waly agent me naky main agent me
  
+/////////////////////////
+final output by default str leta he
+/////////////////////////
+
+OUTPUT type
+by default ye str return krta he wesy hm jeson_schema ke method ke zariye isko jeson return krwa skty hen or jeson schema ak abtruct method he 
+
+/////////////////////////
+AGENTS HOOKS 
+ismy 3 chizen hoti hen 
+on start =yani agent sy phly ye chyga to koch bhi add rkna ho agent sy phly jo chly wo chly ga 
+on end =ye end me chalyga
+on handsoff=handsoof ke waqt koch krwana he to ye lgaden 
+ye sb perallel chalta he 
+hm isky zariye bhi debug kr skty hen 
+
+/////////////////////////////
+tool_use_behaviour***********
+
+ye by default run_llm_again pr hota he
+    # tool_use_behavior="stop_on_first_tool",
+    # ismy wo sary tools chlayga lekin ans sirf first tool ka return krdega ye max turn 1 bhi ho skta he or ye jesa tool me ans he same dega khod koch add krky nhi dega hi wagera 
+    
+    # tool_use_behavior="run_llm_again",
+    # ye 2 bar llm ke loop ko chlayga or tool ke ans ko modify krky osko khos ans dega
+    
+    # tool_use_behavior=["weather_tool"]
+    #   is trha deny sy wo is tool ko run nhi kryga error dega program rok jayga agent hi rok jayga 
+
+/////////////////////////////
+/////////////////////////////
+/////////////////////////////
+/////////////////////////////
+/////////////////////////////
+/////////////////////////////
+/////////////////////////////
+/////////////////////////////
+/////////////////////////////
+/////////////////////////////
+
+/////////////////////////////
