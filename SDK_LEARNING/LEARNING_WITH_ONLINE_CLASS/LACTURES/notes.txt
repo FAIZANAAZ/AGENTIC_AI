@@ -152,7 +152,7 @@ or agr ksis tool ka anme deden to phir wo osi ko chlayga bhly ga or agr swal os 
 lekin agr hm None ye wala krdengy tb wo auto hoga yani chalalo ya nhi marzi he
 toll use krny ke bad wo reset krdyga tool ko 
 
-as_tool me hm custom_output_extrac sy hm koi bhi word nikl kr extrac kr skty hen
+
 
 
 /********************
@@ -489,13 +489,84 @@ ye by default run_llm_again pr hota he
     # tool_use_behavior=["weather_tool"]
     #   is trha deny sy wo is tool ko run nhi kryga error dega program rok jayga agent hi rok jayga 
 
+    #StopAtToll   
+    ye chalta he or ans deta he phir rok deta he
+
+    ToolsToFinalOutputResult (customize tool use behaviour)*****
+    ye ak function he jo hmnkr pas krty hen tool use behavior me 
+    tool_use_behavior=tool_beh
+    # ismy ye hoga ke hm jo bhi tools use krlen lekin hmny jo ye funtion bnaya he joky finalout ka he ye ans ko
+     overide krta he yani koi bhi tool chala oska ans ayga lekin llm os ans ko is function ke output sy overide krdega or isi function wala ans nazr ayga ye wala nhi ayga 
+    
+/////////////////////////////
+
+reset_tool_choice****
+iski best practice ye he or recomeneded bhi ye he ke isko true rkha jay 
+ye tool ko call  krny ke bas osko reset krdeta he BY DEFAULT BHI YE TRUE HI hota he 
+agr isko false kiya to wo bar bar tool ko call krdega infinit loop me
+/////////////////////////////
+as_tool
+as_tool me hm custom_output_extrac sy hm koi bhi word nikl kr extrac kr skty hen
+isky zarriye hm kisi agent ko toolbnaskty hen or osmy name or instruction dena lazmi he 
+
+/////////////////////////////
+@function_tool(
+    name_override="weather_tool_karachi"
+    jis function ke ope ye decorater lga hoga iska name override krdega
+
+    description_override="this is weather tool for karachi",
+    # jis function ke ope ye decorater lga hoga iska description override krdega
+
+     docstring_style="google",
+    # ye function ke docstring style ko google style pr set krdega
+    
+    use_docstring_info=True,
+    # ye function ke docstring gaib krdega 
+    
+    failure_error_function=custom_error_function,
+    # ismy jo function pass kiya he koi error aya oto ye print hoga agr hm khod ka nhibnaty to eo by default default_tool_error_function ko run krta he 
+    
+    is_enable=True,
+    # agr isko false krdengy to wo tool agen ko dikhyga hi nhi 
+    
+    )
+
+
 /////////////////////////////
 /////////////////////////////
+
+
+
+
+
+         RUNNER
+runner ak class he          
 /////////////////////////////
+RUNCONFIG
+ismy bhi kafi properties hoti he 
+
+model: str | Model | None = None,
+    model_provider: ModelProvider = MultiProvider,
+    model_settings: ModelSettings | None = None,
+    handoff_input_filter: HandoffInputFilter | None = None,
+    input_guardrails: list[InputGuardrail[Any]] | None = None,
+    output_guardrails: list[OutputGuardrail[Any]] | None = None,
+    tracing_disabled: bool = False,
+    trace_include_sensitive_data: bool = True,
+        # ye bhi tracing ko diable krdyga yani openai ke dashbord pr nhi show hoga data
+
+    workflow_name: str = "Agent workflow",
+    # ye by default iska name agent workflow hota he agr hm de dengy to is name sy tracing show hogi hamri dashbord pr
+
+    trace_id: str | None = None,
+    group_id: str | None = None,
+    trace_metadata: dict[str, Any] | None = None
+
 /////////////////////////////
+agr hm model agent me bhi dengy or runconfg me bhi to wo runconfig wala othayga 
 /////////////////////////////
-/////////////////////////////
-/////////////////////////////
+hm privious_response_id sy statefull bna skty hen agnt ko isy wo har agent ke response ke sath hi next agent ko jayga or ak hi context me rhyga 
+
 /////////////////////////////
 /////////////////////////////
 /////////////////////////////
