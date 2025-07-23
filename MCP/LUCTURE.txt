@@ -14,8 +14,14 @@ mcp ko hm uvcorn ki madad sy run krty hen or uvicorn uv me phly sy mojood he osk
 hm python me koch methods ke zariye sy post put wagera ki request bhi dekh skty hen 
 mcp me @mcp.tool ke zariye hm koi bhi tool bna skty hen 
 
+********************************************************************
+TOOL ko hmara agent ka loop yani llm call krta he 
+prompte ko hmara user call krta he lekin hm osy agent sy bhi krwa sty hen
+resources (file) hmari application call krta he 
+
+********************************************************************
 
 ****************mcp installation
 uv add mcp
 mcp ko run krny ki cammand ******
-uv run main:ass        
+uv run uvicorn  main:ass --reload     

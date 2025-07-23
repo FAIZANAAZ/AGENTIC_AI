@@ -13,7 +13,7 @@ agent
 
 
 llm******************
-agent llm ko sirf 4 chizwn leta he agentbsy osy zada nhi 
+agent llm ko sirf 4 chizwn leta he agent sy osy zada nhi 
 
 system prompt
 user prompt
@@ -39,11 +39,11 @@ to hm set-tracing-disable=(disable=true ) krty hen to hmy esa koch bhi krny sy y
 lekin hm @function-toll(failair-error-function=None) kr  skty hen ke khod sy nhi kro orerrro handling or hm khod krlen jakr phir try catch sy 
 userprompt or sytem prompt ke ilawa harchiz as a tool hi jati he llm ke pas
 
-koi bhi agebt tool chose krny ke bad wo auto reset ho jata he yani again wo kr skta he koi dosra tool choise 
+koi bhi agent tool chose krny ke bad wo auto reset ho jata he yani again wo kr skta he koi dosra tool choise 
 /*******************
-lifesycle khht hen kisis chiz ke chalny ko jesy hmary agent ke chalny  ko ismy initializ yani start hona execute yani chalna wagera or terminate yani end hona 
+lifecycle khty hen kisi chiz ke chalny ko jesy hmary agent ke chalny  ko ismy initializ yani start hona execute yani chalna wagera or terminate yani end hona 
 
-jb runner chalta he to Runnerhook chlta he isi trha jb Agent stat hota he to Agenthook chlta he 
+jb runner chalta he to Runner hook chlta he isi trha jb Agent stat hota he to Agenthook chlta he 
 
 /*******************
 agent clone 
@@ -52,7 +52,8 @@ hm agentname.clon() krky acities copy krkry use kr skty hen osmy sari chizen a j
 
 /*******************
 tool call with llm
-jbhm agent me ak funcstool pas krty hen to wo tool chalta he lekin oska anse  jata he llm ke pas wo osko agar thik nhi hoto thik krky ans krta he lekin tool call zaror hota he
+jbhm agent me ak funcstool pas krty hen to wo tool chalta he lekin oska ans  jata he llm ke pas wo osko agar thik nhi hoto thik krky ans krta he 
+
 lekin hm agent me ak property use krengy tool_use_behsvior="stop_on_first_toll" isy ye hga ke wo tol ka jo return hoga wo sahi ho ya ghalat ans lekr wo stop ho jayga llm ke pas nhi jayga
 ya hm modelseting ki property dekr bhi osmy tool choise ko required kr skty hen
 
@@ -79,15 +80,14 @@ yani phly hm @functioltool sy bnaty hen 1 trika he
 
 
 /*********************
-hm agr instruction nnhi dety agent ko towo by dafault otha leta he lekin agr dety hen to lazim he kr wo string ya function ho osky ilwa errror ayga
+hm agr instruction nhi dety agent ko to wo by dafault otha leta he lekin agr dety hen to lazim he kr wo string ya function ho osky ilwa error ayga
 /*********************
 jb bhi dynamic instruction ki bat ya alg alg information ki bat aygi to yani wha context ki bat hori hogi osi me hm info rkhty hen
 /*********************
 rest-tool-choise configure krta he  selection-tool ko tool call hony ke bad 
 /*********************
 jb bhi debuging ki bat hogi to tracing ki bat hogi
-/*********************
-handsoff me jo input-type hota he wo rest-agent ke liye hota he dosry agent ke liye yani wo reset krdeta he 
+
 /*********************
 recomended-prompt-predifine next agent ke liye instruction ko or easy understand bnata he modify krky
 /*********************
@@ -107,7 +107,7 @@ recomended-prompt-predifine next agent ke liye instruction ko or easy understand
 
 *******
 modelseting
-ye llm ko call krty time ki seting hoti he ismy jitni bhi properties hoty hen oski by default value none hoti he 
+ye llm ko call krty time ki seting hoti he ismy jitni bhi properties hoty hen oski by default value None hoti he 
  ***********
  Jab temperature setting lower hoti hai (e.g., 0.1), to model ka output zyada deterministic aur predictable hota hai. Iska matlab hai
   ke model zyada common aur likely words select karta hai, jisse response predictability badhti hai.
@@ -140,7 +140,7 @@ se zyada predictable output milta hai, lekin Top-P aur Top-K se randomness bhi a
 
 max-token
 isko hmy minimum 16 dena he kam krny ke liye wrna wo 400 ka error dega 
-jitni token dengy wo otna ans lakr dega baqi at dega yani agr hm khty hen ke 100 lines ki story likho jismy 18 token use hoty hen or hmny 1 diye hen to wo error nhi dega
+jitni token dengy wo otna ans lakr dega baqi Kat dega yani agr hm khty hen ke 100 lines ki story likho jismy 18 token use hoty hen or hmny 1 diye hen to wo error nhi dega
 blky story 100 lines ki nhi layga 80 90 line pr rok dega
 
 /********************
@@ -148,7 +148,7 @@ toll_choice
 ye by dafalut auto hota he yani chalta rhta he or by default value na hoti he yani na bhi to to chal jayga 
 agr isko hm "none" krdengy to wo nhi kryga use or requied krdengy to lazmi chalyga 
 or auto me oski mrzi he chly ya nhi 
-or agr ksis tool ka anme deden to phir wo osi ko chlayga bhly ga or agr swal os tool ke motabik na hoto wo dosra tool bhi chalalyga kioky osko bs ye pta he hn ye wla krna he jiska nmae diya he use hony bad tool reset ho jata he phir wo sawal ke motabik dosra tool bhi chalaega 
+or agr ksis tool ka NAME deden to phir wo osi ko chlayga  ga or agr swal os tool ke motabik na hoto wo dosra tool bhi chalalyga kioky osko bs ye pta he hn ye wla krna he jiska nmae diya he use hony bad tool reset ho jata he phir wo sawal ke motabik dosra tool bhi chalaega 
 lekin agr hm None ye wala krdengy tb wo auto hoga yani chalalo ya nhi marzi he
 toll use krny ke bad wo reset krdyga tool ko 
 
@@ -165,7 +165,8 @@ agr iskofalse krdengy to ye nhi chalyga
 truncation
 
 input truncation/context window
-ye conversation history ko handle r=krta he yani ye context widow he ak trha sy jesy 1 miliun sy zada nhi de skty words hm ye wahi he
+ye conversation history ko handle 
+krta he yani ye context widow he ak trha sy jesy 1 miliun sy zada nhi de skty words hm ye wahi he
 agr isko hm auto rakhengy to agr words 1 milins sy zada hen to wo isko khod handle kryga or start or end ki history rakhenga baqi bich ki mita dega
 agr hm isko disable rakhngy to wo esa nhi kryga or 1 lion sy zada hoga to wo error de dega  
 by default ye autoh hota he
@@ -312,15 +313,15 @@ function tool e data type bhi jati he compilation ke time pr
 llm apny code ko codeinterpretertool me run krky sandbox evornment me bhejta he 
 ************
 
-hm by default trace prosecer ko hta kr set_trace_processerlga skty hen oroskaname agent trace hoga 
+hm by default trace prosecer ko hta kr set_trace_processer lga skty hen or oska name agent trace hoga 
 agr osi ke sath add krna hoto add_trace_processer
 
 ************
 sary runner trace me wrap hoty hen 
 ************
-khod sy error  jo hm rase ya retry kty hen to modlretry sy wo aata he impot hokr 
+khod sy error  jo hm rase ya retry kty hen to modlretry sy wo aata he impoRt hokr 
 ************
-jb koi handoff function invoke hpga tb on_handoff function execute hoga
+jb koi handoff function invoke hOga tb on_handoff function execute hoga
 ************
 
 FunctionTool ki class me hm sara code parameter params_json_schema ke zariye jeson me convert krty hen 
@@ -331,7 +332,7 @@ RUNCONTEXTWRAPER ak type he jo apny ander system prompt function ko or dependenc
 ctx.retry_count retry count krt he kitny bar retry howa he 
 ************
 
-# isko minimum 2 token chiye hoty hen or max 10 1me ye nhi kr payga handle 
+# TOOL ko minimum 2 token chiye hoty hen or max 10 1me ye nhi kr payga handle 
 ************
 
 sdk ki 3 main primitive types hoti hen 1=Agent 2=handoff 3=guardrail
@@ -341,7 +342,7 @@ llm hmy bs 2 chizen bhej skta he ak plain text joky markdown structure me hoga o
 hmy debuging ko on rkhna choye hmy isy ak tracing id bhi milti he
 ************
 StopAtToll(use_at_tool_name=abs)
-ye abs ko use krny ke bad puse krdyga yani rok dega pgir again nhi call nhi hoga llm 
+ye abs ko use krny ke bad puse krdyga yani rok dega pgir again  call nhi hoga llm 
 ************
 max turn hmesha runner me pas hoga or tools me minimum 2 turn lazim chiye hota he lekin agr tool_choice required ho wrna wo tool use nhi 
 kryga 1 trun me lekin ans de dega  jbky normaly 1 chiye hota he lekin hmny agent ko agr handsoff diyahe to 2 lazmi chiye wrna eror yga 
@@ -351,7 +352,7 @@ kryga 1 trun me lekin ans de dega  jbky normaly 1 chiye hota he lekin hmny agent
 
 agr hmny tool_choice ko bhi krdiya required or reset_tool_choice ko krdiya false yani wo reset na kry to wo infinite ho jayga or hmny max turn ko 2  3 krdiya itni km to wo errro a jayga phir 
 ************
-tool_use_behsvior by default hota he runn_llm_again or peraleel_tool_call True hota he
+tool_use_behsvior by default hota he run_llm_again or peraleel_tool_call True hota he
 ************
 peraleel_tool_call ko agr hm false krdengy to wo phly ak ko run kryga phir oska ans dega phir 
 dosra agr zarorat hoto oska response yani sb tolls ko call krny ke bad response nhi dega 
@@ -360,12 +361,12 @@ dynamic insturection me hmara phla preameter hmesha hi ctx hoga or 2 agent agy p
  ye agr kiye to wo error nhi dega lekin wo phly waly ko as a context hi consider kryga or agent or 2 wala 
 
 **********
-name ak position argument he name ka perameter hmesha str leta he ya function lekin function ka lena zarori he isky ilawa kch bhidengy wo error nhi dyga wahi set bhi ho jayga nme me 
+name ak position argument he name ka perameter hmesha str leta he ya function lekin function ka lena zarori he isky ilawa kch bhi dengy wo error nhi dyga wahi set bhi ho jayga nme me 
 lekin nichy soft wornging a jaygi ke apny schema ko follow nui kiya error invaled ayga 
 **********
 data type ko change krny ko sirialization khty hen 
 **********
-instraction ye bhi ak position argument he is  me hm str ,callable yani dynamic instraction jo function bna kr dety hen or none de kty hen 
+instraction ye bhi ak  argument he is  me hm str ,callable yani dynamic instraction jo function bna kr dety hen or none de kty hen 
 or instruction me hm agr fuction pas krty hen to osko chalaty nhi hen wo osko khod chalata he callable hota he
 hm instruction ho openai me dekhny ke ilawabhi dekh skty hen easy
 
@@ -378,7 +379,7 @@ async def func():
 **********
 callable mean function or wo sync bhi ho skta he or async bhi 
 ***********
-runner me jo context as hota he actua me context start hi wha sy hota he 
+runner me jo context as hota he actuaL me context start hi wha sy hota he 
 **********
 hm jb koi function instruction me pas krty hen wo osky perameter ko phly waly runcontextwraper or dosry ko agent hi lega bhly hm oski type na dy runcontextwraper
 hm ctx.context krengy to hmy wahi value mily gi jo hm runner me context="faiza" pas krengy to faiza milyga 
@@ -469,12 +470,14 @@ by default ye str return krta he wesy hm jeson_schema ke method ke zariye isko j
 
 /////////////////////////
 AGENTS HOOKS 
-ismy 3 chizen hoti hen 
+ismy 5 chizen hoti hen 
 on start =yani agent sy phly ye chyga to koch bhi add rkna ho agent sy phly jo chly wo chly ga 
 on end =ye end me chalyga
 on handsoff=handsoof ke waqt koch krwana he to ye lgaden 
 ye sb perallel chalta he 
 hm isky zariye bhi debug kr skty hen 
+ON_TOOL_START
+ON_TOOL_END
 
 /////////////////////////////
 tool_use_behaviour***********
@@ -490,7 +493,7 @@ ye by default run_llm_again pr hota he
     #   is trha deny sy wo is tool ko run nhi kryga error dega program rok jayga agent hi rok jayga 
 
     #StopAtToll   
-    ye chalta he or ans deta he phir rok deta he
+    ye chalta he or ans deta he phir rok deta he LL KO
 
     ToolsToFinalOutputResult (customize tool use behaviour)*****
     ye ak function he jo hmnkr pas krty hen tool use behavior me 
@@ -568,7 +571,11 @@ agr hm model agent me bhi dengy or runconfg me bhi to wo runconfig wala othayga
 hm privious_response_id sy statefull bna skty hen agnt ko isy wo har agent ke response ke sath hi next agent ko jayga or ak hi context me rhyga 
 
 /////////////////////////////
+hm pydetic ki class me fileld ke ander description bhi dety hen or osky ande hm osko bta skty hen ke kiya type rakho or kesy handle kro llm osko prhta he jesy 
+"""set to true if the user is placing the order for pizza and berger set to false if for any other request""
 /////////////////////////////
+ans.to_input_list()
+ye bhi dikha deta he conversation history thori main wali jesy input output
 /////////////////////////////
 
 /////////////////////////////

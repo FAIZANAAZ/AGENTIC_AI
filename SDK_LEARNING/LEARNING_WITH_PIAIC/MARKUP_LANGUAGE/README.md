@@ -10,7 +10,7 @@
 - Aise hi `######` tak ja sakte hain
 
 ## Paragraphs
-- Simple text likho aur paragraphs ke darmiyan ek khali line chhodo
+- Simple text likho aur paragraphs ke darmiyan ek khali line choR do
 
 ## Line Breaks
 - Line ke end par do spaces do, phir enter karo  
