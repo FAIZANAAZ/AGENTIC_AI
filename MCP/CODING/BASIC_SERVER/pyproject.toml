@@ -1,5 +1,5 @@
 [project]
-name = "dd"
+name = "basic_server"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
@@ -7,4 +7,5 @@ requires-python = ">=3.11"
 dependencies = [
     "mcp>=1.12.1",
     "openai-agents>=0.2.3",
+    "rich>=14.1.0",
 ]

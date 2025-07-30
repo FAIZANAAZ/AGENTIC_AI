@@ -1,5 +1,6 @@
-
+mcp*****
 hm apna kam data local server sy hta kr mcp pr rkhty hen isy hmara local server bhi lightwaight ho jata he 
+actual me hm jo tools apny sdk me rakhty thy ab osko hm mcp pr rakhengy 
 
 HTTP protocol
 client yani browser ka internet ke zariye server yani (kisi ka bhi computer jo dosri jga rkha he ) bat krny ko hhtp protocol khty hen
@@ -20,8 +21,31 @@ prompte ko hmara user call krta he lekin hm osy agent sy bhi krwa sty hen
 resources (file) hmari application call krta he 
 
 ********************************************************************
+mcp server 2 type ke hoty hen 
+remote server
+local server
+
+client bhut sary ho skty hn 
+postman 
+request
+mcp client
+openai sdk integration 
+
+********************************************************************
+tools/list=tool dekhna
+tools/call=tool use krna 
+********************************************************************
+# stateless isi liye rakhty hen  ke abhi hmy zarorat nhi he ke wo koch yad rkahy hm chahty hen jb bhi start ho wo new tariky sy ho 
+streamable mean ke agr net band hogya yani connection band hogya he to agr dobara on hoto wahi sy start ho kam jha sy roka tha 
+
+********************************************************************
+clientsession********
+ye ak class he
+
+ismy possional argements hen read_stream or write_streams  baqi sb key_ward hen 
 
 ****************mcp installation
 uv add mcp
 mcp ko run krny ki cammand ******
 uv run uvicorn  main:ass --reload     
+

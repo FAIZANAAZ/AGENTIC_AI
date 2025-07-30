@@ -1,4 +1,4 @@
-agent ak kam krny wala band he
+agent ak kam krny wala banda he
 llm oska dimag he 
 
 agents***************
@@ -36,7 +36,7 @@ to hm set-tracing-disable=(disable=true ) krty hen to hmy esa koch bhi krny sy y
 
 /*******************
 @function-toll decorater jo hota he wo auto uthata he shema or validation or error handling bhi wo khod krta he 
-lekin hm @function-toll(failair-error-function=None) kr  skty hen ke khod sy nhi kro orerrro handling or hm khod krlen jakr phir try catch sy 
+lekin hm @function-toll(failair-error-function=None) kr  skty hen ke khod sy nhi kro or errro handling or hm khod krlen jakr phir try catch sy 
 userprompt or sytem prompt ke ilawa harchiz as a tool hi jati he llm ke pas
 
 koi bhi agent tool chose krny ke bad wo auto reset ho jata he yani again wo kr skta he koi dosra tool choise 
@@ -433,7 +433,7 @@ ye bs ak message he agr hmy handoff krty waqt koch sms dena he to hm ismy de den
 ********
 
 *********
-sdk me dny waly input context window khlata he or 1 milion iski tadat he  isy zada words nhi leta
+sdk me dny waly input (context window) khlata he or 1 milion iski tadat he  isy zada words nhi leta
 or output me max token sy hm handle krengy 
 ***********
 
@@ -498,7 +498,7 @@ ye by default run_llm_again pr hota he
     ToolsToFinalOutputResult (customize tool use behaviour)*****
     ye ak function he jo hmnkr pas krty hen tool use behavior me 
     tool_use_behavior=tool_beh
-    # ismy ye hoga ke hm jo bhi tools use krlen lekin hmny jo ye funtion bnaya he joky finalout ka he ye ans ko
+    # ismy ye hoga ke hm jo bhi tools use krlen lekin hmny jo ye funtion bnaya he joky finaloutput ka he ye ans ko
      overide krta he yani koi bhi tool chala oska ans ayga lekin llm os ans ko is function ke output sy overide krdega or isi function wala ans nazr ayga ye wala nhi ayga 
     
 /////////////////////////////
