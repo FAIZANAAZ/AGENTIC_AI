@@ -39,6 +39,28 @@ tools/call=tool use krna
 streamable mean ke agr net band hogya yani connection band hogya he to agr dobara on hoto wahi sy start ho kam jha sy roka tha 
 
 ********************************************************************
+mcp me  3 chizen main hen
+tools************
+yani functions
+
+resources********
+yani koi bhi file image video jismy data ho 
+
+ismy ak hota he uri joke url ki trha hota he lekin osmy zada chizen hoti hen uri ak trha sy rout he yani jo uri hogi ospr osi ka data show hoga 
+
+read_resource ke zariye hm resources ko read kr skty hen yani osmy jo data hmny diya he file wagera 
+
+prompte***********
+phly sy koi prompte likh kr rakhlo phir use krty jao multi time
+********************************************************************
+https//google.com/video
+https =schema
+google.com = host
+video = endpoint
+********************************************************************
+
+********************************************************************
+
 clientsession********
 ye ak class he
 
@@ -49,3 +71,4 @@ uv add mcp
 mcp ko run krny ki cammand ******
 uv run uvicorn  main:ass --reload     
 
+********************************************************************
