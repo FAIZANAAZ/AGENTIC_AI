@@ -13,7 +13,7 @@ MCP (model context protocol)
 mcp is a server 
 mcp ko hm uvcorn ki madad sy run krty hen or uvicorn uv me phly sy mojood he osko install nhi krna hota
 hm python me koch methods ke zariye sy post put wagera ki request bhi dekh skty hen 
-mcp me @mcp.tool ke zariye hm koi bhi tool bna skty hen 
+mcp me @mcp.tool ke zariye hm koi bhi tool bna skty hen -
 
 ********************************************************************
 TOOL ko hmara agent ka loop yani llm call krta he 
@@ -67,8 +67,105 @@ ye ak class he
 ismy possional argements hen read_stream or write_streams  baqi sb key_ward hen 
 
 ****************mcp installation
+uv init
 uv add mcp
 mcp ko run krny ki cammand ******
 uv run uvicorn  main:ass --reload     
 
+********************************************************************
+transport*******
+ak jga sy dosri jha jana yani client sy server or servr sy client
+transport do  trha ki hoti he 
+1:local=standard input or output jo single machine pr hoti he 
+//ismy client request kryga or server response but server req nhi kr skta
+do :streamable https =ye internet pr jakr mokhtalif client sy connsct ho skta he 
+//ismy server bhi request bhej skta he 
+
+hand shalk**
+mcp ka rule he ke sbsy phly client or server ke darmiyan jb bhi koi kam hoga sbsy phly hand shak initialiation hogi jo 3 step me hogi 
+request ,response ,notificationkyga hell
+phly (request) jaygi client sy sever ko hi kiya ap connect ho mery sath ** phir server (response) kryga ke hnconnect hon phit client dobara khyga (notificationa) hn me bhi connect hon
+phir agy ka sara kam hoga
+
+server sy sada tr get request kryga or client post
+
+
+
+********************************************************************
+pyton ka error agr ta e wo direct cange ho jaga mcp error me
+
+********************************************************************
+Tools*********
+{
+  "jsonrpc":"2.0"  ,
+  "id":1,
+  "method":"tools/list",
+  "params":{}
+}
+
+post req bejne ke lie use hota he jo hm body me pass kry hen 
+
+{
+  "jsonrpc":"2.0"  ,
+  "id":1,
+  "method":"tools/call",
+  "params":{
+    "name":"hello",
+    "argUments":{}
+  }
+}
+
+or tool ko alll ke liye ye or name tool ka or agr koi perameter dety hhen to wo argments me ata he
+
+********************************************************************
+RESORECES**********
+
+{
+  "jsonrpc":"2.0"  ,
+  "id":1,
+  "method":"resources/list",
+  "params":{
+    "cursor":"optional-cursor-value"
+  }
+}
+
+for recources see
+
+*****
+{
+  "jsonrpc":"2.0"  ,
+  "id":1,
+  "method":"resources/read",
+  "params":{
+    "name":"my_resource",
+    "argUments":{},
+    "uri":"docs://documents"
+  }
+}
+
+for resource call
+
+
+********************************************************************
+PROMPT**********
+{
+  "jsonrpc":"2.0"  ,
+  "id":1,
+  "method":"prompts/list",
+  "params":{
+  }
+}
+
+********
+{
+  "jsonrpc":"2.0"  ,
+  "id":1,
+  "method":"prompts/get",
+  "params":{
+    "name":"my_prompt",
+    "argUments":{}
+   
+  }
+}
+********************************************************************
 ********************************************************************
