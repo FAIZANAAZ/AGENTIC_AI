@@ -87,9 +87,16 @@ request ,response ,notificationkyga hell
 phly (request) jaygi client sy sever ko hi kiya ap connect ho mery sath ** phir server (response) kryga ke hnconnect hon phit client dobara khyga (notificationa) hn me bhi connect hon
 phir agy ka sara kam hoga
 
-server sy sada tr get request kryga or client post
+server sy sada tr get request kryga or client post\\
 
+capability*************
+jb server response krta  to  wo output  capability me btata he ke kia kia he mer pas or me kya kya kr skta hon 
+isi tra client bhi notificationa me btata he ke me kya kya kr skta hon
+********************************************************************
 
+SAMPLE**********
+phl ye hota the ke mcp llms provide krta tha tha jisy sb se krty th kioky mcp free he to bht sar logo ke se s llm ka bhut kharcha ata trha
+phir mcp ne new method laa sample  jisy ab llm mcp pr use nhi hota bllky server client ko request krta he or cllient sy khta he apna llm use kro or mojhe ye ye chizen internet sy lakr do phir client llm sy lakr server ko de deta he ani iska client he ab wohi llm ka use kryga 
 
 ********************************************************************
 pyton ka error agr ta e wo direct cange ho jaga mcp error me
@@ -168,4 +175,10 @@ PROMPT**********
   }
 }
 ********************************************************************
+ clientsession ak class he jo mcp walo ne di he jismy bnaya bnya client he bs methods call krty jay 
+
+ 
 ********************************************************************
+hmara agent sirf tolls ko chalata he or run krta he
+prompt hmara user ka hota he agent osko use nhi krta 
+or resources ko apllications chlati hen or use krti hen 

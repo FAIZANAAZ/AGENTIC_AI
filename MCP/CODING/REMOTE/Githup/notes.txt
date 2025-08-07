@@ -1,0 +1,11 @@
+past in url(https://api.githubcopilot.com/mcp/)
+
+1=go in yout githup profile=>click on dp and click on stting=>developer setting
+
+2=personal access token =>fine-grainal token=>generate new token =>github passward=>enter any name of token=>Expirtion dena he lazim ke token kitni der me expire ho jay=> all repositories (marzi he public den ya private yr all)
+
+3=permistion me=> permition tab pr click => add permission => or sb pr tik krdengy => phir wo sb permishion ke tab me a jayga => osmy sbko access read or write krdengy 
+
+4=>click on account tab or same process
+
+5=>click on generate token=>again click=> copy token=> make variable in env and past token

@@ -1,0 +1,13 @@
+run cammand in terminal (npx @modelcontextprotocol/inspector)
+wo window open krky dega
+
+1=sbsy phly Transport Type me (Streamable HTTP) add krengy
+2=url add krengy jis pr server chlra hoga 
+3=Connect pr client krengy 
+wo initailize krlega khod sy 
+wo tabs me dikhayga tools,resource ,promt wagera
+
+jo bhi call krna ho osko hm tab pr click krengy 
+agr hm tools tab pr clieck krengy to wo dikhaygay wo sary tools jo hmny bnay thy os pr click krengy to wo osko info bhi dikha dega yani call krwa dega jeson wagra khod dal dega 
+
+isi trha sbky sath hoga 
