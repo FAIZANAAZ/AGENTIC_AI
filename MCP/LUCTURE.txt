@@ -182,3 +182,30 @@ PROMPT**********
 hmara agent sirf tolls ko chalata he or run krta he
 prompt hmara user ka hota he agent osko use nhi krta 
 or resources ko apllications chlati hen or use krti hen 
+
+protocol
+internet ke oper data ko ak jga sy dosry jga pr le jany ke liye protocols ki zarorat hoti he 
+ye ak rull he  jesorpc ki form me  body jaygi or client req kryga post ki or server get ki reponse ke lie
+
+http(hyper text transfer protocol)=ye website ke liye url jo ak jga sy dosry jga pr data ko lakr jaty hen 
+https=ye save he zada kioky ismy data encryptor decript hota he
+ftp=filetransfer krny ke liye
+sftp(file transfer protocol)=yni ye zada save he kioky ismy data encryptor decript hota he
+smtp=simple mail transfer protoccol email ke liye
+ssmtp=ye save + he
+dns(domain net servie= ye name deta he faiza.com)
+
+********************************************************************
+DEEP copy matlb jiki copy bnai he osy blkl talak khatam wi ak alag hi chiz bn gay jbky shellow copy ka talak he agr shello ko change kra to wo 
+jiski copy he osko bhi yani orgnal ko bhi hange krdengy 
+********************************************************************
+restapi************
+rest api ka full form he reatful state api
+ye ak tariika(arcitacture ) he api banany ka http ko use krky
+ye use krta he get, post ,put,delete,patch
+isko use krny ke bhi rules hen***
+httpko orretly use krena he
+statless hona lazim he 
+data ko json form me use kren 
+
+
