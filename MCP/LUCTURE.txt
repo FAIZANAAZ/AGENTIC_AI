@@ -208,4 +208,83 @@ httpko orretly use krena he
 statless hona lazim he 
 data ko json form me use kren 
 
+********************************************************************
+CP Server
+     - less server load (isy zada load nhi hota server pr )
+     - MCPserver owner will do maintanance(Yani agr mcp ke server pr koi kharabi ay to hmari zimedari nhi wo khod thik krengy)
+     - open source -> tool (free of cost)
 
+
+MCP CLient
+     - always use http POST method
+     - always use jsonRpc message structure
+
+
+MCPStdio ✅
+     - No need of network to run
+     - used for local development(Yani hmy internet ki zarorat nhi Hoti isky Liye jesy hm localhost300 pr Kam krt hen bad me deployment krty hen )
+
+MCPsse ❌
+     - stateless / stateful
+     - HTTP request -> POST (foran close ho jata he, from client)
+     - HTTP request -> GET (jab tak close nahi hota jab tak kam complete na ho jaye from client)
+lekin ye ab use nhi hota
+
+
+MCPstreamable_http ✅ ( (stateless) , (stateful -> sessionId) ) 
+ye season id ki madad Sy statfull bn jata he
+     - can run on network(isko internet ki zarorat Hoti he )
+     - can revive by the help of session    
+     - HTTP request -> POST (foran close ho jata he) 
+     - HTTP request -> GET (jab tak close nahi hota jab tak kam complete na ho jaye.)
+
+
+Websocket
+     - bi-directional handles request & responce
+
+    
+    
+#/////////////////////
+Session iD***
+hmny season id lany ke body me
+ method :"initialized"
+likhna hoga to wo terminal me header ke Ander I'd Dega 
+
+phir hm os I'd ko apny header me dalengy code ke Ander or osky last version ko 
+seasion_id:"jdgshgj747574"
+MCP_Protocol_Version:"2025-6-18"
+ya Jo bhi last chalra ho wo or body me
+method:"incialized/notifications"
+
+#/////////////////////
+request https Sy hokr osi-model Sy hokr guzarti he osi ke 7 lyers Hoti hen
+
+
+OSI****
+Hardware layers***
+Application layer**
+ye sbsy phli layer Hoti he  ye UI dekhati he users ko 
+
+Presentation Layers***
+ak jga Sy data dosri jga jata he encrypted hokr or  phir decrip ho jata he 
+
+Session layer *
+ye port decide krta ke konsy port response Jana he jis port Sy request Ari he osi pr Jana chiye 
+
+Software layers**
+Physical layer**
+ye code ko binary (bit code)me convert krky computer ko deta he
+
+DAta Layers**
+ye decide krta he data kosny format me hoga jesy files py ,ts 
+
+Network Layers**
+ye decide krta he ke data  konsy network pr Sy jayga jesy wifi 
+#***
+Transport layers**
+ye manage krta he ke sari request ko
+
+#*"***
+horizontal scrolling tb hi momkin he JB stateless ho request 
+
+stateless direct response krta he
