@@ -1,0 +1,63 @@
+installation/////////////////
+search(https://n8n.io/)
+get started
+enter all data and fill form
+password=faiza23@#$
+copanyname=dfdff4454
+clik on free trial
+select =>only me=>it=>any=>any=>skip=>start automation
+
+////////////////////////////////////
+personal = create workflow=click on + box=on chat msg in side bar =back to canvas =click on open chat ya hm l pr click krky open or close kr skty hen 
+
+chat open hoga chat GPt ki trha osmy Koch likh kr oska ans dekh skty hen double window Hogi
+
+phir hm osy band krengy or choty + pr click krengy again wo sidebar open kryga is bar hm ai select krengy = ai agent
+
+3 widow open hokr aygi ak input jismy wo sawal ki detail Hogi Jo hmny chat pr likhi thi
+dosri ai configuration Jo hmy krni he or osy Jo Kam krwana he 
+
+3rd wo Jo ai agent Kam kryga oska output ayga
+
+phichy jaengy or phir 2 chizen a janegi chat or ai agent hm ai agent ke 1 paon pr + pr click krengy or model select krengy open ai ka = phir configuration open hoga osmy first box or click krengy or  crate new cradiant ko  select krengy or key or model dalengy ye 2 chizen chiye Hoti he agent Sy Kam krwany ke Liye 
+ or medil me gpt-4.1-mini
+
+phir again chat open krengy sms krengy ans a jayga Yani agent chal gya 
+
+phir agent ke dosry pain pr click krky simple memory select krengy phir pichy a kr hm chat krengy or apna name bolengy again chat krengy to osko hmara name yad hoga
+
+
+
+********
+n8n ak open source software he 
+ 
+ismy hm esy Kam krty hen ke + ke button pr click krky next next krky ak chain bna dety hen jesy phly chat pr Kam phir ai pr 
+
+
+ai agent configuration***
+ waly me user message ke Ander hmary pas wo msg hota he Jo hmny chat me likha hota he wesy wo auto save hota he lekin 
+agr na hoto krlengy
+
+
+3 tariky he. isky use krny ke. ****
+
+phla tarika ye he ke inki GitHub clone krky local server pr chalen hm  ye unpaid he
+
+dosra tarika ye npm Sy bhi Chala skty hen 
+
+3rd tarika he cloud pr ke oper  ye paid he
+
+*******Ai-Agent
+ai agent ke Ander ismy 3 + hoty hen 
+1 me hm osko model dety hen or apki key 
+2 me hm osko koi bhi data base dety hen
+
+3 me hm osko
+
+
+kisi app ko connect krny ke liye hm + pr click krky 
+Ai-action app pr click krengy
+wha bhut sary apps a skty he. jinko hm connect krta skty hen
+
+
+lekinin=faiza3579@#$
