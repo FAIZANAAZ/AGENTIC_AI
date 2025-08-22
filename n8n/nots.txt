@@ -1,9 +1,11 @@
+https://docs.n8n.io/try-it-out/tutorial-first-workflow/#step-three-add-the-nasa-node-and-set-up-credentials
+
 installation/////////////////
 search(https://n8n.io/)
 get started
 enter all data and fill form
-password=faiza23@#$
-copanyname=dfdff4454
+password=
+copanyname=
 clik on free trial
 select =>only me=>it=>any=>any=>skip=>start automation
 
@@ -61,3 +63,36 @@ wha bhut sary apps a skty he. jinko hm connect krta skty hen
 
 
 lekinin=faiza3579@#$
+
+///////////////////////////////////////////
+trigers/////
+ye events hoty hen
+///////////////////////////////////////////
+scahdule triger
+yha hm timing wgera set krty hen
+///////////////////////////////////////////
+{{ $json }}
+hm jeson ko {{}}$ ye formate me likty hen
+///////////////////////////////////////////
+hmy NASA ke ki api ke Liye Jana he (api.nasa.gov)
+Sy name or email daleengy or sign up krengy to wha a jaygi email ke zariye key NASA ki
+
+https://www.postb.in/
+for bin id
+*********
+or + pr click krky apps waly me jakr nasa me jakr donki solar flare me jakr fill krengy hm 
+api me api 
+recourse me DONKI Solar FLare
+operation me get or 
+Additional filed pr click krky start or end date dekr
+///////////////////////////////////////////
+today Yani ye ak formate he time ka minus Yani pichy jao 7 Yani 7 din pichy or days Yani 7 din phly
+///////////////////////////////////////////
+JB hm Koch data fill krengy hm to execute ke orange waly button pr click krky check kr skty hen ke Jo Chala he wo Sahi he osmy ak sms ayga successfully ka
+///////////////////////////////////////////
++ pr click krny sy jo side bar open hota he chats app jismy hoty hen wo node khlaty hen
+///////////////////////////////////////////
+///////////////////////////////////////////
+
+
+
