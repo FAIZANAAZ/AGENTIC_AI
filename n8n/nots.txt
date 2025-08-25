@@ -95,4 +95,30 @@ JB hm Koch data fill krengy hm to execute ke orange waly button pr click krky ch
 ///////////////////////////////////////////
 
 
+ hmary pas 4 types ki memories Hoti hen
 
+stm(short term memory)***
+Yani Jo chiz yad rkhna lazmi nhi ho Yani ye Koch Der ke Liye yad rakho or phir bhul jao
+
+ltm(long term memory  )**
+jisko yad rkhna lazim he osmy use krna hoga ltm ko ismy hm baton ke Koch main points ko yad rkhty hen jesy user ka name Faiza he ye to hm yad nhi rakhengy hm yad rkhengy Faiza 
+
+episodic memory***
+ye hm isi Liye use krty he. ke phly wali memory ko ab wali memory Sy jorny ke Liye jesy episodes me hota he dramy wali 
+
+sementic memory***
+janer knowledge ki memory Jo osko pta hota chiye phly Sy hi jesy Pakistan ke sher ke bary  name Karachi he
+ vector database***"" hm isy connect krty hen memory ke liye ismy 100gb hota he lekin iski khasiyat ye he ke ye ans deny ke Liye JB kisi chiz ko search kryga database me jakr to wo bhut fast krta he
+
+ye fast is wja Sy hota he ke JB ye dhondny jata he  to wo sb words ko nhi dkehta wo sary words ko deactivate rakhta he bs on words ko active kryga Jo osy milty jhoty hongy relate krengy or osmy Sy wo dhondlega agr sb ko active rkhta to sbmy Sy dhondna moshkil ho jata
+
+///////////////////////////////////////////
+///////////////////////////////////////////
+****/////////////////////////////////////
+RAG Application**
+
+Google Claude system client I'd acesss ***
+
+sbsy phly + pr click krky  *(google drive )pr jaengy phir *(on changing involving a specific folder )**ko click krengy-- 
+credentials pr create new credential ko select krdengy 
+window open Hogi Jo hmy client I'd or secret I'd mangegi wo hmy milygi cloud ki website pr --sbsy oper open docs pr click krengy -- ak web open Hogi n8n ki docs ki --sbsy phly prerequisites me hmy google cloud ko setup krna hoga right click krengy create Google cloud account pr or open in new tab krengy  --- console me jaengy top right header me milyga --- Gemini api pr click krengy -- new project -- project ko name dengy or create krlengy-- notification aygi jismy os project ko select project krdengy --to oper header me wo set ho jayga project ka name  -- olty hath pr menu pr click krengy --click on api and service--enablid api and services  -- search me likhan he google drive api  --enable--sidr panal Sy OAth constant screen--client--get started --fill app name wo name Jo rkha tha wahi dengy  and email apni wali --next-- external click-- next -- contact information me email again deni he. --next-- agree pr click -- continue --create -- matric me create OAth pr click krengy -- selection bar me  Application type me web application select krengy -- name dengy wahi Jo  rkha tha --  Authorized redirect Uri me add uri pr click krengy -- isky Ander hm dengy call back uri-- joky n8n me Jo window open he osmy hoga Waha Sy copy krky past krengy -- create --client id Dega it client secret bhi dega osko copy krengy -- n8n me jakr past krdengy  client I'd ko or secrete Dono ko  -- again Google clud me aygy --side bar Sy data access pr click krengy --add and remove scope-- nichy Sy row pr pages ko 100 krlengy -- jitni bhi google drive api likha hoga sbko click krdengy   --update -- sbsy nichy akr save krlengy-- n8n me sign in with Google krdengy-- apni email ko verify krengy --
