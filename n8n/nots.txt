@@ -115,10 +115,70 @@ ye fast is wja Sy hota he ke JB ye dhondny jata he  to wo sb words ko nhi dkehta
 ///////////////////////////////////////////
 ///////////////////////////////////////////
 ****/////////////////////////////////////
+ARKITATURS WORKFLOW********************
+
 RAG Application**
 
 Google Claude system client I'd acesss ***
 
 sbsy phly + pr click krky  *(google drive )pr jaengy phir *(on changing involving a specific folder )**ko click krengy-- 
 credentials pr create new credential ko select krdengy 
-window open Hogi Jo hmy client I'd or secret I'd mangegi wo hmy milygi cloud ki website pr --sbsy oper open docs pr click krengy -- ak web open Hogi n8n ki docs ki --sbsy phly prerequisites me hmy google cloud ko setup krna hoga right click krengy create Google cloud account pr or open in new tab krengy  --- console me jaengy top right header me milyga --- Gemini api pr click krengy -- new project -- project ko name dengy or create krlengy-- notification aygi jismy os project ko select project krdengy --to oper header me wo set ho jayga project ka name  -- olty hath pr menu pr click krengy --click on api and service--enablid api and services  -- search me likhan he google drive api  --enable--sidr panal Sy OAth constant screen--client--get started --fill app name wo name Jo rkha tha wahi dengy  and email apni wali --next-- external click-- next -- contact information me email again deni he. --next-- agree pr click -- continue --create -- matric me create OAth pr click krengy -- selection bar me  Application type me web application select krengy -- name dengy wahi Jo  rkha tha --  Authorized redirect Uri me add uri pr click krengy -- isky Ander hm dengy call back uri-- joky n8n me Jo window open he osmy hoga Waha Sy copy krky past krengy -- create --client id Dega it client secret bhi dega osko copy krengy -- n8n me jakr past krdengy  client I'd ko or secrete Dono ko  -- again Google clud me aygy --side bar Sy data access pr click krengy --add and remove scope-- nichy Sy row pr pages ko 100 krlengy -- jitni bhi google drive api likha hoga sbko click krdengy   --update -- sbsy nichy akr save krlengy-- n8n me sign in with Google krdengy-- apni email ko verify krengy --
+window open Hogi Jo hmy client I'd or secret I'd mangegi wo hmy milygi cloud ki website pr --sbsy oper open docs pr click krengy -- ak web open Hogi n8n ki docs ki --sbsy phly prerequisites me hmy google cloud ko setup krna hoga right click krengy create Google cloud account pr or open in new tab krengy  --- console me jaengy top right header me milyga --- Gemini api pr click krengy -- new project -- project ko name dengy or create krlengy-- notification aygi jismy os project ko select project krdengy --to oper header me wo set ho jayga project ka name  -- olty hath pr menu pr click krengy --click on api and service--enablid api and services  -- search me likhan he google drive api  --enable--sidr panal Sy OAth constant screen--client--get started --fill app name wo name Jo rkha tha wahi dengy  and email apni wali --next-- external click-- next -- contact information me email again deni he. --next-- agree pr click -- continue --create -- matric me create OAth pr click krengy -- selection bar me  Application type me web application select krengy -- name dengy wahi Jo  rkha tha --  Authorized redirect Uri me add uri pr click krengy -- isky Ander hm dengy call back uri-- joky n8n me Jo window open he osmy hoga Waha Sy copy krky past krengy -- create --client id Dega it client secret bhi dega osko copy krengy -- n8n me jakr past krdengy  client I'd ko or secrete Dono ko  -- again Google clud me aygy --side bar Sy data access pr click krengy --add and remove scope-- nichy Sy row pr pages ko 100 krlengy -- jitni bhi google drive api likha hoga sbko click krdengy   --update -- sbsy nichy akr save krlengy--Audience me jaengy clude pr hi jha Sy hm client me gy thy wahi hoga --test user me add user krengy or apni email dalengy -- save --save --- n8n me sign in with Google krdengy-- apni email ko verify krengy 
+
+google has verified--continiue --salect all --continue -- successful ajayga-- 
+
+phir back aygy --mode ko everytime --triger on ko changes involving a specific folderr-- from list ke Liye hmy ak documents dalna hoga ya koi bhi file jismy Sy data lekr ay to hm jaengy personal 
+hm apni google drive me jaengy -new pr click krengy --new folder--name dengy--craete--folder ka Jo name rkha tha osko on krengy--os folder me Koch bhi dal dengy--file daldengy jismy Koch info ho 
+
+phir waps n8n pr jaengy or 3 ... Sy refresh list krengy or phir Jo folder bnaya tha wo a jayga osko add krdengy --watch me crate file create -- fetch test event krengy to name me os file ka name a jay to matlb Sahi chlra he
+
+back aygy + pr click krengy -- google drive -- me download file ko select krengy --fill krengy --credencital to connect me google account drive krengy--recources me file or me hmy Jo I'd Mili thi kind ke nichy likhi Hogi or name ke oper  but permission id nhi hona chiye wo execute krty waqt os ko drig and drop krky file me concatenate krwa dengy-- execute krdengy
+
+ab vector data base me os file ko rakhengy *
++ pr click krengy pinecorn vector store ko click krengy-- add document to vector store-- create new credential --api key dalengy pinecorn ki --pincoren search krengy hm google pr -- vector database with knowledge ai--login with Google--i am building small or personal project -- name wagera dengy or business me personal set krengy-- nichy coding language me I don't code select krengy --click on button -- uase case me RAG -- I have row document -- goal building ai project +-get start  -- api key aygi wo copy krengy -- agr miss ho jay  api key ka option bhi ara hoga to dobara create krky name rakh kr copy krlengy -- or n8n me past krdengy-- save
+
+phir index bnaygy pinecone ki web pr jaengy database --create index name dengy -- vertical scrol krky test embading 3 small --dimention ko 1536 krengy --create index --*
+
+phir n8n ki web pr wapas operation mood me insert documents krengy-- from list me wahi name dengy Jo index bnaya tha oska name ayga --batch size ko 200 hi rakhengy --add option --pinecone namespace --any name phir execute nhi krengy pichy jaygy again
+
+pion vector ke phly + ko click krengy or model dengy --embading open ai krengy --credencial me api key dalengy open ai wali or model me text embading 3 small krengy--
+
+phir dosry + pr click krengy --default data loader --typr of data ko binary --mode me load for input data --data form me automatically detect by mime type-- test splitting ko simple krdengy 
+
+
+Bahir aygy or execution workflow pr click krengy
+
+pinecon ki web pr jaengy or index pr jaengy wha data aya hoga check krengy wahi database ke Ander scrol krky namecase me name aya hoga or browser me bhi detail ai Hogi 
+
+step2*******
+
+sbsy phly Khali jga me click krengy blkl alag+ pr click krky  chat trigger krengy again chat waly   + pr click krengy or ai agent ko click krengy
+ab phly waly + ko click krengy  chat model krengy  open ai chat model --tool waly ko click krengy pinecorn vector store click krengy -- configuration krengy credntion phly Sy hoga set wo chordengy--operation mode me retrive documents -- description me hm os file ke bary me likhdengy ke osmy ye file ka data he -- pinecorn index me wo index ayga Jo bnaya tha osko hi select krsengy-- limit ko 4 hi rhndengy--option me picorn namecase me wahi name dekngy Jo rkha tha picorn ki web pr -- ab bahir jaengy to tool a jayga os tool ke emading waly + ko click krengy embading openai--sb khod set hoga --back jaengy or chat Sy sawal krengy os file ke Ander Jo bhi tha somy Sy to wo ans krdyga
+
+
+
+
+
+
+
+/////////////////////////////////////////////////////////
+full stack short project******
++ web hook trigger node ---http ko post req set krengy -- path ko set krengy Jo set hoga wahi rhny dengy  --Athuntication None -- Response me immediately -- execute (listen for test event)
+JB JB req bhejengy execute krna hoga wrna postman pr error Dega wo 
+
+for chaking api url *""""
+open postman -- n8n me sbsy oper ak url hoga wo lakr yha post man me set krengy --method post--body me --from data select osmy osmy key message --value Ms koi bhi text likh dengy --run krengy likha ayga workflow has been start or n8n me bhi body ke ander ans a jayga  
+
+-----+ Ai agent -- source for prompt ko hm define blow krdengy  --prompt  me message ko daldengy body ke ander hoga braber Sy  drag krky -- add option -- system prompt -- always greet the user with his or her name with smili emoji ya (Koch bhi ho chahty hen likh dengy  ) 
+isky phly + ko click krengy or model dengy -- open ai agent -- api key lgi wi Hogi -- gpt-4.1-mini --execute ai agent waly ko krengy-- to wha wahi sms ayga Jo postman Sy Bheja tha osko hm immediately Sy hta kr using response to webhook node krdengy (taky wo dosry webhook Sy response lekr ay)
+
++---- webhook-- response to webhook -- execute (ye agent Sy repose lekr wapas bhejyga )
+**
+hm ai Sy ak webhook test form bnaygy jismy ak input or ak submit button he   or hm n8n me jaengy or jha hmny message ko drag Kiya tha ai agent Sy wha hm messag ki jga pr os name ko likhengy Jo frontend me jakr body ke ander dekhengy kis name Sy a rha he  or response wo likhengy 
+ya wo braber me bhi a jayga
+
+input/////
+create a website having one input box and subit button and use this webhook url post req"https://faizanaaz.app.n8n.cloud/webhook-test/7f13049d-817c-4729-87b7-5dba7afcb9ad"
+
+webhook will response base so you have to show response too
+
