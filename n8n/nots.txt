@@ -182,3 +182,33 @@ create a website having one input box and subit button and use this webhook url 
 
 webhook will response base so you have to show response too
 
+
+
+
+
+
+
+////////////////////////////////////////////////////////
+
+Nathan Workflow level one
+
+sbsy phly + pr click krky scatual trigger lengy Yani alarm ki trha Jo hota he isko lengy day time date set krengy -- ---------+ http req -- ismy method get rakhengy -- url dengy wo hmy email me milyga --serach n8n level 1 (level one introduction)likha ayga nichy aygy 2 a course user id ke braber me signup here pr click krengy-- sign up-- name dengy apna--email dengy -- user name abhi nhi dengy -- search (https://community.n8n.io/)-- sign up -- select account --continue --user name ayga form me (Faiza_Naaz )osko copy krky rekhlengy --phir sign up krdengy --never-- bs is web Sy bahir a jaengy -- ab osi account me user name dalengy Jo Mang rha tha Jo copy krky rkha tha -- it engineering-- zero coding skil-- chatbot-- submit --email aygi jismy details aygi Koch 
+
+sb dekh bhal kr copy krna he khi space na ay ak bhi
+ak url ayga to osko copy krengy email Sy database url  or jakr http me n8n me dal dengy --athuntication me generic Wala select krengy --generic auth me header auth--craete new credential click --name or value email Sy copy past krengy --save--send header ko on krengy --specific header me using field blow--header permeter me phir name or value --name unique_id likhengy or value phir wahi email Sy lengy --execute--data ajayga-- pichy aygy again
+
+connect database
+--------+ Airtable -- create a record -- new credential --resourse me --acees token dengy -- search Airtable.com open -- signup for free --continue with Google --nichy aygy company ka koi bhi name dengy-- it-- it again--  × krdengy -- create--screen ko full ioengy right wali --oper unite base ko rename krky koi name dengy double click krky -- skip nichy agr window ai koi --Table ko double click left Sy -- rename table -- any name --save-- Kafi sary columns bna krdengy sb pr ak ak krky right click krengy or delete column krdengy A  name rheny dengy  -- hmy is table me apna http Wala record lakr save krwana he isi kiye hm apny column bnaygy--nichy profile ki jga T likha ara hoga Mera F --build hub pr janegy -- create token -- any name --add scop -- data record reade write or schema base read ko click krengy or ye hmy n8n me jha dalna he token wha pr bhi likha hoga ke Kiya Kiya select krna he  -- add a base name  create token -- copy krengy rakehnlengy or n8n me bhi jakr past krdengy -- os tab ko band kredengy -- operation me create krengy-- Base me osi table ka name Dega wo krengy select -- table me bhi wahi name --mapping column  mode me map each column maualally rkengy  -- again osi website pr jaengy -- or name columns name bnygy Jo data ke hen -- or datatype dengy number ya string Jo bhi Hogi wha sbki --  number dengy to desimal places me 0  select krengy agr . me value nhi he to agr string heto single text   -- n8n me aygy -- value to send me refresh krengy to osi column ka names a jayga or braber Sy otha otha kr drig and drop krdengy n8n me --execute krengy or osi website airtable wali  pr Jake dekhengy to wo a jayga data
+
+osi web pr jaengy os table pr click krengy or duplicate table krky name change krdengy --orderid orderstutas or employeename rakhengy baqi column delete --again aygy n8n or ----+ airtable again create a record -- sb Koch hoga select hoga name change krdengy oska bhi -- base me duplicate wlaa select krengy-- again value to sad me drig and drop krengy braber Sy or daldengy --ab hmy krna he filter ke hm Sara data nhi lary hm  to Jo Jo chiye osko if else Sy set krengy ---+ pr click krengy if select   lekin dosry waly airtable Sy phly waly + pr click krengy or brabr sy hm http ko salect krengy--phir condition lengy Jo Jo chiye osko if value1 me drage krengy or is equal to krengy nichy likhengy ke osmy Sy status ke oper lga dengy ya kisi chiz ke bhi oper ke agr braber hoto filhal  (orderstatus)is equal to  nichy waly me likhengy (processing)--execute -- to wo Sirf onko hi data me save kryga jiska orderstatus braber hoga processing ke 
+
+hmary pas hota he if or else me 2 chizen + ke Sath true or false to hm phly waly me to proceesing kr diya false me bhi ak condition lgaygy is bar phly osi web pr jakr hm wahi duplicate krky table bnaygy again or sb configuration krengy or orderstatus ko is equal to booked krdengy ab wo booked ko alag or processing waly ko alag krky save kryga 
+--
+
+calculate values **
+
++ pr lekin main table waly + pr if ke pichy Wala select code (ismy hm coding kr skty hen)--run once--language JavaScript ya jis bhi language me code dalna he--search (https://docs.n8n.io/courses/level-one/chapter-5/chapter-5.5/#configure-the-code-node)--text course--level once--Building the workflow--Calculating booked orders-- code ko copy krny ke Liye (hm khod bhi likh skty hen but ye bhter he )--copy and past in n8n me -- Koch changes krni hoto krlengy --ab ismy ye issue hota he ke wo apny hisab Sy field me rkhta he or bahir I'd wagera extra bna deta he  to hm apny hisab Sy agr columns ki field krhna he to hm edite field krengy + pr click krky lekin code waly node Sy phly or select edit field --configration me hm mode ko jeson krengy --ak Jason tab open hoga likhengy apny hisab Sy field ke kisky Ander Kiya ana chiye  { "OrderID": drage krky OrderID past krengy} lekin string ki values ko  hmesha "" me likhengy 
+(key or values ki speaking thik hona chiye side Sy dekh kr likhan he 
+ye hmara apni Marzi Sy ak Jason bn gya ab yehi ayga JSON formate me hmny apna formate ban Liya )-- esy hi sb bna lengy sari fileds ke Liye ' lga lga kr  --execute
+
+---+ discord -- send a message --connection type me Webhook --craete new  credential --ye email me aya hoga webhook url-- send a message ke Liye hm(https://internal.users.n8n.cloud/webhook/course-level-1) -- me jaengy or sms format hoga osko copy past krdengy -- or exemption select hoga chiye tab-- execute -- ak sms ay hoga hm jaengy email Jo ai thi os pr or discord server pr click krengy-- accept invite -- or discord pr n8n ke icon ko sidebar Sy click krengy -- course level one -- hmy pta esy chlyga ke hmara sms aya he email me Jo I'd he os id Sy aya hoga
