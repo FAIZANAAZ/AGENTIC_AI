@@ -1,6 +1,4 @@
-https://docs.n8n.io/try-it-out/tutorial-first-workflow/#step-three-add-the-nasa-node-and-set-up-credentials
-
-installation/////////////////
+ljinstallation/////////////////
 search(https://n8n.io/)
 get started
 enter all data and fill form
@@ -9,6 +7,7 @@ copanyname=
 clik on free trial
 select =>only me=>it=>any=>any=>skip=>start automation
 
+abff
 ////////////////////////////////////
 personal = create workflow=click on + box=on chat msg in side bar =back to canvas =click on open chat ya hm l pr click krky open or close kr skty hen 
 
@@ -212,3 +211,35 @@ calculate values **
 ye hmara apni Marzi Sy ak Jason bn gya ab yehi ayga JSON formate me hmny apna formate ban Liya )-- esy hi sb bna lengy sari fileds ke Liye ' lga lga kr  --execute
 
 ---+ discord -- send a message --connection type me Webhook --craete new  credential --ye email me aya hoga webhook url-- send a message ke Liye hm(https://internal.users.n8n.cloud/webhook/course-level-1) -- me jaengy or sms format hoga osko copy past krdengy -- or exemption select hoga chiye tab-- execute -- ak sms ay hoga hm jaengy email Jo ai thi os pr or discord server pr click krengy-- accept invite -- or discord pr n8n ke icon ko sidebar Sy click krengy -- course level one -- hmy pta esy chlyga ke hmara sms aya he email me Jo I'd he os id Sy aya hoga
+
+
+
+//////////////////////////////////////////////////////////////////
+contact form automatation with email agent****
++ Gmail -- on message -- sign in with Google --sleect account -- cheq all options -- continue --connection successful -- pull time ko every minutes --event me message received-- simplify ke button Jo off krdengy (ye hamri email ko zada simplify nhi kryga Yani short rakhega)-- execute -- hnary account me Jo sbsy latest email ai hogi osko show kryga wo -- output me ak I'd bhi milygi--n8n ke execution krwany pr-- phir hm dosri email Sy email likhengy is email pr Jo n8n me lgai he --phir dosry account me wo ajaygi (Sirf chak krny ke Liye ke ye latest email otha rha he ya nhi ) --or execution krny pr wha pr ajaygi email jis account Sy bheji he or jis account pr Gai he-- output me table pr ajengy or form me address me likhi Hogi wo email jissy ai he hamry pas
+
+execute krengy to output me ak pin krny ka option hota he to hmary pas Jo email ai he wahi pin ho jay (taky hmaara workflow kharab na ho wrna koi or email aygi bich me wo osko otha lega )
+
+hmy text ko ab classifier krna he ke Sirf is type ki email ka reply kro baqi nhi 
+--+ text classified --hmy text to classify me braber Sy text ko drig and drop krna he --add category -- categories me student support (ya koi bhi hm name Dena chahy)--description hm wo dengy Jo main Kam he jesy ke Sirf student ka addmition ki email Hoti reply krna wrna nhi --ab ak or category lgaygy agr lagana chahty hen kisi or Kam ke Liye to  jesy hm ak or lgygy or khengy baqi isky olawa Jo bhi emails hen wo tm is category me dal Dena--bahir ajengy to do category ke + bby a ajygy --
+
+classifier me ak model deny ka option hota he wo dengy hm + pr click krky-- execute --wo reply email ke hisab Sy os. category me dal Dega jiski email ai he classified me 
+
+ab hm apny main Yani student support waly pr work krengy --hm phly classifier ke os + wali category ko click krengy jiska koi Kam nhi or osko no operation do nothing pr set krengy -- or phir jispr Kam krna he osky + pr click krengy --unpin krengy or koi esi email bhejengy dosry account Sy Jo hmary Kam ke he or check krengy wo Sahi category me ara he  or Kam wali category ke + pr click krky hm ai agent ko select krengy -- defined blow(Yani hm btaygy konsa sms othana he Yani email)--execute --braber Sy text ko drig and drop krdengy prompt me--add option --system message -- prompt likhengy or smajhaygy ke Kiya krna he agent ne (you are a student support agent for WordPress course and your work is too incoming emails with relivent data information using your knowledge base tool 
+instructions**
+your output should be friendly and use emoji sign of as Faiza Naaz from Naaz academy
+output**
+only the body content of the email
+never reply your own)
++ or click krky model dedengy ai agent ko  -- + pr click krky hm ak tool dengy or dengy pinecorn vector store-- credentials me wahi process -- operation mood me retrive documents as tool for ai agent  --(iska apna model hota he jisko btatana prhta he ke Kiya krna he description me )description me prompt (call this tool to acres policy and faq information or any WordPress inquiry related query ) -- from list me wahi Jo pinecorn me banya tha -- limit me 4 -- include metadata ko on hi rakhengy --bahir aygy -- embading ke + pr click krengy --embading openai Wala sely--bahir aygy --execute --
+
+(ab hmara Jo pinecorn hena wo Khali he to hm osmy Koch data dalna chahty hen taky wo response kr sky to hm ak alag Sy bnaygy workflow jisky zariye hm pinecorn me data dalengy drive sy)
+
+overview me jaengy or new workflow create krengy + krengy  google drive triger-- involving specific folder-- new credential --wo sb krengy Jo hm krty hen drive Sy kisi sheet ko panicorn me data lany ke Liye --+ krengy or drive me ab download file waly lengy or wahi sb krengy --from list me file ki I'd dengy drig and drop krky kind ke bad or name Sy phly wali --execute -- file download ho jaygi 
+
+ab pinecorn me save krwaygy**
++ pinecorn vector store --add Wala --mode me insert documents--form list me osi database ko select krengy --add option me pinecone namecase me name dengy koi bhi lekin type krengy khod  bahir aygy -- +embaded model dengy open ai wlaa -- documents ke + me default data loader --type  of data  me binary --mode me load all input data--data formate me automatically detect mine type -- text me simple --bahir a kr execute 
+
+
+again overview me jaengy or phly waly workflow me jaengy email automation waly --execute -- ai agent pr click krky cheq krengy ke ans aya ya nhi ai agent ka -- agr Sahi ans nhi aya to hm took or agent ke prompt ko thik krengy --
+
