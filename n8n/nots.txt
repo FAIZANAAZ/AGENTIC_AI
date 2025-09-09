@@ -243,3 +243,7 @@ ab pinecorn me save krwaygy**
 
 again overview me jaengy or phly waly workflow me jaengy email automation waly --execute -- ai agent pr click krky cheq krengy ke ans aya ya nhi ai agent ka -- agr Sahi ans nhi aya to hm took or agent ke prompt ko thik krengy --
 
+ak or picone bnaygy or osmy ab web development ka data bhejengy -- dosry waly workflow me jaengy or pinecorn waly ko alag Sy copy past krengy -- files Namecase  wagera name ab change hoga course ke hisab sy--or osko bhi agent ke tool Sy connect krwadengy--agent ka prompt wagera bhi change krengy -- classifier ke category brhaygy-- agent ke + ko click krky send messages pr click krengy -- osmy sbsy phly waly trigger Sy email nikal kr to me dalengy -- message me agent ke output ko dalengy drig and drop krky--sbject me wahi dalengy Jo osny Dala he-- execute krengy to email aygi received Hogi or send ho jaygi
+
+ab isko hn form Sy connect krwaygy**
+frontend me ak form bnaygy osmy url cooncet krengy webhook ka taky response jay phir webhook ko connect krengy --gemale --send email Sy -- or apny account pr bhej dengy email phir osi process ko run krengy classifier Sy start krky or end me egent me bhi ak or send email conect krwaygy or jis email Sy ai he wo nikal kr agent ka ans dal kr osy send krdengy
