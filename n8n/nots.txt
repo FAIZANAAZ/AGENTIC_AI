@@ -247,3 +247,20 @@ ak or picone bnaygy or osmy ab web development ka data bhejengy -- dosry waly wo
 
 ab isko hn form Sy connect krwaygy**
 frontend me ak form bnaygy osmy url cooncet krengy webhook ka taky response jay phir webhook ko connect krengy --gemale --send email Sy -- or apny account pr bhej dengy email phir osi process ko run krengy classifier Sy start krky or end me egent me bhi ak or send email conect krwaygy or jis email Sy ai he wo nikal kr agent ka ans dal kr osy send krdengy
+
+
+
+
+
+
+
+install localy with docker\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+search(https://docs.docker.com/desktop/setup/install/windows-install/) click on docker desktop for window
+ download hokr ajayga hm double click krky open krengy run krengy --install hoga --phly window me button pr click krengy or search wsl agr wo black color ka hi to wo porana he -- phir search krengy turn windows features ospr click krengy--vertual machine platform waly pr click krengy or windos sub system for linux-- ok krdengy --ye install ho jayga or restart now krengy --computer band ho jayga or open hoga again --phir wahi docer wali window pr aygy -- --open CMD likhengy   wsl --install -- phir wsl --status phir wsl --update -- phir wsl -l -o (list a jaygi )-- phir wsl --install -d Ubuntu --  wo intall ho jay to welcome ajayga --thik he wrna error aya hoga to hm -- window key press krengy or Ctrl + shift+ escept-- task manager open hoga --performance me jakr dekhengy kr CPU enable hona chiye -- agr disabled he to cammands run krengy CMD me -- hm computer band krengy or again open krengy to osmy khi na khi likha hoga ke ubnto ya virtual ko open krny ke Liye ye button click kren -- to phir again uff krengy or or foran wo button press krengy Jo likha tha to wo on krdega -- phir again wo cammands chalygy Ubuntu Wala phir success ho jayga --
+ phir cmb me jaengy or wha wo account name or password mangra hoga wo hm dengy osy or enter krdengy pasward nazr nhi ata bs yad rkhna chiye phir CMD me likhengy lsb_release -a (ismy hm dekhengy me ubunto hamary pas ya nhi he Yani I'd ubunto likha ayga )
+exit krky osy bahir a jaygy 
+wsl -v (version check krengy )
+
+
+
+again hm jaengy docker wali screen pr -- 1st or 3rd pr tik hoga osko ok krdengy --insatall hoga wo --close and logout -- phir Sy laptop band hoga or open hoga --ak window Hogi osko accept krna he --  phir skip -- window open hogi-- engine running likha hoga left button pr osko hm wha Sy run or band kr skty hen --search bar hm likhengy n8nio/n8n nichy bhi ayga pull krengy-- install ho jayga -- sidebar me ak tab h he image ka click krengy ak image ka name tag I'd wagera ayga isko hmy run krna he -- ak play ka button hoga run krengy -- ak window open Hogi arrow pr click krengy -- container ka name dengy Koch bhi --5678 likhengy port me -- valum me -- computer me jakr ak folder bnaygy n8n ke name Sy (is folder me hmara storage Hogi Jo Kam hm krengy )--valum waly pr ... click krengy or osi folder or open krlengy dosry tab me hm likhengy location -- /home/node/.n8n -- run -- Allow -- ak link ayga osi window pr osko localhost open krlega browser pr -- phir info dal kr open krlengy or work start -- or end me wahi docker ki window pr jakr images me akr -- jisky agy green dot ara hoga yani wo chalra he to osko Kam krny ke bad band krdengy blue box pr click krky -- or engine running bhi puse krdengy
