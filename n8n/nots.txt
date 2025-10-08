@@ -280,3 +280,45 @@ signup with Google --bni bnai tavily api key milygi wesy hm bna bhi skty hen cop
 kioky hm agent pr bharosa nhi kr skty to hm human in tha loop bhi add krengy taky wo Koch krny Sy phly ak bar pochly-- + human in the loop--or os app ko select krdengy jisy hm chahty hen wo pochy Whatsapp sms ya gemail -- gemail select krengy -- credentials -- or wahi console me jaengy or gemail api koe enable krengy or jis name Sy phly project bnaya tha isi pr click krengy to wha pr a jaygi bninhoi I'd Dono kioky phly bnai thi copy past -- sign in with Google -- or message select -- operation me send and wait taky wo w8 kry-- email subject or message dengy message me wahi result jesy email ay -- approved -- add option -- type approved ko approved and disapprov krengy taky 2 buttons ay -- nichy limit me Kitna time wo wait kry phir experire ho jay wo dengy ye bhi set krna zarori he taky hmara wo w8 kry phir ans ay to post wrna decline krky dosry topic pr Chala jay ---
 + if node select (taky hm approved ki Bina pr LinkedIn ya khi bhi post kr sken )-- hm true ke tab me approve waly ko dalengy drag krky -- or boolean me jakr is true ko select krlengy (Yani true hoto node agt prhayga  )-- LinkedIn select krengy (yaha bhi hmy client I'd chiye Hoti he or secerat kioky hm docker Sy local n8n use kry hen wrna clude pr direct sign in Sy ho jata tha  )--
 **search LinkedIn (https://developer.linkedin.com/)--craete app-- name dengy -- company page ka name dengy joky he hi nhi to hm phly LinkedIn pr jakr Al page bnaygy -- open LinkedIn --click on for business --craete company page --name dengy -- industry me Koch bhi -- size select me Koch bhi or verify ki select  -- or bs create -- view as page -- page open hoga search bar Sy os url ko copy krengy or waly LinkedIn waly pr jakr past krdengy --nichy aygy koi bhi logo dengy -- check pr click or create app--share on LinkedIn ko request access I have no tik krky ak bar phir request access --nichy aygy sign in with LinkedIn ko bhi wahi krengy access --auth ke tab me jaengy -- Dono idies mil jaeygy copy past in n8n--n8n pr ak url hoga osko copy krengy or osi developer wali web pr akr hm authuriz with you app ko edit krengy os os url ko daldengy--n8n me janegy Dono green buttons ko off krdengy -- or sign in connect my account  allow krengy LinkedIn ke Sath or save --resourse post -- operation create --post as me person -- nichy hamra name ara hoga wo lengy person number me --text me wo dengy Jo post krna he drag krky --media category none --execute -- ab hm apny http me pin ko unpin krengy taky wo sari post pr run kry or  agr hm chahty hen ke sary post ak Sath na kry gap Sy kry to hm + pr click krky wait ka note lga dengy or osky agy waly + ko again loop Sy moladengy to wo os time ke bad chalyga again
+
+fo image generation//////////////////
+serch https://huggingface.co/
+signup
+searchbar me likhengy flux or slect krlengy (flux.1-schnell)
+click on view api code 
+click on +2 ya +3 
+click on hf interface api
+javacript tab me jaengy or code ko copy krengy
+chat jpt on krengy or prompt likhengy (i am setting http node ,plz write curl of below javascript code 
+""ismy code past krdengy jo copy kiya tha "")
+wo bna kr dega koch n8n me janegy
+ak node lengy alag sy http ka or import curl lengy or chat gpt sy lakr past krdengy to koch chizen wo khod krdenga set 
+header parameter ki va;lue me hm barrer ke bad jo bhi hoga hta dengy ak space dengy
+waps osi website pr jaengy right site sy profile icon ko click krengy or acces token pr click krengy or passward dengy jo rkha tha
+create new token koi bhi name dengy phir repositry permistion sy oper jitny bhi box hen sbko click krengy 
+create token krdengy 
+copy krengy or n8n me akr barrer ke bad past krdengy 
+add permeter pr clcick krengy or formate bejengy 
+name me hm Accept likengy value me hm application/json 
+phir ak or perameter lengy 
+name me Contect-Type application/json
+again ak or lengy 
+Accept value image/png
+nichy body content typ me JSON or specify body me Using JSON krdengy nichy ak box open hoga 
+ismy hm input dengy tab ko expretion krengy 
+{"inputs":"Flying butterfly"
+}
+jo bhi image bnwani ho oska name
+
+nichy jaengy or response formate ko hm file rakheng 
+put output me data likh dengy 
+execute krengy or view krengy to picture bna kr dega wo
+or get row in sheet ke agy or linkedin ke pichy rkh dengy 
+
+agr linkendin sy krwary hen to linkedin me media category me image select krlengy to nichy wahi name a jayga jo rkha tha meny 
+
+
+
+
+
+
