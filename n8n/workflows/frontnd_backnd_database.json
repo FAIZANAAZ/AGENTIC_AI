@@ -1,0 +1,233 @@
+{
+  "name": "frontnd/backnd/database",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "9d9067c0-2872-4137-8992-ad675aea255f",
+        "responseMode": "responseNode",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2.1,
+      "position": [
+        -736,
+        0
+      ],
+      "id": "bc5d0e6c-809e-40ac-a301-6e5403c865b9",
+      "name": "Webhook",
+      "webhookId": "9d9067c0-2872-4137-8992-ad675aea255f"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "={{ $json.body.name }}  {{ $json.body.message }}",
+        "options": {
+          "systemMessage": "always greet the user with his or her name with smili emoji and message highlight"
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 2.2,
+      "position": [
+        -560,
+        0
+      ],
+      "id": "a52229b2-cb39-4f1c-a26c-ada543a09f03",
+      "name": "AI Agent"
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "mode": "list",
+          "value": "gpt-4.1-mini"
+        },
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.2,
+      "position": [
+        -560,
+        160
+      ],
+      "id": "5216d81f-46a4-4f5b-8266-8baa940e0ee7",
+      "name": "OpenAI Chat Model",
+      "credentials": {
+        "openAiApi": {
+          "id": "BD7swnAp1jdDFuMx",
+          "name": "OpenAi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.4,
+      "position": [
+        -272,
+        -64
+      ],
+      "id": "a099d918-008b-45bb-a592-dec492dcd118",
+      "name": "Respond to Webhook"
+    },
+    {
+      "parameters": {
+        "operation": "create",
+        "base": {
+          "__rl": true,
+          "value": "app5IS54lnUuUqE37",
+          "mode": "list",
+          "cachedResultName": "2databas",
+          "cachedResultUrl": "https://airtable.com/app5IS54lnUuUqE37"
+        },
+        "table": {
+          "__rl": true,
+          "value": "tbl0CPVUsZthVOmhk",
+          "mode": "list",
+          "cachedResultName": "my table",
+          "cachedResultUrl": "https://airtable.com/app5IS54lnUuUqE37/tbl0CPVUsZthVOmhk"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "Full Name": "={{ $('Webhook').item.json.body.name }}",
+            "Message": "={{ $('Webhook').item.json.body.message }}"
+          },
+          "matchingColumns": [
+            "Name"
+          ],
+          "schema": [
+            {
+              "id": "Full Name",
+              "displayName": "Full Name",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "Message",
+              "displayName": "Message",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.airtable",
+      "typeVersion": 2.1,
+      "position": [
+        -128,
+        144
+      ],
+      "id": "dcab5e09-ccc6-4af9-93cf-a002545bc8a1",
+      "name": "Create a record",
+      "credentials": {
+        "airtableTokenApi": {
+          "id": "P7zpYHwcijZXxVw3",
+          "name": "Airtable Personal Access Token account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "sendTo": "faixanaaz@gmail.com",
+        "subject": "n8n",
+        "emailType": "text",
+        "message": "={{ $json.fields['Full Name'] }}{{ $json.fields.Message }}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        80,
+        144
+      ],
+      "id": "7bf16799-7cd1-4131-afbd-4077c6a5fce5",
+      "name": "Send a message",
+      "webhookId": "1e1bfe3b-335b-43d5-a643-2e611b536c58",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "LRzpFIm8ce8RDog8",
+          "name": "Gmail account"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AI Agent": {
+      "main": [
+        [
+          {
+            "node": "Respond to Webhook",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Create a record",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Create a record": {
+      "main": [
+        [
+          {
+            "node": "Send a message",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "89f349b7-a1ef-4f12-b0ff-0e4503df2173",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "f242abcdf285aedf821b7288e00f2c767599f1a8f40cb443032031c7aab5eb96"
+  },
+  "id": "sqRqwfNeP517lzwf",
+  "tags": []
+}

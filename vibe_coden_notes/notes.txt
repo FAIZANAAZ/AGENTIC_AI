@@ -1,0 +1,24 @@
+---------------------- run these command for once in lifetime --------------------------
+
+1. folder create 1️⃣
+2. node --version 1️⃣
+3. qwen download (npm install -g @qwen-code/qwen-code) 1️⃣
+
+
+
+
+
+
+
+--------------------------- run these command every project -------------------------------
+
+1. qwen run for auth (qwen)
+2. spec kit download (uvx --from git+https://github.com/github/spec-kit.git specify init .)
+3. Choose your AI assistant (Qwen)
+4. Choose script type (PowerShell)
+5. Initialize a new Specify project from the latest template (specify init)
+6. run this command in qwen inputbox (speckit.constitution Create or update project governing principles and development guidelines to build calculator with python language)
+7. run this command in qwen inputbox (speckit.specify i want to build a calculator using python language to perform arthimetic operation)
+8. run this command in qwen inputbox (/speckit.plan (create technical implementation my tech stack is pyhton language))
+9. run this command in qwen inputbox (speckit.tasks Generate actionable task lists for implementation according to specs\python-calculator\plan.md)
+10. run this command in qwen inputbox (speckit.implement (Execute all tasks to build the feature according to the plan))

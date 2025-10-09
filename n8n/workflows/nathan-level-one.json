@@ -1,0 +1,505 @@
+{
+  "name": "nathan-level-one",
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "weeks",
+              "triggerAtDay": [
+                1
+              ],
+              "triggerAtHour": 9
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        -640,
+        0
+      ],
+      "id": "cd669b1c-0420-49f7-90af-fec73d9775a5",
+      "name": "Schedule Trigger"
+    },
+    {
+      "parameters": {
+        "url": "https://internal.users.n8n.cloud/webhook/custom-erp",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "unique_id",
+              "value": "628e2ec61b62f897eafb38d411b639c6"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        -480,
+        0
+      ],
+      "id": "650f67c0-820d-4bac-85b8-c45f5425a1bc",
+      "name": "HTTP Request",
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "wA4YulXI9scgCJC8",
+          "name": "Header Auth account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "create",
+        "base": {
+          "__rl": true,
+          "value": "app5IS54lnUuUqE37",
+          "mode": "list",
+          "cachedResultName": "2databas",
+          "cachedResultUrl": "https://airtable.com/app5IS54lnUuUqE37"
+        },
+        "table": {
+          "__rl": true,
+          "value": "tbl0CPVUsZthVOmhk",
+          "mode": "list",
+          "cachedResultName": "my table",
+          "cachedResultUrl": "https://airtable.com/app5IS54lnUuUqE37/tbl0CPVUsZthVOmhk"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "orderPrice": "={{ $json.orderPrice }}",
+            "customerID": "={{ $json.customerID }}",
+            "orderID": "={{ $json.orderID }}",
+            "employeeName": "={{ $json.employeeName }}",
+            "orderStatus": "={{ $json.orderStatus }}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "orderID",
+              "displayName": "orderID",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "number",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "orderStatus",
+              "displayName": "orderStatus",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "employeeName",
+              "displayName": "employeeName",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "customerID",
+              "displayName": "customerID",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "number",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "orderPrice",
+              "displayName": "orderPrice",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "number",
+              "readOnly": false,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.airtable",
+      "typeVersion": 2.1,
+      "position": [
+        -336,
+        0
+      ],
+      "id": "130a7574-d722-44dd-b531-e46b93089068",
+      "name": "my table",
+      "credentials": {
+        "airtableTokenApi": {
+          "id": "P7zpYHwcijZXxVw3",
+          "name": "Airtable Personal Access Token account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "82a5fbc7-9c6b-46fd-bf6d-2d5b12867e51",
+              "leftValue": "={{ $json.orderStatus }}",
+              "rightValue": "processing",
+              "operator": {
+                "type": "string",
+                "operation": "equals",
+                "name": "filter.operator.equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        16,
+        0
+      ],
+      "id": "04ec0323-a5bb-4f83-99ab-3e0fa97fae03",
+      "name": "If"
+    },
+    {
+      "parameters": {
+        "operation": "create",
+        "base": {
+          "__rl": true,
+          "value": "app5IS54lnUuUqE37",
+          "mode": "list",
+          "cachedResultName": "2databas",
+          "cachedResultUrl": "https://airtable.com/app5IS54lnUuUqE37"
+        },
+        "table": {
+          "__rl": true,
+          "value": "tblXmeFZEvXlA1a8w",
+          "mode": "list",
+          "cachedResultName": "processing",
+          "cachedResultUrl": "https://airtable.com/app5IS54lnUuUqE37/tblXmeFZEvXlA1a8w"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "orderID": "={{ $json.fields.orderID }}",
+            "orderStatus": "={{ $json.fields.orderStatus }}",
+            "employeeName": "={{ $json.fields.employeeName }}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "orderID",
+              "displayName": "orderID",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "number",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "orderStatus",
+              "displayName": "orderStatus",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "employeeName",
+              "displayName": "employeeName",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.airtable",
+      "typeVersion": 2.1,
+      "position": [
+        128,
+        -176
+      ],
+      "id": "db438781-e662-4b1b-b5c4-144e9e478443",
+      "name": "processing",
+      "credentials": {
+        "airtableTokenApi": {
+          "id": "P7zpYHwcijZXxVw3",
+          "name": "Airtable Personal Access Token account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "create",
+        "base": {
+          "__rl": true,
+          "value": "app5IS54lnUuUqE37",
+          "mode": "list",
+          "cachedResultName": "2databas",
+          "cachedResultUrl": "https://airtable.com/app5IS54lnUuUqE37"
+        },
+        "table": {
+          "__rl": true,
+          "value": "tblvKyy4Bz0ERDmfs",
+          "mode": "list",
+          "cachedResultName": "booked",
+          "cachedResultUrl": "https://airtable.com/app5IS54lnUuUqE37/tblvKyy4Bz0ERDmfs"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "orderStatus": "={{ $json.orderStatus }}",
+            "employeeName": "={{ $json.employeeName }}",
+            "orderID": "={{ $json.orderID }}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "orderID",
+              "displayName": "orderID",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "number",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "orderStatus",
+              "displayName": "orderStatus",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "employeeName",
+              "displayName": "employeeName",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.airtable",
+      "typeVersion": 2.1,
+      "position": [
+        128,
+        192
+      ],
+      "id": "6b87c95c-a8c2-422f-bd00-725efeaae19d",
+      "name": "booked",
+      "credentials": {
+        "airtableTokenApi": {
+          "id": "P7zpYHwcijZXxVw3",
+          "name": "Airtable Personal Access Token account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "let items = $input.all();\nlet totalBooked = items.length;\nlet bookedSum = 0;\n\nfor (let i=0; i < items.length; i++) {\n  bookedSum = bookedSum + items[i].json.fields.orderID;\n}\n\nreturn [{ json: {totalBooked, bookedSum} }];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        320,
+        192
+      ],
+      "id": "b9b34848-074b-4640-80c1-bb6684dbda2e",
+      "name": "Code"
+    },
+    {
+      "parameters": {
+        "mode": "raw",
+        "jsonOutput": "={\n  \"orderID\": {{ $json.fields.orderID }},\n  \"orderStatus\": \"{{ $json.fields.orderStatus }}\",\n  \"employeeName\": \"{{ $json.fields.employeeName }}\",\n  \"customerID\":{{ $json.fields.customerID }},\n  \"orderPrice\":{{ $json.fields.orderPrice }}\n}\n",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        -160,
+        0
+      ],
+      "id": "93133081-55e0-4e35-8858-739522de0292",
+      "name": "Edit Fields"
+    },
+    {
+      "parameters": {
+        "authentication": "webhook",
+        "content": "=This week we've {{$json[\"totalBooked\"]}} booked orders with a total value of {{$json[\"bookedSum\"]}}. My Unique ID: {{ $('HTTP Request').params[\"headerParameters\"][\"parameters\"][0][\"value\"] }}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.discord",
+      "typeVersion": 2,
+      "position": [
+        624,
+        192
+      ],
+      "id": "ed41950b-1707-4c47-b9f2-86a2a86d5a10",
+      "name": "Discord",
+      "webhookId": "ee052fb9-e670-419f-bf77-46fb9096d2e9",
+      "credentials": {
+        "discordWebhookApi": {
+          "id": "XY8eFQGZmtYd5sjH",
+          "name": "Discord Webhook account"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Schedule Trigger": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request": {
+      "main": [
+        [
+          {
+            "node": "my table",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "my table": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If": {
+      "main": [
+        [
+          {
+            "node": "processing",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "booked",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code": {
+      "main": [
+        [
+          {
+            "node": "Discord",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields": {
+      "main": [
+        [
+          {
+            "node": "If",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "booked": {
+      "main": [
+        [
+          {
+            "node": "Code",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "7c3cad1c-280b-4366-8282-2fef1347df1a",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "f242abcdf285aedf821b7288e00f2c767599f1a8f40cb443032031c7aab5eb96"
+  },
+  "id": "mcs4I2akyHpwQkFF",
+  "tags": []
+}

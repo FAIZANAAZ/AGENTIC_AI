@@ -1,4 +1,0 @@
-{"__type":"$$EventMessageAudit","id":"86b221f0-3bfb-444a-ab71-d7688fdc14aa","ts":"2025-10-07T18:42:38.275+00:00","eventName":"n8n.audit.user.login.failed","message":"n8n.audit.user.login.failed","payload":{"authenticationMethod":"email","userEmail":"faixanaaz@gmail.com","reason":"wrong credentials"}}
-{"__type":"$$EventMessageConfirm","confirm":"86b221f0-3bfb-444a-ab71-d7688fdc14aa","ts":"2025-10-07T18:42:38.284+00:00","source":{"id":"0","name":"eventBus"}}
-{"__type":"$$EventMessageAudit","id":"56e6eb36-690b-473e-b269-103e6452064a","ts":"2025-10-07T18:49:22.798+00:00","eventName":"n8n.audit.user.login.failed","message":"n8n.audit.user.login.failed","payload":{"authenticationMethod":"email","userEmail":"faixanaaz@gmail.com","reason":"wrong credentials"}}
-{"__type":"$$EventMessageConfirm","confirm":"56e6eb36-690b-473e-b269-103e6452064a","ts":"2025-10-07T18:49:22.847+00:00","source":{"id":"0","name":"eventBus"}}

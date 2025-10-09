@@ -1,0 +1,310 @@
+{
+  "name": "stuendt-email-agent/frontnd",
+  "nodes": [
+    {
+      "parameters": {
+        "inputText": "={{ $json.text }}",
+        "categories": {
+          "categories": [
+            {
+              "category": "students support ",
+              "description": "You have been assigned as the email support agent. Your responsibility is to respond only to student-related emails. Please do not reply to any other emails"
+            },
+            {
+              "category": "others ",
+              "description": "For all other emails that are not student-related, please move them to the 'Others' categories "
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.textClassifier",
+      "typeVersion": 1.1,
+      "position": [
+        -752,
+        16
+      ],
+      "id": "126c4e56-083a-4506-9f95-c39d3137b73c",
+      "name": "Text Classifier"
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "mode": "list",
+          "value": "gpt-4.1-mini"
+        },
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.2,
+      "position": [
+        -736,
+        176
+      ],
+      "id": "913cd4c2-336a-4f65-8cf2-eea366763f58",
+      "name": "OpenAI Chat Model",
+      "credentials": {
+        "openAiApi": {
+          "id": "BD7swnAp1jdDFuMx",
+          "name": "OpenAi account"
+        }
+      }
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        -464,
+        192
+      ],
+      "id": "1d6cab29-a7bf-412c-a0ec-60a85a3b8c3b",
+      "name": "No Operation, do nothing"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "={{ $json.text }}",
+        "options": {
+          "systemMessage": "You are a student support agent for the WordPress course. Your task is to reply to incoming student emails using your knowledge base tool. Write friendly replies, keep them simple, and use emojis where helpful. Always sign off as Faiza Naaz, Naaz Academy. Output only the email body content (no greetings, subject lines, or your own extra replies"
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 2.2,
+      "position": [
+        -368,
+        -96
+      ],
+      "id": "42c5d68c-69e7-4d4f-b806-a1f5b82147bd",
+      "name": "AI Agent"
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "mode": "list",
+          "value": "gpt-4.1-mini"
+        },
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.2,
+      "position": [
+        -352,
+        96
+      ],
+      "id": "8120f211-00fe-48a3-93a4-17a3c8a9b686",
+      "name": "OpenAI Chat Model1",
+      "credentials": {
+        "openAiApi": {
+          "id": "BD7swnAp1jdDFuMx",
+          "name": "OpenAi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "mode": "retrieve-as-tool",
+        "toolDescription": "call this tool to acres policy and faq information or any WordPress inquiry related query",
+        "pineconeIndex": {
+          "__rl": true,
+          "value": "studentsindexdb",
+          "mode": "list",
+          "cachedResultName": "studentsindexdb"
+        },
+        "options": {
+          "pineconeNamespace": "emailAgent"
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.vectorStorePinecone",
+      "typeVersion": 1.3,
+      "position": [
+        -144,
+        96
+      ],
+      "id": "749fd670-e533-4753-8fc7-281380586540",
+      "name": "Pinecone Vector Store",
+      "credentials": {
+        "pineconeApi": {
+          "id": "15RfzGVwPMFYUkns",
+          "name": "PineconeApi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.embeddingsOpenAi",
+      "typeVersion": 1.2,
+      "position": [
+        0,
+        224
+      ],
+      "id": "c06c1446-18ea-4cfd-9f25-d7c0e3a42d53",
+      "name": "Embeddings OpenAI",
+      "credentials": {
+        "openAiApi": {
+          "id": "BD7swnAp1jdDFuMx",
+          "name": "OpenAi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        0,
+        -96
+      ],
+      "id": "25eaa44c-4175-427a-8a18-6e2472cda50d",
+      "name": "Send a message",
+      "webhookId": "2b8ed975-6398-4c83-b0a5-3aecf88000c7",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "LRzpFIm8ce8RDog8",
+          "name": "Gmail account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        -976,
+        16
+      ],
+      "id": "5fe5cc06-085a-4d18-b17e-9a39f4011d30",
+      "name": "Send a message1",
+      "webhookId": "dcd1fcde-5375-4a2c-83e3-e9bc0151e353",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "LRzpFIm8ce8RDog8",
+          "name": "Gmail account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "student-support",
+        "responseMode": "responseNode",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2.1,
+      "position": [
+        -1184,
+        32
+      ],
+      "id": "0c17b273-d017-4b41-b1d0-e4609187587e",
+      "name": "Webhook",
+      "webhookId": "4e06cb9e-5d1e-4aba-a476-618e2704fc11"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "OpenAI Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Text Classifier",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Text Classifier": {
+      "main": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "No Operation, do nothing",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model1": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Pinecone Vector Store": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Embeddings OpenAI": {
+      "ai_embedding": [
+        [
+          {
+            "node": "Pinecone Vector Store",
+            "type": "ai_embedding",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AI Agent": {
+      "main": [
+        [
+          {
+            "node": "Send a message",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Send a message1": {
+      "main": [
+        [
+          {
+            "node": "Text Classifier",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "21dcd066-d499-4e65-8f88-8964e0940435",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "f242abcdf285aedf821b7288e00f2c767599f1a8f40cb443032031c7aab5eb96"
+  },
+  "id": "M7HSmaPsAPF6hpCc",
+  "tags": []
+}

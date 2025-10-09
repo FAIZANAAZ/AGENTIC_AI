@@ -291,11 +291,18 @@ click on hf interface api
 javacript tab me jaengy or code ko copy krengy
 chat jpt on krengy or prompt likhengy (i am setting http node ,plz write curl of below javascript code 
 ""ismy code past krdengy jo copy kiya tha "")
+
+gpt ans"curl -X POST "https://router.huggingface.co/hf-inference/models/black-forest-labs/FLUX.1-schnell" \
+  -H "Authorization: Bearer $HF_TOKEN" \
+  -H "Content-Type: application/json" \
+  -d '{"inputs": "Astronaut riding a horse"}' \
+  --output result.png
+"
 wo bna kr dega koch n8n me janegy
 ak node lengy alag sy http ka or import curl lengy or chat gpt sy lakr past krdengy to koch chizen wo khod krdenga set 
 header parameter ki va;lue me hm barrer ke bad jo bhi hoga hta dengy ak space dengy
 waps osi website pr jaengy right site sy profile icon ko click krengy or acces token pr click krengy or passward dengy jo rkha tha
-create new token koi bhi name dengy phir repositry permistion sy oper jitny bhi box hen sbko click krengy 
+create new token koi bhi name dengy phir repositry permistion sy oper jitny bhi box hen sbko click krengy left right dono
 create token krdengy 
 copy krengy or n8n me akr barrer ke bad past krdengy 
 add permeter pr clcick krengy or formate bejengy 
@@ -318,7 +325,78 @@ or get row in sheet ke agy or linkedin ke pichy rkh dengy
 agr linkendin sy krwary hen to linkedin me media category me image select krlengy to nichy wahi name a jayga jo rkha tha meny 
 
 
+prompt change krengy agent ka first waly or add krengy ke ye sb ana chiye or image ka prompt bhi ho 
+
+"# Overview
+You are an AI agent tasked with creating a professional LinkedIn post based on the content of three given articles. Your post should reflect the following:
+
+- Use a professional tone, suitable for LinkedIn.
+- Avoid spammy or overly promotional language.
+- Incorporate relevant emojis to make the post engaging and humanized.
+- Add non-spammy, industry-specific hashtags that enhance the post’s visibility without overloading the message.
+- in imagePrompt Provide a clear AI image prompt based on the content of the post, so that an AI-generated image can be created to complement the post.
+- use line breaks to format post 
+- use Topic heading in post content
+
+## Output Guidelines:
+- Ensure the language is professional and appropriate for a business-focused platform like LinkedIn.
+- Avoid robotic or overly formal phrasing. The post should sound natural and conversational while maintaining a professional tone.
+- Incorporate the best practices for social media engagement by selecting relevant hashtags and emojis that align with the post's topic.
+- The image prompt should be specific enough to generate an image that visually represents the post’s content, e.g., a modern office setting, a diverse team working on tech, etc.
+
+## Output Example:
+```json
+{
+  "post": "Advancing AI Video Generation with Alibaba WAN 2.5 🎥🤖
+
+The evolution of AI-generated video content has reached a new milestone with Alibaba's WAN 2.5 model. This advanced multimodal AI brings cinematic-quality video generation from simple text or image prompts, complete with synchronized audio and realistic motion. Platforms such as Higgsfield WAN 2.5, Fal.ai, and Wavespeed are already showcasing how this technology is moving beyond mere visuals to tell expressive, high-fidelity stories in stunning 4K resolution.
+
+For content creators, marketers, and storytellers, WAN 2.5 offers:
+
+Up to 10-second videos with dynamic motion and expressions
+
+Seamless integration with tools like ImagineArt for creative workflows
+
+A next-generation storytelling experience with cinematic realism
+
+This technology is setting new standards in AI-driven video production, offering limitless creativity and opening new possibilities for audience engagement.
+
+#AI #VideoGeneration #CinematicAI #ContentCreation #TechInnovation",
+
+"imagePrompt": "A modern office setting with a team of professionals interacting with AI-powered tools on their laptops. The environment should be sleek, tech-forward, and diverse in terms of the team composition. The mood is innovative and forward-thinking."
+}
 
 
+### Key Improvements:
+1. *Clearer instructions:* Specifying that the post must be "business-focused" and fit for LinkedIn helps guide the tone and structure.
+2. *Professionalism:* Emphasizing that the post should not sound robotic but still remain formal and professional.
+3. *Hashtags and emojis:* Making sure the hashtags are relevant and non-spammy.
+4. *Image prompt clarity:* The image prompt should help generate an image that visually aligns with the content of the post."
+***
+linkinin me media category ko image krty hen jb bhi image sath add krni ho post ke
+
+sturcture output persy
+isy ye hoga hmy jis formate me ans chiye wo lengy 
+phir + krky structure output perse ko laygy or agent ke tool output perse ke + Sy connect krdengy lekin agent me jakr response formaete ke button ko on krengy to 3  + add ho jayga osko connect krengy -- node me define using jeson shema select krengy or osky nichy -- input schema me hm likhengy wo sb jesa ans chiye --phir jha hmny image ki api use ki thi odhar input me hm ai ne Jo promt bnaya hoga image ke Liye wo dengy
 
 
+//////////////////////////////////////////////
+tavily Sy search krwany ke Liye phly osko install krengy + Sy or search Wala select krengy  tavily.com Sy api lakr lagaygy 
+resources me query rakhengy operation me query rakhengy or query me wo chiz jisky bary me search krna he 
+add option Sy topic lengy or news select krengy ya Koch bhi (new matlb wo news wali jitni chizen hen web wagera eha sy search kryga baqi bhi esy hi hen )
+max results de dengy ke kitni jagahon Sy search krna he 
+time range me ke kitny phly Sy krna he week pori news ya current Koch bhi
+
+split***
+ke node Sy hm kisi bhi array me Sy values ko alag alag kr skty hen phir hm osi array ko agly note me dalengy to wo alag alag howa hoga
+
+.join('/n') *
+isy hm space de skty hen kisi bhi Pera wagera me 
+
+aggregate **
+isy hm dobara Arey ko join kr skty hen
+
+///////////////////
+current date 
+{{$now.formate("DDD")}}
+isy hm current date nikal skty en kha hi text me ye likhengy date a jaygi
