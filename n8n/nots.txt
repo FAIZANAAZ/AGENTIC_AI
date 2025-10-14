@@ -400,3 +400,20 @@ isy hm dobara Arey ko join kr skty hen
 current date 
 {{$now.formate("DDD")}}
 isy hm current date nikal skty en kha hi text me ye likhengy date a jaygi
+
+Switch*****
+if alse ki trha hamry pas switch statement bhi Hoti he jismy hm mokhtalif conditions de skty hen ke agr pichy Sy input me likha ay Faiza to tm nichy Wala + run krna or agr nimra ay to oper Wala 
+
+
+direct nodes***
+hmary pas Koch direct notes hoty hen jo ke apny pas model lety hen ak llm Yani isy hmy agent nhi lgaty bs llm chiye hoto ye use krlengy ye 3 trha ke hoty hen jesy 
+basic llm chain (input aya llm ke pas gya or ans Le aya )
+Quation ans chain(input aya Jo sawal pochna ho pocha ans Liya or esy chalta rhyga jitny sawal chiye ho)
+sumerization chain(isy ye hoga ke pichy jitna bara input ara hoga ye osko summery bna Dega taky agy agr use krna Hoti short summary me krlen naky full btaen)
+
+Execute sub workflow**
+agr hm chahty hen ke hm kisi dosry ke Liye bnay koi workflow Yani koi or agr use kry to hm chat trigger use nhi krty yato execute-sub-workflow  user krengy ya trigger manually 
+
+
+previous workflow***
+call n8n workflow tool node ki madad Sy hm any kisi bhi workflow ko as a tool use kr skty hen

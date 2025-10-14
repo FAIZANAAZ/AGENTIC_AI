@@ -1,0 +1,40 @@
+# yaml,yml (dono trha sy bn skta he files)
+# ye file error nhi deti ghlti pr bhi 
+# brakets nhi hoty ismy
+
+name: "faiza naaz"
+age: 20
+# "variable ki name or values ke darmiyan ak space dena lazmi he "
+skills:
+  - python
+  - java
+  - c++
+  - html
+  - css
+  - js
+  # ye list he array ismy hm indent sy control krty hen 
+
+marks:
+  math: 95
+  physics: 90
+  chemistry: 89
+  english: 93
+  urdu: 88
+
+# ye dictionary he ismy key or value hoti he or bhi indent dengy names ke agy 2 tb ye dictionaiers bnygi
+
+empty_value: null
+empty_value2: ~
+# null or ~ ye dono empty value k liye use hoty hen yani null 
+
+basic_info: &default_base 
+  name: "faiza naaz"
+  age: 20
+  # &default_base likhny sy hm dori jga bhi use kr skty hen 
+srudent_card:
+  <<: *default_base
+  class: "BSCS"
+  year: 2nd
+  university: "UoK"
+
+# <<: *default_base ye hmny uper wali dictionary ko yha copy kr lia he or usmy or chezen b add kr skty hen
