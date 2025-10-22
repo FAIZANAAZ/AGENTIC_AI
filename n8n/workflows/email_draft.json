@@ -1,0 +1,442 @@
+{
+  "name": "email_draft",
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "weeks",
+              "triggerAtHour": 9
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        -1024,
+        -32
+      ],
+      "id": "590b09aa-e62a-4514-a10b-5a830525b88b",
+      "name": "Schedule Trigger"
+    },
+    {
+      "parameters": {
+        "query": "AI ADOPTION for small business",
+        "options": {
+          "topic": "news",
+          "max_results": 3,
+          "time_range": "week"
+        }
+      },
+      "type": "@tavily/n8n-nodes-tavily.tavily",
+      "typeVersion": 1,
+      "position": [
+        -864,
+        -16
+      ],
+      "id": "aa06292c-3d6e-493f-8f25-96ab2fcdb8ef",
+      "name": "Search",
+      "credentials": {
+        "tavilyApi": {
+          "id": "10uPEcd8t86lXuUC",
+          "name": "Tavily account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=here are the articles:\n{{ $json.results.map(item => JSON.stringify(item,null,2)).join('\\n\\n') }}\n",
+        "hasOutputParser": true,
+        "options": {
+          "systemMessage": "=You are an expert newsletter planner. You receive 3–5 short article digests (title, URL, published date, content) from the past week.\n\nTask: \npropose a catchy edition title (≤ 80 chars) and exactly 3 concise topics (each 3–5 words) that reflect distinct angles for our audience of small-business leaders.\n\nConstraints: unique topics; no duplicates; no clickbait; be informative.\nOutput only via the required schema (no extra text)."
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 2.2,
+      "position": [
+        -704,
+        0
+      ],
+      "id": "eaef473c-9d15-4028-a2e3-b6cb27615a0e",
+      "name": "planing agent"
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "mode": "list",
+          "value": "gpt-4.1-mini"
+        },
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.2,
+      "position": [
+        -656,
+        224
+      ],
+      "id": "82f49808-c152-4d8a-9a3b-afe6725a9b8e",
+      "name": "OpenAI Chat Model",
+      "credentials": {
+        "openAiApi": {
+          "id": "yoq5oEcPxuV9rr9y",
+          "name": "OpenAi account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "schemaType": "manual",
+        "inputSchema": "{\n  \"type\": \"object\",\n  \"additionalProperties\": false,\n  \"properties\": {\n    \"title\": { \"type\": \"string\", \"minLength\": 10 },\n    \"topics\": {\n      \"type\": \"array\",\n      \"minItems\": 3,\n      \"maxItems\": 3,\n      \"items\": { \"type\": \"string\", \"minLength\": 3, \"maxLength\": 50 }\n    }\n  },\n  \"required\": [\"title\", \"topics\"]\n}"
+      },
+      "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
+      "typeVersion": 1.3,
+      "position": [
+        -544,
+        208
+      ],
+      "id": "4be075ec-ddd1-4dd2-8e81-52d275dcbebe",
+      "name": "Structured Output Parser"
+    },
+    {
+      "parameters": {
+        "fieldToSplitOut": "output.topics",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.splitOut",
+      "typeVersion": 1,
+      "position": [
+        -400,
+        0
+      ],
+      "id": "d0e55d42-207d-4cdb-9101-15dbd7727892",
+      "name": "Split Out"
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "mode": "list",
+          "value": "gpt-4.1-mini"
+        },
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.2,
+      "position": [
+        -176,
+        208
+      ],
+      "id": "17e810d3-4e92-4c1e-8aab-12afc504bd8e",
+      "name": "OpenAI Chat Model1",
+      "credentials": {
+        "openAiApi": {
+          "id": "yoq5oEcPxuV9rr9y",
+          "name": "OpenAi account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=Topic :{{ $json.query }}\n\nuse these source to write one standalone section:\n{{ $json.results.map(item => JSON.stringify(item,null,2)).join('\\n\\n') }}",
+        "hasOutputParser": true,
+        "options": {
+          "systemMessage": "=You are a professional newsletter section writer. Write ONE self-contained section (350–500 words) for small-business leaders.\n\nRequirements:\n- Start with an H2 heading matching the Topic (e.g., “## <topic>”).\n- Synthesize facts from the provided sources (don’t invent).\n- Inline-cite claims with superscript markers like [1], [2].\n- After the prose, add a short “Sources” list: [n] Title — Domain (linked).\n- Tone: clear, expert, engaging. No overall intro or conclusion; just this section.\n- Output plain Markdown (the editor will convert to HTML)."
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 2.2,
+      "position": [
+        -96,
+        0
+      ],
+      "id": "4a53b493-722f-429e-b9d4-2beca0481295",
+      "name": "section write agent"
+    },
+    {
+      "parameters": {
+        "query": "={{ $json['output.topics'] }}",
+        "options": {
+          "topic": "general",
+          "time_range": "week",
+          "include_raw_content": true
+        }
+      },
+      "type": "@tavily/n8n-nodes-tavily.tavily",
+      "typeVersion": 1,
+      "position": [
+        -240,
+        0
+      ],
+      "id": "e52dab20-4d52-45b9-98a1-85e5bec32711",
+      "name": "research",
+      "credentials": {
+        "tavilyApi": {
+          "id": "10uPEcd8t86lXuUC",
+          "name": "Tavily account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "fieldsToAggregate": {
+          "fieldToAggregate": [
+            {
+              "fieldToAggregate": "output"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.aggregate",
+      "typeVersion": 1,
+      "position": [
+        208,
+        0
+      ],
+      "id": "60d92acd-de19-4696-938c-d8e40e6b570b",
+      "name": "Aggregate"
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "mode": "list",
+          "value": "gpt-4.1-mini"
+        },
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.2,
+      "position": [
+        384,
+        208
+      ],
+      "id": "62af729d-4b8e-4e99-9438-cb209237ed90",
+      "name": "OpenAI Chat Model2",
+      "credentials": {
+        "openAiApi": {
+          "id": "yoq5oEcPxuV9rr9y",
+          "name": "OpenAi account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "schemaType": "manual",
+        "inputSchema": "{\n  \"type\": \"object\",\n  \"additionalProperties\": false,\n  \"properties\": {\n    \"subject\": {\n      \"type\": \"string\",\n      \"description\": \"the email subject\"\n    },\n    \"content\": {\n      \"type\": \"string\",\n      \"description\": \"the newsletter content\"\n    }\n  },\n  \"required\": [\"subject\", \"content\"]\n}"
+      },
+      "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
+      "typeVersion": 1.3,
+      "position": [
+        560,
+        192
+      ],
+      "id": "f1101589-f256-4771-bfc5-19c7e517a055",
+      "name": "Structured Output Parser1"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=title:{{ $('planing agent').item.json.output.title }}\n\nsection:{{ $json.output.join(\"\\n\\n\\n\") }}\n{{ $('planing agent').item.json.output.title }}",
+        "hasOutputParser": true,
+        "options": {
+          "systemMessage": "=You are the newsletter editor and layout stylist.\n\n**Input:** one title candidate and 3 Markdown sections with [n] footnotes.\n\n**Output:**\n1. **subject** — an email subject (≤ 80 chars, no emojis).\n2. **content** — a VALID, responsive HTML **body only** (no `<!DOCTYPE>`, `<html>`, or `<head>`).\n\n**HTML Requirements:**\n* Structure: include a header with the title + current date {{ $now.format(\"DDD\") }}, a short intro paragraph, the 3 sections (convert Markdown to HTML), a “Key Sources” section that deduplicates and numbers links, and a short friendly sign-off.\n* Typography: use `<h1>/<h2>`, `<p>`, `<ul>/<ol>`, `<a>`. Apply inline CSS for readability (max-width container, readable font size and line-height).\n* Links: anchors must include `rel=\"noopener noreferrer\"` and `target=\"_blank\"`.\n* Accessibility: semantic headings; include `alt` text if images appear (don’t invent images).\n* Restrictions: no external CSS/JS, no tracking pixels."
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 2.2,
+      "position": [
+        384,
+        -16
+      ],
+      "id": "72ae1090-d109-493b-b8ec-129b929d586c",
+      "name": "editor agent"
+    },
+    {
+      "parameters": {
+        "resource": "draft",
+        "subject": "={{ $json.output.subject }}",
+        "emailType": "html",
+        "message": "={{ $json.output.content }}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        704,
+        -16
+      ],
+      "id": "74932526-40ac-4c98-b3fc-9bd4bc010738",
+      "name": "Create a draft",
+      "webhookId": "7a5ea7f9-db34-4486-9b0c-1ba980c263c2",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "3veTYfZZYsxoBnzo",
+          "name": "Gmail account 2"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Schedule Trigger": {
+      "main": [
+        [
+          {
+            "node": "Search",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Search": {
+      "main": [
+        [
+          {
+            "node": "planing agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "planing agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Structured Output Parser": {
+      "ai_outputParser": [
+        [
+          {
+            "node": "planing agent",
+            "type": "ai_outputParser",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "planing agent": {
+      "main": [
+        [
+          {
+            "node": "Split Out",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Split Out": {
+      "main": [
+        [
+          {
+            "node": "research",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model1": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "section write agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "research": {
+      "main": [
+        [
+          {
+            "node": "section write agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "section write agent": {
+      "main": [
+        [
+          {
+            "node": "Aggregate",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Aggregate": {
+      "main": [
+        [
+          {
+            "node": "editor agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model2": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "editor agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Structured Output Parser1": {
+      "ai_outputParser": [
+        [
+          {
+            "node": "editor agent",
+            "type": "ai_outputParser",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "editor agent": {
+      "main": [
+        [
+          {
+            "node": "Create a draft",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "4c750227-c350-4f7c-95a2-c0c466dd4212",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "bd6fbea05acc2786790afdef62e64cd08e6d395f692a01397785ed0f6ccb725e"
+  },
+  "id": "Sr3I3zruhdTRUShy",
+  "tags": []
+}

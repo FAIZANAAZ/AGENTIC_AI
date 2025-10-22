@@ -1,3 +1,5 @@
+Faiza13579
+
 ljinstallation/////////////////
 search(https://n8n.io/)
 get started
@@ -417,3 +419,64 @@ agr hm chahty hen ke hm kisi dosry ke Liye bnay koi workflow Yani koi or agr use
 
 previous workflow***
 call n8n workflow tool node ki madad Sy hm any kisi bhi workflow ko as a tool use kr skty hen
+
+///////////////////////////////////
+Mcp ***
+n8n me bhi mcp server ka node hota he or mcp client bhi hota he hm mcp server ko bna skty hen alag workflow ke Ander or osmy bhut sary tools connect kr skty hen phir kisi dosry workflow me agent ke Ander tool me mcp client ko connect krky mcp server Wala url Jo mcp server ke node me hi mojood hota he dengy or or wo sary tools Sirf ak mcp client ke tool ki madad Sy agent exes kr skta he osmy authentication bhi lga skty hen hm agr server me koi athuntication lgygy to osko client me pass bhi krni Hogi 
+
+JB tk mcp server listen nhi kryga tb tk client ko use nhi kr payga agent osko hmy listen pr lgana hoga bs input Wala node execute pr lga dengy mcp server ka wo listen krny lgyga 
+
+hm mcp server ke url ko kisi agentkit ya koi bhi tool agent banny waly ke mcp client me dalengy wo osy connect ho jayga
+
+//////////////////////////////////
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+////////////////////////////////////////////////////
+
+install cludefare in our window *
+open (https://developers.cloudflare.com/cloudflare-one/connections/connect-networks/downloads/#windows
+) 64 Wala download krengy --
+
+api key  of tunnel cludefare***
+open (dash.cloudflare.com) login with Google --- side bar Sy zero trust me aygy-- phir network -- tumnels-- create tunnels -- select coludfare -- name dengy tunel ka--save -- ak bar click window pr or ak bar 64 pr krengy --ak key Ari Hogi hm osko copy krengy --or save krky rakh lengy -- phir oper sy route tunnels --  published application -- domain hm select krengy hamra name ara hoga or sb domain Koch bhi likhdengy or hm agr chaengy to path me endpoint bhi bta skty hen to wo bn jayga ak url 
+service me hm batengy ke http Sy aygi request or url me hm localhost:5678 ya wo url jisko convert krna he oper waly domain ko --compelete setup or cliek kredengy to wo bn kr a jayga tunnel 
+
+
+
+(agr hmara apna nhi he or API he hmary pas kisi or ne di he to hm ye krengy ke)chat GPt pr jaengy likhengy (I have cloudfare api key but I don't have caludfare in my window how to install cloudfare this is I am use (api key dedengy))
+
+//////cloudfare install in our PC 
+open CMD with administrator run cammand (winget install --id Cloudflare.cloudflared)
+agree ko y likh kr enter 
+
+run where cloudflared (isy pta lgyga ke konsi jga pr he wo)
+run cloudflared --version (isy version pta lgyga )
+
+run  cloudflared service install api key (Jo save krky rakhi thi ) enter 
+
+Jo website pr tunnel url bnaya tha ospr jaengy edit-- publish application rout ke tab me jaygy -- or Jo url bnaya tha ospr click krengy to wo dosry tab me open hoga osko copy krengy or env me akr past krdengy public domain ke Ander or http // ye sb htadengg lekin tb JB hmny compose ki file me hmny osko likha ho public url me --env me Webhook ke variable me bhi yehi daldengy wo https// esitise

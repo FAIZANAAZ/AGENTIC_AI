@@ -1,0 +1,25 @@
+sign_up with (https://www.langchain.com/langsmith/observability)
+sb koch skip skip krky wo ak dashbor pr le jayga
+(https://docs.n8n.io/advanced-ai/langchain/langsmith/)yh sy langchain yani langsmith langchain ka hi part he to document mil jayga kesy kam krna he variables wagera 
+
+isky liye hmy koch variables set krny hoty hen ak project n8n ka bna kr vs code pr 
+
+run n8n in terminal project bn jayga 
+
+**************
+LANGCHAIN_ENDPOINT="https://api.smith.langchain.com"
+LANGCHAIN_TRACING_V2=true
+LANGCHAIN_API_KEY=yha api key lgani he
+LANGCHAIN_PROJECT="n8n_debug"
+4 variable bs taky kis project ko debag kiya he osko yad rkhny ke liye
+
+ye variable ak env ki file bna kr osy rakhny hen
+phir hmy jana he langchain ke dashboard pr phir wha jakr setting=>api key craete or env me lga deni he 
+
+tracing project****
+lansmith me jo dasbord open howa tha ospr ajengy or tracing project pr click krengy to wo ajayga ke os note me hmny kiya kiya run kiya kisny kitna time liya sb or os project ke name sy ayga jo env me rkha he 
+
+ monitering*****
+ dasbord pr moitorung pr jaengy wha pr wo charts ki sorat me batyga kiya kiya aya he kitni tracing hoi he kitna kam hora kitna bar execution hoi ya fail howa 
+
+ ye sara kam sirf tb workkryga jb project vc code ke sath chllra hoga naky docker ke sath 
